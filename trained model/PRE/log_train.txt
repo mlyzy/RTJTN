@@ -1,0 +1,1927 @@
+==========
+Args:Namespace(adam_epsilon=1e-08, base_model='bert', batch_size=20, bool_attention_mask=False, data_path='./data/NYT', do_lower_case=False, entity_feat_module_name='entity_avg_max_cls_feats', eval_epochs=1, eval_only=False, exponent_coef=3, feat_process_module='fc_bn_relu', gpu_id='2', gradient_accumulation_steps=1, head='', head_out_channels=1024, init_checkpoint=None, learning_rate=3e-05, learning_rate_pretrain=0.0002, load_trained_model=True, loss_coef=1.0, loss_func='BCELossForDuIE', loss_predicate_coef=0.01, lr_backbone_coef=1.0, max_seq_length=256, model='transfromer_2class', model_dict_test='./log/0421/Transfromer_bert/star_end_bertbase/model_best/model_best_epoch_44_f1_88.28.pth', model_path='./pretrain_model/bertbase', n_gpu=1, not_train_O=False, num_classes=97, num_fc=1, num_train_epochs=50, num_workers=16, only_train_predicate_heads=False, output_dir='./log/0421/transfromer_2class_bert/PRE', pre_only=False, predict_data_file='./data/NYT/test.json', pretrain_heads=False, pretrain_heads_epochs=1, print_steps=100, seed=42, tag='PRE', test_batch_size=8, testset='duie_spo', testset_dir='./data/NYT/dev.json', train_continue=False, trainset='duie_spo', trainset_dir='./data/NYT/train.json', use_cpu=False, warmup_ratio=0.06, weight_coef=111.0, weight_decay=0.0)
+==========
+Currently using GPU 2
+======loading trained model======
+./log/0421/Transfromer_bert/star_end_bertbase/model_best/model_best_epoch_44_f1_88.28.pth
+======Dataset loading======
+Preprocessing data, loaded from ./data/NYT/train.json
+Total valid predicate num: 92591
+======Dataset loading Finihsed!!! trainset:56196 
+Preprocessing data, loaded from ./data/NYT/dev.json
+Total valid predicate num: 8340
+======Dataset loading Finihsed!!! testset: 5000
+
+=====start training of 0 epochs=====
+epoch: 0 / 50, steps: 100 / 2809, lr: 0.000000, loss: 0.027935, loss_predicate: 0.724869, speed: 1.85 step/s
+epoch: 0 / 50, steps: 200 / 2809, lr: 0.000001, loss: 0.021324, loss_predicate: 0.662456, speed: 1.96 step/s
+epoch: 0 / 50, steps: 300 / 2809, lr: 0.000001, loss: 0.014606, loss_predicate: 0.561973, speed: 1.93 step/s
+epoch: 0 / 50, steps: 400 / 2809, lr: 0.000001, loss: 0.010346, loss_predicate: 0.454733, speed: 1.96 step/s
+epoch: 0 / 50, steps: 500 / 2809, lr: 0.000002, loss: 0.008160, loss_predicate: 0.347823, speed: 1.89 step/s
+epoch: 0 / 50, steps: 600 / 2809, lr: 0.000002, loss: 0.006770, loss_predicate: 0.275284, speed: 1.92 step/s
+epoch: 0 / 50, steps: 700 / 2809, lr: 0.000002, loss: 0.005779, loss_predicate: 0.226136, speed: 1.93 step/s
+epoch: 0 / 50, steps: 800 / 2809, lr: 0.000003, loss: 0.005097, loss_predicate: 0.183249, speed: 1.83 step/s
+epoch: 0 / 50, steps: 900 / 2809, lr: 0.000003, loss: 0.004513, loss_predicate: 0.166373, speed: 1.88 step/s
+epoch: 0 / 50, steps: 1000 / 2809, lr: 0.000004, loss: 0.004074, loss_predicate: 0.146147, speed: 1.94 step/s
+epoch: 0 / 50, steps: 1100 / 2809, lr: 0.000004, loss: 0.003722, loss_predicate: 0.133343, speed: 1.92 step/s
+epoch: 0 / 50, steps: 1200 / 2809, lr: 0.000004, loss: 0.003361, loss_predicate: 0.110643, speed: 1.93 step/s
+epoch: 0 / 50, steps: 1300 / 2809, lr: 0.000005, loss: 0.003104, loss_predicate: 0.097045, speed: 1.91 step/s
+epoch: 0 / 50, steps: 1400 / 2809, lr: 0.000005, loss: 0.002849, loss_predicate: 0.091237, speed: 1.92 step/s
+epoch: 0 / 50, steps: 1500 / 2809, lr: 0.000005, loss: 0.002660, loss_predicate: 0.084937, speed: 1.92 step/s
+epoch: 0 / 50, steps: 1600 / 2809, lr: 0.000006, loss: 0.002420, loss_predicate: 0.084983, speed: 1.91 step/s
+epoch: 0 / 50, steps: 1700 / 2809, lr: 0.000006, loss: 0.002203, loss_predicate: 0.084292, speed: 1.86 step/s
+epoch: 0 / 50, steps: 1800 / 2809, lr: 0.000006, loss: 0.002031, loss_predicate: 0.075757, speed: 1.84 step/s
+epoch: 0 / 50, steps: 1900 / 2809, lr: 0.000007, loss: 0.001884, loss_predicate: 0.076428, speed: 1.96 step/s
+epoch: 0 / 50, steps: 2000 / 2809, lr: 0.000007, loss: 0.001749, loss_predicate: 0.068866, speed: 1.91 step/s
+epoch: 0 / 50, steps: 2100 / 2809, lr: 0.000007, loss: 0.001610, loss_predicate: 0.062324, speed: 1.92 step/s
+epoch: 0 / 50, steps: 2200 / 2809, lr: 0.000008, loss: 0.001514, loss_predicate: 0.066815, speed: 1.94 step/s
+epoch: 0 / 50, steps: 2300 / 2809, lr: 0.000008, loss: 0.001390, loss_predicate: 0.073999, speed: 1.90 step/s
+epoch: 0 / 50, steps: 2400 / 2809, lr: 0.000009, loss: 0.001293, loss_predicate: 0.058457, speed: 1.90 step/s
+epoch: 0 / 50, steps: 2500 / 2809, lr: 0.000009, loss: 0.001231, loss_predicate: 0.075130, speed: 1.93 step/s
+epoch: 0 / 50, steps: 2600 / 2809, lr: 0.000009, loss: 0.001130, loss_predicate: 0.067605, speed: 1.90 step/s
+epoch: 0 / 50, steps: 2700 / 2809, lr: 0.000010, loss: 0.001051, loss_predicate: 0.062289, speed: 1.79 step/s
+epoch: 0 / 50, steps: 2800 / 2809, lr: 0.000010, loss: 0.000974, loss_predicate: 0.046569, speed: 1.85 step/s
+
+=====start evaluating of 1 epochs=====
+eval loss: 0.002126
+precision: 86.20	 recall: 88.74	 f1: 87.45	
+precision_predicate: 91.01	 recall_predicate: 86.82	 f1_predicate: 88.87	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+Saving model checkpoint to ./log/0421/transfromer_2class_bert/PRE/model_best
+epoch time footprint: 0 hour 26 min 40 sec
+
+=====start training of 1 epochs=====
+epoch: 1 / 50, steps: 100 / 2809, lr: 0.000010, loss: 0.000925, loss_predicate: 0.051676, speed: 1.85 step/s
+epoch: 1 / 50, steps: 200 / 2809, lr: 0.000011, loss: 0.000860, loss_predicate: 0.062440, speed: 1.92 step/s
+epoch: 1 / 50, steps: 300 / 2809, lr: 0.000011, loss: 0.000815, loss_predicate: 0.062467, speed: 1.92 step/s
+epoch: 1 / 50, steps: 400 / 2809, lr: 0.000011, loss: 0.000762, loss_predicate: 0.063398, speed: 1.90 step/s
+epoch: 1 / 50, steps: 500 / 2809, lr: 0.000012, loss: 0.000718, loss_predicate: 0.056279, speed: 1.89 step/s
+epoch: 1 / 50, steps: 600 / 2809, lr: 0.000012, loss: 0.000708, loss_predicate: 0.057496, speed: 1.91 step/s
+epoch: 1 / 50, steps: 700 / 2809, lr: 0.000012, loss: 0.000643, loss_predicate: 0.060684, speed: 1.92 step/s
+epoch: 1 / 50, steps: 800 / 2809, lr: 0.000013, loss: 0.000610, loss_predicate: 0.059084, speed: 1.91 step/s
+epoch: 1 / 50, steps: 900 / 2809, lr: 0.000013, loss: 0.000560, loss_predicate: 0.064175, speed: 1.82 step/s
+epoch: 1 / 50, steps: 1000 / 2809, lr: 0.000014, loss: 0.000545, loss_predicate: 0.046770, speed: 1.87 step/s
+epoch: 1 / 50, steps: 1100 / 2809, lr: 0.000014, loss: 0.000518, loss_predicate: 0.045921, speed: 1.92 step/s
+epoch: 1 / 50, steps: 1200 / 2809, lr: 0.000014, loss: 0.000489, loss_predicate: 0.059685, speed: 1.93 step/s
+epoch: 1 / 50, steps: 1300 / 2809, lr: 0.000015, loss: 0.000474, loss_predicate: 0.061069, speed: 1.90 step/s
+epoch: 1 / 50, steps: 1400 / 2809, lr: 0.000015, loss: 0.000433, loss_predicate: 0.052103, speed: 1.90 step/s
+epoch: 1 / 50, steps: 1500 / 2809, lr: 0.000015, loss: 0.000436, loss_predicate: 0.054750, speed: 1.90 step/s
+epoch: 1 / 50, steps: 1600 / 2809, lr: 0.000016, loss: 0.000400, loss_predicate: 0.047946, speed: 1.90 step/s
+epoch: 1 / 50, steps: 1700 / 2809, lr: 0.000016, loss: 0.000376, loss_predicate: 0.043237, speed: 1.92 step/s
+epoch: 1 / 50, steps: 1800 / 2809, lr: 0.000016, loss: 0.000344, loss_predicate: 0.057567, speed: 1.85 step/s
+epoch: 1 / 50, steps: 1900 / 2809, lr: 0.000017, loss: 0.000342, loss_predicate: 0.050565, speed: 1.82 step/s
+epoch: 1 / 50, steps: 2000 / 2809, lr: 0.000017, loss: 0.000346, loss_predicate: 0.069267, speed: 1.90 step/s
+epoch: 1 / 50, steps: 2100 / 2809, lr: 0.000017, loss: 0.000319, loss_predicate: 0.063836, speed: 1.92 step/s
+epoch: 1 / 50, steps: 2200 / 2809, lr: 0.000018, loss: 0.000322, loss_predicate: 0.055857, speed: 1.89 step/s
+epoch: 1 / 50, steps: 2300 / 2809, lr: 0.000018, loss: 0.000297, loss_predicate: 0.060403, speed: 1.90 step/s
+epoch: 1 / 50, steps: 2400 / 2809, lr: 0.000019, loss: 0.000299, loss_predicate: 0.063090, speed: 1.93 step/s
+epoch: 1 / 50, steps: 2500 / 2809, lr: 0.000019, loss: 0.000257, loss_predicate: 0.040439, speed: 1.92 step/s
+epoch: 1 / 50, steps: 2600 / 2809, lr: 0.000019, loss: 0.000272, loss_predicate: 0.076522, speed: 1.90 step/s
+epoch: 1 / 50, steps: 2700 / 2809, lr: 0.000020, loss: 0.000249, loss_predicate: 0.046676, speed: 1.92 step/s
+epoch: 1 / 50, steps: 2800 / 2809, lr: 0.000020, loss: 0.000245, loss_predicate: 0.057034, speed: 1.89 step/s
+
+=====start evaluating of 2 epochs=====
+eval loss: 0.001972
+precision: 85.82	 recall: 88.51	 f1: 87.14	
+precision_predicate: 88.38	 recall_predicate: 88.32	 f1_predicate: 88.35	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 26 min 55 sec
+
+=====start training of 2 epochs=====
+epoch: 2 / 50, steps: 100 / 2809, lr: 0.000020, loss: 0.000236, loss_predicate: 0.055597, speed: 1.84 step/s
+epoch: 2 / 50, steps: 200 / 2809, lr: 0.000021, loss: 0.000206, loss_predicate: 0.034621, speed: 1.95 step/s
+epoch: 2 / 50, steps: 300 / 2809, lr: 0.000021, loss: 0.000223, loss_predicate: 0.047307, speed: 1.90 step/s
+epoch: 2 / 50, steps: 400 / 2809, lr: 0.000021, loss: 0.000222, loss_predicate: 0.053187, speed: 1.92 step/s
+epoch: 2 / 50, steps: 500 / 2809, lr: 0.000022, loss: 0.000188, loss_predicate: 0.044827, speed: 1.91 step/s
+epoch: 2 / 50, steps: 600 / 2809, lr: 0.000022, loss: 0.000174, loss_predicate: 0.042142, speed: 1.89 step/s
+epoch: 2 / 50, steps: 700 / 2809, lr: 0.000022, loss: 0.000179, loss_predicate: 0.052293, speed: 1.93 step/s
+epoch: 2 / 50, steps: 800 / 2809, lr: 0.000023, loss: 0.000155, loss_predicate: 0.037983, speed: 1.89 step/s
+epoch: 2 / 50, steps: 900 / 2809, lr: 0.000023, loss: 0.000195, loss_predicate: 0.070631, speed: 1.88 step/s
+epoch: 2 / 50, steps: 1000 / 2809, lr: 0.000024, loss: 0.000172, loss_predicate: 0.071906, speed: 1.87 step/s
+epoch: 2 / 50, steps: 1100 / 2809, lr: 0.000024, loss: 0.000173, loss_predicate: 0.060229, speed: 1.86 step/s
+epoch: 2 / 50, steps: 1200 / 2809, lr: 0.000024, loss: 0.000160, loss_predicate: 0.046959, speed: 1.92 step/s
+epoch: 2 / 50, steps: 1300 / 2809, lr: 0.000025, loss: 0.000156, loss_predicate: 0.050621, speed: 1.90 step/s
+epoch: 2 / 50, steps: 1400 / 2809, lr: 0.000025, loss: 0.000175, loss_predicate: 0.057635, speed: 1.89 step/s
+epoch: 2 / 50, steps: 1500 / 2809, lr: 0.000025, loss: 0.000151, loss_predicate: 0.055241, speed: 1.89 step/s
+epoch: 2 / 50, steps: 1600 / 2809, lr: 0.000026, loss: 0.000173, loss_predicate: 0.055623, speed: 1.93 step/s
+epoch: 2 / 50, steps: 1700 / 2809, lr: 0.000026, loss: 0.000139, loss_predicate: 0.033731, speed: 1.91 step/s
+epoch: 2 / 50, steps: 1800 / 2809, lr: 0.000026, loss: 0.000155, loss_predicate: 0.036311, speed: 1.93 step/s
+epoch: 2 / 50, steps: 1900 / 2809, lr: 0.000027, loss: 0.000161, loss_predicate: 0.057119, speed: 1.93 step/s
+epoch: 2 / 50, steps: 2000 / 2809, lr: 0.000027, loss: 0.000155, loss_predicate: 0.055587, speed: 1.83 step/s
+epoch: 2 / 50, steps: 2100 / 2809, lr: 0.000027, loss: 0.000139, loss_predicate: 0.052657, speed: 1.87 step/s
+epoch: 2 / 50, steps: 2200 / 2809, lr: 0.000028, loss: 0.000149, loss_predicate: 0.052051, speed: 1.92 step/s
+epoch: 2 / 50, steps: 2300 / 2809, lr: 0.000028, loss: 0.000180, loss_predicate: 0.062688, speed: 1.89 step/s
+epoch: 2 / 50, steps: 2400 / 2809, lr: 0.000029, loss: 0.000138, loss_predicate: 0.054841, speed: 1.90 step/s
+epoch: 2 / 50, steps: 2500 / 2809, lr: 0.000029, loss: 0.000118, loss_predicate: 0.036253, speed: 1.90 step/s
+epoch: 2 / 50, steps: 2600 / 2809, lr: 0.000029, loss: 0.000163, loss_predicate: 0.053031, speed: 1.90 step/s
+epoch: 2 / 50, steps: 2700 / 2809, lr: 0.000030, loss: 0.000133, loss_predicate: 0.049525, speed: 1.93 step/s
+epoch: 2 / 50, steps: 2800 / 2809, lr: 0.000030, loss: 0.000191, loss_predicate: 0.082784, speed: 1.93 step/s
+
+=====start evaluating of 3 epochs=====
+eval loss: 0.002213
+precision: 84.68	 recall: 88.52	 f1: 86.56	
+precision_predicate: 90.36	 recall_predicate: 87.34	 f1_predicate: 88.82	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 26 min 47 sec
+
+=====start training of 3 epochs=====
+epoch: 3 / 50, steps: 100 / 2809, lr: 0.000030, loss: 0.000226, loss_predicate: 0.065632, speed: 1.79 step/s
+epoch: 3 / 50, steps: 200 / 2809, lr: 0.000030, loss: 0.000182, loss_predicate: 0.063654, speed: 1.93 step/s
+epoch: 3 / 50, steps: 300 / 2809, lr: 0.000030, loss: 0.000127, loss_predicate: 0.040640, speed: 1.90 step/s
+epoch: 3 / 50, steps: 400 / 2809, lr: 0.000030, loss: 0.000138, loss_predicate: 0.055682, speed: 1.93 step/s
+epoch: 3 / 50, steps: 500 / 2809, lr: 0.000030, loss: 0.000144, loss_predicate: 0.062504, speed: 1.89 step/s
+epoch: 3 / 50, steps: 600 / 2809, lr: 0.000030, loss: 0.000184, loss_predicate: 0.061379, speed: 1.91 step/s
+epoch: 3 / 50, steps: 700 / 2809, lr: 0.000030, loss: 0.000168, loss_predicate: 0.048204, speed: 1.87 step/s
+epoch: 3 / 50, steps: 800 / 2809, lr: 0.000030, loss: 0.000172, loss_predicate: 0.049261, speed: 1.91 step/s
+epoch: 3 / 50, steps: 900 / 2809, lr: 0.000030, loss: 0.000172, loss_predicate: 0.054160, speed: 1.93 step/s
+epoch: 3 / 50, steps: 1000 / 2809, lr: 0.000030, loss: 0.000153, loss_predicate: 0.035835, speed: 1.92 step/s
+epoch: 3 / 50, steps: 1100 / 2809, lr: 0.000030, loss: 0.000165, loss_predicate: 0.042352, speed: 1.81 step/s
+epoch: 3 / 50, steps: 1200 / 2809, lr: 0.000030, loss: 0.000151, loss_predicate: 0.046516, speed: 1.86 step/s
+epoch: 3 / 50, steps: 1300 / 2809, lr: 0.000030, loss: 0.000146, loss_predicate: 0.064169, speed: 1.96 step/s
+epoch: 3 / 50, steps: 1400 / 2809, lr: 0.000030, loss: 0.000088, loss_predicate: 0.048291, speed: 1.95 step/s
+epoch: 3 / 50, steps: 1500 / 2809, lr: 0.000030, loss: 0.000135, loss_predicate: 0.050741, speed: 1.95 step/s
+epoch: 3 / 50, steps: 1600 / 2809, lr: 0.000030, loss: 0.000151, loss_predicate: 0.056004, speed: 1.96 step/s
+epoch: 3 / 50, steps: 1700 / 2809, lr: 0.000030, loss: 0.000122, loss_predicate: 0.040289, speed: 1.97 step/s
+epoch: 3 / 50, steps: 1800 / 2809, lr: 0.000030, loss: 0.000150, loss_predicate: 0.038706, speed: 1.98 step/s
+epoch: 3 / 50, steps: 1900 / 2809, lr: 0.000030, loss: 0.000118, loss_predicate: 0.052513, speed: 1.96 step/s
+epoch: 3 / 50, steps: 2000 / 2809, lr: 0.000030, loss: 0.000130, loss_predicate: 0.041337, speed: 1.96 step/s
+epoch: 3 / 50, steps: 2100 / 2809, lr: 0.000030, loss: 0.000181, loss_predicate: 0.067793, speed: 1.95 step/s
+epoch: 3 / 50, steps: 2200 / 2809, lr: 0.000030, loss: 0.000187, loss_predicate: 0.052954, speed: 1.92 step/s
+epoch: 3 / 50, steps: 2300 / 2809, lr: 0.000029, loss: 0.000137, loss_predicate: 0.039502, speed: 1.92 step/s
+epoch: 3 / 50, steps: 2400 / 2809, lr: 0.000029, loss: 0.000152, loss_predicate: 0.064403, speed: 1.95 step/s
+epoch: 3 / 50, steps: 2500 / 2809, lr: 0.000029, loss: 0.000144, loss_predicate: 0.051834, speed: 1.95 step/s
+epoch: 3 / 50, steps: 2600 / 2809, lr: 0.000029, loss: 0.000149, loss_predicate: 0.045290, speed: 1.97 step/s
+epoch: 3 / 50, steps: 2700 / 2809, lr: 0.000029, loss: 0.000141, loss_predicate: 0.057724, speed: 1.96 step/s
+epoch: 3 / 50, steps: 2800 / 2809, lr: 0.000029, loss: 0.000119, loss_predicate: 0.040082, speed: 1.96 step/s
+
+=====start evaluating of 4 epochs=====
+eval loss: 0.002269
+precision: 84.66	 recall: 89.24	 f1: 86.89	
+precision_predicate: 88.58	 recall_predicate: 88.60	 f1_predicate: 88.59	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 26 min 15 sec
+
+=====start training of 4 epochs=====
+epoch: 4 / 50, steps: 100 / 2809, lr: 0.000029, loss: 0.000127, loss_predicate: 0.035844, speed: 1.89 step/s
+epoch: 4 / 50, steps: 200 / 2809, lr: 0.000029, loss: 0.000138, loss_predicate: 0.042217, speed: 1.98 step/s
+epoch: 4 / 50, steps: 300 / 2809, lr: 0.000029, loss: 0.000113, loss_predicate: 0.031337, speed: 1.97 step/s
+epoch: 4 / 50, steps: 400 / 2809, lr: 0.000029, loss: 0.000125, loss_predicate: 0.039640, speed: 1.94 step/s
+epoch: 4 / 50, steps: 500 / 2809, lr: 0.000029, loss: 0.000088, loss_predicate: 0.029625, speed: 1.95 step/s
+epoch: 4 / 50, steps: 600 / 2809, lr: 0.000029, loss: 0.000177, loss_predicate: 0.055966, speed: 1.95 step/s
+epoch: 4 / 50, steps: 700 / 2809, lr: 0.000029, loss: 0.000127, loss_predicate: 0.044958, speed: 1.95 step/s
+epoch: 4 / 50, steps: 800 / 2809, lr: 0.000029, loss: 0.000125, loss_predicate: 0.039608, speed: 1.97 step/s
+epoch: 4 / 50, steps: 900 / 2809, lr: 0.000029, loss: 0.000165, loss_predicate: 0.047682, speed: 1.96 step/s
+epoch: 4 / 50, steps: 1000 / 2809, lr: 0.000029, loss: 0.000161, loss_predicate: 0.057950, speed: 1.97 step/s
+epoch: 4 / 50, steps: 1100 / 2809, lr: 0.000029, loss: 0.000162, loss_predicate: 0.048407, speed: 1.98 step/s
+epoch: 4 / 50, steps: 1200 / 2809, lr: 0.000029, loss: 0.000139, loss_predicate: 0.046214, speed: 1.96 step/s
+epoch: 4 / 50, steps: 1300 / 2809, lr: 0.000029, loss: 0.000164, loss_predicate: 0.045741, speed: 1.97 step/s
+epoch: 4 / 50, steps: 1400 / 2809, lr: 0.000029, loss: 0.000145, loss_predicate: 0.051231, speed: 1.96 step/s
+epoch: 4 / 50, steps: 1500 / 2809, lr: 0.000029, loss: 0.000145, loss_predicate: 0.045533, speed: 1.98 step/s
+epoch: 4 / 50, steps: 1600 / 2809, lr: 0.000029, loss: 0.000185, loss_predicate: 0.048554, speed: 1.97 step/s
+epoch: 4 / 50, steps: 1700 / 2809, lr: 0.000029, loss: 0.000136, loss_predicate: 0.038824, speed: 1.97 step/s
+epoch: 4 / 50, steps: 1800 / 2809, lr: 0.000029, loss: 0.000174, loss_predicate: 0.065806, speed: 1.96 step/s
+epoch: 4 / 50, steps: 1900 / 2809, lr: 0.000029, loss: 0.000150, loss_predicate: 0.041818, speed: 1.97 step/s
+epoch: 4 / 50, steps: 2000 / 2809, lr: 0.000029, loss: 0.000153, loss_predicate: 0.050694, speed: 1.97 step/s
+epoch: 4 / 50, steps: 2100 / 2809, lr: 0.000029, loss: 0.000197, loss_predicate: 0.044576, speed: 1.96 step/s
+epoch: 4 / 50, steps: 2200 / 2809, lr: 0.000029, loss: 0.000187, loss_predicate: 0.043335, speed: 1.98 step/s
+epoch: 4 / 50, steps: 2300 / 2809, lr: 0.000029, loss: 0.000162, loss_predicate: 0.054561, speed: 1.97 step/s
+epoch: 4 / 50, steps: 2400 / 2809, lr: 0.000029, loss: 0.000171, loss_predicate: 0.051310, speed: 1.96 step/s
+epoch: 4 / 50, steps: 2500 / 2809, lr: 0.000029, loss: 0.000216, loss_predicate: 0.046196, speed: 1.97 step/s
+epoch: 4 / 50, steps: 2600 / 2809, lr: 0.000029, loss: 0.000167, loss_predicate: 0.056373, speed: 1.99 step/s
+epoch: 4 / 50, steps: 2700 / 2809, lr: 0.000029, loss: 0.000218, loss_predicate: 0.065183, speed: 1.99 step/s
+epoch: 4 / 50, steps: 2800 / 2809, lr: 0.000029, loss: 0.000173, loss_predicate: 0.049182, speed: 1.99 step/s
+
+=====start evaluating of 5 epochs=====
+eval loss: 0.002036
+precision: 86.59	 recall: 87.79	 f1: 87.19	
+precision_predicate: 90.96	 recall_predicate: 87.36	 f1_predicate: 89.13	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+Saving model checkpoint to ./log/0421/transfromer_2class_bert/PRE/model_best
+epoch time footprint: 0 hour 25 min 45 sec
+
+=====start training of 5 epochs=====
+epoch: 5 / 50, steps: 100 / 2809, lr: 0.000029, loss: 0.000111, loss_predicate: 0.039280, speed: 1.88 step/s
+epoch: 5 / 50, steps: 200 / 2809, lr: 0.000029, loss: 0.000148, loss_predicate: 0.032812, speed: 1.98 step/s
+epoch: 5 / 50, steps: 300 / 2809, lr: 0.000029, loss: 0.000133, loss_predicate: 0.046108, speed: 1.98 step/s
+epoch: 5 / 50, steps: 400 / 2809, lr: 0.000029, loss: 0.000151, loss_predicate: 0.036112, speed: 1.95 step/s
+epoch: 5 / 50, steps: 500 / 2809, lr: 0.000029, loss: 0.000145, loss_predicate: 0.036421, speed: 1.93 step/s
+epoch: 5 / 50, steps: 600 / 2809, lr: 0.000029, loss: 0.000166, loss_predicate: 0.046095, speed: 1.94 step/s
+epoch: 5 / 50, steps: 700 / 2809, lr: 0.000029, loss: 0.000129, loss_predicate: 0.042956, speed: 1.94 step/s
+epoch: 5 / 50, steps: 800 / 2809, lr: 0.000029, loss: 0.000135, loss_predicate: 0.037632, speed: 1.96 step/s
+epoch: 5 / 50, steps: 900 / 2809, lr: 0.000029, loss: 0.000124, loss_predicate: 0.050521, speed: 1.95 step/s
+epoch: 5 / 50, steps: 1000 / 2809, lr: 0.000028, loss: 0.000121, loss_predicate: 0.029899, speed: 1.95 step/s
+epoch: 5 / 50, steps: 1100 / 2809, lr: 0.000028, loss: 0.000153, loss_predicate: 0.039535, speed: 1.96 step/s
+epoch: 5 / 50, steps: 1200 / 2809, lr: 0.000028, loss: 0.000196, loss_predicate: 0.052681, speed: 1.96 step/s
+epoch: 5 / 50, steps: 1300 / 2809, lr: 0.000028, loss: 0.000134, loss_predicate: 0.026085, speed: 1.97 step/s
+epoch: 5 / 50, steps: 1400 / 2809, lr: 0.000028, loss: 0.000170, loss_predicate: 0.043374, speed: 1.96 step/s
+epoch: 5 / 50, steps: 1500 / 2809, lr: 0.000028, loss: 0.000143, loss_predicate: 0.035577, speed: 1.96 step/s
+epoch: 5 / 50, steps: 1600 / 2809, lr: 0.000028, loss: 0.000193, loss_predicate: 0.043201, speed: 1.96 step/s
+epoch: 5 / 50, steps: 1700 / 2809, lr: 0.000028, loss: 0.000224, loss_predicate: 0.054439, speed: 1.96 step/s
+epoch: 5 / 50, steps: 1800 / 2809, lr: 0.000028, loss: 0.000161, loss_predicate: 0.033275, speed: 1.97 step/s
+epoch: 5 / 50, steps: 1900 / 2809, lr: 0.000028, loss: 0.000204, loss_predicate: 0.060789, speed: 1.96 step/s
+epoch: 5 / 50, steps: 2000 / 2809, lr: 0.000028, loss: 0.000092, loss_predicate: 0.029855, speed: 1.97 step/s
+epoch: 5 / 50, steps: 2100 / 2809, lr: 0.000028, loss: 0.000175, loss_predicate: 0.033991, speed: 1.96 step/s
+epoch: 5 / 50, steps: 2200 / 2809, lr: 0.000028, loss: 0.000166, loss_predicate: 0.053189, speed: 1.95 step/s
+epoch: 5 / 50, steps: 2300 / 2809, lr: 0.000028, loss: 0.000149, loss_predicate: 0.044662, speed: 1.97 step/s
+epoch: 5 / 50, steps: 2400 / 2809, lr: 0.000028, loss: 0.000173, loss_predicate: 0.055939, speed: 1.97 step/s
+epoch: 5 / 50, steps: 2500 / 2809, lr: 0.000028, loss: 0.000159, loss_predicate: 0.036688, speed: 1.97 step/s
+epoch: 5 / 50, steps: 2600 / 2809, lr: 0.000028, loss: 0.000148, loss_predicate: 0.044819, speed: 1.97 step/s
+epoch: 5 / 50, steps: 2700 / 2809, lr: 0.000028, loss: 0.000122, loss_predicate: 0.041749, speed: 1.95 step/s
+epoch: 5 / 50, steps: 2800 / 2809, lr: 0.000028, loss: 0.000191, loss_predicate: 0.048163, speed: 1.96 step/s
+
+=====start evaluating of 6 epochs=====
+eval loss: 0.002050
+precision: 84.89	 recall: 88.69	 f1: 86.75	
+precision_predicate: 89.44	 recall_predicate: 88.52	 f1_predicate: 88.98	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 50 sec
+
+=====start training of 6 epochs=====
+epoch: 6 / 50, steps: 100 / 2809, lr: 0.000028, loss: 0.000150, loss_predicate: 0.027365, speed: 1.89 step/s
+epoch: 6 / 50, steps: 200 / 2809, lr: 0.000028, loss: 0.000117, loss_predicate: 0.032535, speed: 1.98 step/s
+epoch: 6 / 50, steps: 300 / 2809, lr: 0.000028, loss: 0.000131, loss_predicate: 0.034858, speed: 1.97 step/s
+epoch: 6 / 50, steps: 400 / 2809, lr: 0.000028, loss: 0.000114, loss_predicate: 0.029182, speed: 1.97 step/s
+epoch: 6 / 50, steps: 500 / 2809, lr: 0.000028, loss: 0.000146, loss_predicate: 0.039462, speed: 1.96 step/s
+epoch: 6 / 50, steps: 600 / 2809, lr: 0.000028, loss: 0.000181, loss_predicate: 0.031363, speed: 1.95 step/s
+epoch: 6 / 50, steps: 700 / 2809, lr: 0.000028, loss: 0.000117, loss_predicate: 0.030772, speed: 1.93 step/s
+epoch: 6 / 50, steps: 800 / 2809, lr: 0.000028, loss: 0.000149, loss_predicate: 0.045171, speed: 1.94 step/s
+epoch: 6 / 50, steps: 900 / 2809, lr: 0.000028, loss: 0.000180, loss_predicate: 0.043567, speed: 1.94 step/s
+epoch: 6 / 50, steps: 1000 / 2809, lr: 0.000028, loss: 0.000134, loss_predicate: 0.034867, speed: 1.94 step/s
+epoch: 6 / 50, steps: 1100 / 2809, lr: 0.000028, loss: 0.000129, loss_predicate: 0.032822, speed: 1.94 step/s
+epoch: 6 / 50, steps: 1200 / 2809, lr: 0.000028, loss: 0.000112, loss_predicate: 0.024620, speed: 1.96 step/s
+epoch: 6 / 50, steps: 1300 / 2809, lr: 0.000028, loss: 0.000148, loss_predicate: 0.039713, speed: 1.96 step/s
+epoch: 6 / 50, steps: 1400 / 2809, lr: 0.000028, loss: 0.000127, loss_predicate: 0.034931, speed: 1.96 step/s
+epoch: 6 / 50, steps: 1500 / 2809, lr: 0.000028, loss: 0.000130, loss_predicate: 0.034535, speed: 1.96 step/s
+epoch: 6 / 50, steps: 1600 / 2809, lr: 0.000028, loss: 0.000102, loss_predicate: 0.037938, speed: 1.96 step/s
+epoch: 6 / 50, steps: 1700 / 2809, lr: 0.000028, loss: 0.000134, loss_predicate: 0.030878, speed: 1.96 step/s
+epoch: 6 / 50, steps: 1800 / 2809, lr: 0.000028, loss: 0.000109, loss_predicate: 0.028432, speed: 1.96 step/s
+epoch: 6 / 50, steps: 1900 / 2809, lr: 0.000028, loss: 0.000136, loss_predicate: 0.038980, speed: 1.95 step/s
+epoch: 6 / 50, steps: 2000 / 2809, lr: 0.000028, loss: 0.000121, loss_predicate: 0.039740, speed: 1.96 step/s
+epoch: 6 / 50, steps: 2100 / 2809, lr: 0.000028, loss: 0.000128, loss_predicate: 0.038382, speed: 1.95 step/s
+epoch: 6 / 50, steps: 2200 / 2809, lr: 0.000028, loss: 0.000170, loss_predicate: 0.034457, speed: 1.95 step/s
+epoch: 6 / 50, steps: 2300 / 2809, lr: 0.000028, loss: 0.000148, loss_predicate: 0.029537, speed: 1.96 step/s
+epoch: 6 / 50, steps: 2400 / 2809, lr: 0.000028, loss: 0.000175, loss_predicate: 0.044059, speed: 1.97 step/s
+epoch: 6 / 50, steps: 2500 / 2809, lr: 0.000028, loss: 0.000135, loss_predicate: 0.035520, speed: 1.96 step/s
+epoch: 6 / 50, steps: 2600 / 2809, lr: 0.000027, loss: 0.000144, loss_predicate: 0.048124, speed: 1.96 step/s
+epoch: 6 / 50, steps: 2700 / 2809, lr: 0.000027, loss: 0.000174, loss_predicate: 0.049553, speed: 1.97 step/s
+epoch: 6 / 50, steps: 2800 / 2809, lr: 0.000027, loss: 0.000138, loss_predicate: 0.032058, speed: 1.95 step/s
+
+=====start evaluating of 7 epochs=====
+eval loss: 0.002061
+precision: 85.39	 recall: 88.37	 f1: 86.86	
+precision_predicate: 90.48	 recall_predicate: 88.23	 f1_predicate: 89.34	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+Saving model checkpoint to ./log/0421/transfromer_2class_bert/PRE/model_best
+epoch time footprint: 0 hour 25 min 52 sec
+
+=====start training of 7 epochs=====
+epoch: 7 / 50, steps: 100 / 2809, lr: 0.000027, loss: 0.000156, loss_predicate: 0.032376, speed: 1.87 step/s
+epoch: 7 / 50, steps: 200 / 2809, lr: 0.000027, loss: 0.000136, loss_predicate: 0.045030, speed: 1.98 step/s
+epoch: 7 / 50, steps: 300 / 2809, lr: 0.000027, loss: 0.000128, loss_predicate: 0.027249, speed: 1.97 step/s
+epoch: 7 / 50, steps: 400 / 2809, lr: 0.000027, loss: 0.000100, loss_predicate: 0.026684, speed: 1.96 step/s
+epoch: 7 / 50, steps: 500 / 2809, lr: 0.000027, loss: 0.000111, loss_predicate: 0.024325, speed: 1.96 step/s
+epoch: 7 / 50, steps: 600 / 2809, lr: 0.000027, loss: 0.000163, loss_predicate: 0.036125, speed: 1.96 step/s
+epoch: 7 / 50, steps: 700 / 2809, lr: 0.000027, loss: 0.000140, loss_predicate: 0.035067, speed: 1.96 step/s
+epoch: 7 / 50, steps: 800 / 2809, lr: 0.000027, loss: 0.000117, loss_predicate: 0.031834, speed: 1.94 step/s
+epoch: 7 / 50, steps: 900 / 2809, lr: 0.000027, loss: 0.000143, loss_predicate: 0.032434, speed: 1.93 step/s
+epoch: 7 / 50, steps: 1000 / 2809, lr: 0.000027, loss: 0.000140, loss_predicate: 0.025646, speed: 1.94 step/s
+epoch: 7 / 50, steps: 1100 / 2809, lr: 0.000027, loss: 0.000110, loss_predicate: 0.021691, speed: 1.95 step/s
+epoch: 7 / 50, steps: 1200 / 2809, lr: 0.000027, loss: 0.000106, loss_predicate: 0.020336, speed: 1.96 step/s
+epoch: 7 / 50, steps: 1300 / 2809, lr: 0.000027, loss: 0.000099, loss_predicate: 0.024991, speed: 1.95 step/s
+epoch: 7 / 50, steps: 1400 / 2809, lr: 0.000027, loss: 0.000135, loss_predicate: 0.025597, speed: 1.96 step/s
+epoch: 7 / 50, steps: 1500 / 2809, lr: 0.000027, loss: 0.000148, loss_predicate: 0.043609, speed: 1.96 step/s
+epoch: 7 / 50, steps: 1600 / 2809, lr: 0.000027, loss: 0.000175, loss_predicate: 0.046889, speed: 1.96 step/s
+epoch: 7 / 50, steps: 1700 / 2809, lr: 0.000027, loss: 0.000129, loss_predicate: 0.038030, speed: 1.96 step/s
+epoch: 7 / 50, steps: 1800 / 2809, lr: 0.000027, loss: 0.000139, loss_predicate: 0.034153, speed: 1.98 step/s
+epoch: 7 / 50, steps: 1900 / 2809, lr: 0.000027, loss: 0.000114, loss_predicate: 0.030671, speed: 1.96 step/s
+epoch: 7 / 50, steps: 2000 / 2809, lr: 0.000027, loss: 0.000138, loss_predicate: 0.034778, speed: 1.96 step/s
+epoch: 7 / 50, steps: 2100 / 2809, lr: 0.000027, loss: 0.000135, loss_predicate: 0.040076, speed: 1.97 step/s
+epoch: 7 / 50, steps: 2200 / 2809, lr: 0.000027, loss: 0.000141, loss_predicate: 0.029218, speed: 1.97 step/s
+epoch: 7 / 50, steps: 2300 / 2809, lr: 0.000027, loss: 0.000160, loss_predicate: 0.038042, speed: 1.97 step/s
+epoch: 7 / 50, steps: 2400 / 2809, lr: 0.000027, loss: 0.000189, loss_predicate: 0.038617, speed: 1.95 step/s
+epoch: 7 / 50, steps: 2500 / 2809, lr: 0.000027, loss: 0.000126, loss_predicate: 0.021392, speed: 1.97 step/s
+epoch: 7 / 50, steps: 2600 / 2809, lr: 0.000027, loss: 0.000173, loss_predicate: 0.037991, speed: 1.97 step/s
+epoch: 7 / 50, steps: 2700 / 2809, lr: 0.000027, loss: 0.000130, loss_predicate: 0.026980, speed: 1.97 step/s
+epoch: 7 / 50, steps: 2800 / 2809, lr: 0.000027, loss: 0.000115, loss_predicate: 0.029728, speed: 1.96 step/s
+
+=====start evaluating of 8 epochs=====
+eval loss: 0.002063
+precision: 85.81	 recall: 88.35	 f1: 87.06	
+precision_predicate: 90.93	 recall_predicate: 87.88	 f1_predicate: 89.38	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+Saving model checkpoint to ./log/0421/transfromer_2class_bert/PRE/model_best
+epoch time footprint: 0 hour 25 min 52 sec
+
+=====start training of 8 epochs=====
+epoch: 8 / 50, steps: 100 / 2809, lr: 0.000027, loss: 0.000083, loss_predicate: 0.018189, speed: 1.88 step/s
+epoch: 8 / 50, steps: 200 / 2809, lr: 0.000027, loss: 0.000121, loss_predicate: 0.020241, speed: 1.99 step/s
+epoch: 8 / 50, steps: 300 / 2809, lr: 0.000027, loss: 0.000099, loss_predicate: 0.022231, speed: 1.98 step/s
+epoch: 8 / 50, steps: 400 / 2809, lr: 0.000027, loss: 0.000145, loss_predicate: 0.029474, speed: 1.98 step/s
+epoch: 8 / 50, steps: 500 / 2809, lr: 0.000027, loss: 0.000090, loss_predicate: 0.021573, speed: 1.97 step/s
+epoch: 8 / 50, steps: 600 / 2809, lr: 0.000027, loss: 0.000105, loss_predicate: 0.027510, speed: 1.96 step/s
+epoch: 8 / 50, steps: 700 / 2809, lr: 0.000027, loss: 0.000125, loss_predicate: 0.026651, speed: 1.97 step/s
+epoch: 8 / 50, steps: 800 / 2809, lr: 0.000027, loss: 0.000117, loss_predicate: 0.036536, speed: 1.97 step/s
+epoch: 8 / 50, steps: 900 / 2809, lr: 0.000027, loss: 0.000163, loss_predicate: 0.032706, speed: 1.96 step/s
+epoch: 8 / 50, steps: 1000 / 2809, lr: 0.000027, loss: 0.000150, loss_predicate: 0.039319, speed: 1.93 step/s
+epoch: 8 / 50, steps: 1100 / 2809, lr: 0.000027, loss: 0.000116, loss_predicate: 0.036256, speed: 1.95 step/s
+epoch: 8 / 50, steps: 1200 / 2809, lr: 0.000027, loss: 0.000140, loss_predicate: 0.033771, speed: 1.95 step/s
+epoch: 8 / 50, steps: 1300 / 2809, lr: 0.000027, loss: 0.000140, loss_predicate: 0.034263, speed: 1.95 step/s
+epoch: 8 / 50, steps: 1400 / 2809, lr: 0.000026, loss: 0.000170, loss_predicate: 0.038999, speed: 1.95 step/s
+epoch: 8 / 50, steps: 1500 / 2809, lr: 0.000026, loss: 0.000123, loss_predicate: 0.031850, speed: 1.97 step/s
+epoch: 8 / 50, steps: 1600 / 2809, lr: 0.000026, loss: 0.000185, loss_predicate: 0.032976, speed: 1.96 step/s
+epoch: 8 / 50, steps: 1700 / 2809, lr: 0.000026, loss: 0.000169, loss_predicate: 0.040324, speed: 1.96 step/s
+epoch: 8 / 50, steps: 1800 / 2809, lr: 0.000026, loss: 0.000182, loss_predicate: 0.041634, speed: 1.97 step/s
+epoch: 8 / 50, steps: 1900 / 2809, lr: 0.000026, loss: 0.000117, loss_predicate: 0.033099, speed: 1.96 step/s
+epoch: 8 / 50, steps: 2000 / 2809, lr: 0.000026, loss: 0.000114, loss_predicate: 0.027970, speed: 1.96 step/s
+epoch: 8 / 50, steps: 2100 / 2809, lr: 0.000026, loss: 0.000140, loss_predicate: 0.031423, speed: 1.96 step/s
+epoch: 8 / 50, steps: 2200 / 2809, lr: 0.000026, loss: 0.000131, loss_predicate: 0.029504, speed: 1.97 step/s
+epoch: 8 / 50, steps: 2300 / 2809, lr: 0.000026, loss: 0.000122, loss_predicate: 0.025578, speed: 1.97 step/s
+epoch: 8 / 50, steps: 2400 / 2809, lr: 0.000026, loss: 0.000117, loss_predicate: 0.025977, speed: 1.95 step/s
+epoch: 8 / 50, steps: 2500 / 2809, lr: 0.000026, loss: 0.000134, loss_predicate: 0.025150, speed: 1.96 step/s
+epoch: 8 / 50, steps: 2600 / 2809, lr: 0.000026, loss: 0.000166, loss_predicate: 0.046922, speed: 1.97 step/s
+epoch: 8 / 50, steps: 2700 / 2809, lr: 0.000026, loss: 0.000118, loss_predicate: 0.020068, speed: 1.97 step/s
+epoch: 8 / 50, steps: 2800 / 2809, lr: 0.000026, loss: 0.000155, loss_predicate: 0.033766, speed: 1.97 step/s
+
+=====start evaluating of 9 epochs=====
+eval loss: 0.002205
+precision: 88.30	 recall: 86.94	 f1: 87.62	
+precision_predicate: 92.62	 recall_predicate: 86.18	 f1_predicate: 89.28	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 48 sec
+
+=====start training of 9 epochs=====
+epoch: 9 / 50, steps: 100 / 2809, lr: 0.000026, loss: 0.000168, loss_predicate: 0.029521, speed: 1.91 step/s
+epoch: 9 / 50, steps: 200 / 2809, lr: 0.000026, loss: 0.000110, loss_predicate: 0.017505, speed: 1.98 step/s
+epoch: 9 / 50, steps: 300 / 2809, lr: 0.000026, loss: 0.000115, loss_predicate: 0.025667, speed: 1.97 step/s
+epoch: 9 / 50, steps: 400 / 2809, lr: 0.000026, loss: 0.000143, loss_predicate: 0.027371, speed: 1.97 step/s
+epoch: 9 / 50, steps: 500 / 2809, lr: 0.000026, loss: 0.000158, loss_predicate: 0.047592, speed: 1.97 step/s
+epoch: 9 / 50, steps: 600 / 2809, lr: 0.000026, loss: 0.000136, loss_predicate: 0.030973, speed: 1.98 step/s
+epoch: 9 / 50, steps: 700 / 2809, lr: 0.000026, loss: 0.000128, loss_predicate: 0.042736, speed: 1.97 step/s
+epoch: 9 / 50, steps: 800 / 2809, lr: 0.000026, loss: 0.000124, loss_predicate: 0.027804, speed: 1.95 step/s
+epoch: 9 / 50, steps: 900 / 2809, lr: 0.000026, loss: 0.000131, loss_predicate: 0.035685, speed: 1.98 step/s
+epoch: 9 / 50, steps: 1000 / 2809, lr: 0.000026, loss: 0.000095, loss_predicate: 0.025690, speed: 1.97 step/s
+epoch: 9 / 50, steps: 1100 / 2809, lr: 0.000026, loss: 0.000180, loss_predicate: 0.043656, speed: 1.95 step/s
+epoch: 9 / 50, steps: 1200 / 2809, lr: 0.000026, loss: 0.000106, loss_predicate: 0.030817, speed: 1.94 step/s
+epoch: 9 / 50, steps: 1300 / 2809, lr: 0.000026, loss: 0.000128, loss_predicate: 0.022066, speed: 1.94 step/s
+epoch: 9 / 50, steps: 1400 / 2809, lr: 0.000026, loss: 0.000105, loss_predicate: 0.019935, speed: 1.95 step/s
+epoch: 9 / 50, steps: 1500 / 2809, lr: 0.000026, loss: 0.000173, loss_predicate: 0.026448, speed: 1.95 step/s
+epoch: 9 / 50, steps: 1600 / 2809, lr: 0.000026, loss: 0.000114, loss_predicate: 0.023472, speed: 1.95 step/s
+epoch: 9 / 50, steps: 1700 / 2809, lr: 0.000026, loss: 0.000109, loss_predicate: 0.026817, speed: 1.96 step/s
+epoch: 9 / 50, steps: 1800 / 2809, lr: 0.000026, loss: 0.000087, loss_predicate: 0.031420, speed: 1.96 step/s
+epoch: 9 / 50, steps: 1900 / 2809, lr: 0.000026, loss: 0.000144, loss_predicate: 0.040794, speed: 1.97 step/s
+epoch: 9 / 50, steps: 2000 / 2809, lr: 0.000026, loss: 0.000119, loss_predicate: 0.033331, speed: 1.96 step/s
+epoch: 9 / 50, steps: 2100 / 2809, lr: 0.000026, loss: 0.000157, loss_predicate: 0.034875, speed: 1.97 step/s
+epoch: 9 / 50, steps: 2200 / 2809, lr: 0.000026, loss: 0.000157, loss_predicate: 0.026291, speed: 1.97 step/s
+epoch: 9 / 50, steps: 2300 / 2809, lr: 0.000026, loss: 0.000137, loss_predicate: 0.027546, speed: 1.98 step/s
+epoch: 9 / 50, steps: 2400 / 2809, lr: 0.000026, loss: 0.000112, loss_predicate: 0.034278, speed: 1.98 step/s
+epoch: 9 / 50, steps: 2500 / 2809, lr: 0.000026, loss: 0.000162, loss_predicate: 0.040716, speed: 1.98 step/s
+epoch: 9 / 50, steps: 2600 / 2809, lr: 0.000026, loss: 0.000161, loss_predicate: 0.045841, speed: 1.97 step/s
+epoch: 9 / 50, steps: 2700 / 2809, lr: 0.000026, loss: 0.000136, loss_predicate: 0.037934, speed: 1.96 step/s
+epoch: 9 / 50, steps: 2800 / 2809, lr: 0.000026, loss: 0.000118, loss_predicate: 0.029846, speed: 1.97 step/s
+
+=====start evaluating of 10 epochs=====
+eval loss: 0.002198
+precision: 85.15	 recall: 88.32	 f1: 86.71	
+precision_predicate: 90.62	 recall_predicate: 88.02	 f1_predicate: 89.30	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 46 sec
+
+=====start training of 10 epochs=====
+epoch: 10 / 50, steps: 100 / 2809, lr: 0.000026, loss: 0.000120, loss_predicate: 0.019482, speed: 1.88 step/s
+epoch: 10 / 50, steps: 200 / 2809, lr: 0.000025, loss: 0.000082, loss_predicate: 0.024193, speed: 1.99 step/s
+epoch: 10 / 50, steps: 300 / 2809, lr: 0.000025, loss: 0.000122, loss_predicate: 0.017163, speed: 1.98 step/s
+epoch: 10 / 50, steps: 400 / 2809, lr: 0.000025, loss: 0.000092, loss_predicate: 0.017119, speed: 1.96 step/s
+epoch: 10 / 50, steps: 500 / 2809, lr: 0.000025, loss: 0.000126, loss_predicate: 0.034610, speed: 1.97 step/s
+epoch: 10 / 50, steps: 600 / 2809, lr: 0.000025, loss: 0.000080, loss_predicate: 0.021470, speed: 1.97 step/s
+epoch: 10 / 50, steps: 700 / 2809, lr: 0.000025, loss: 0.000132, loss_predicate: 0.038740, speed: 1.96 step/s
+epoch: 10 / 50, steps: 800 / 2809, lr: 0.000025, loss: 0.000107, loss_predicate: 0.036542, speed: 1.96 step/s
+epoch: 10 / 50, steps: 900 / 2809, lr: 0.000025, loss: 0.000130, loss_predicate: 0.034128, speed: 1.97 step/s
+epoch: 10 / 50, steps: 1000 / 2809, lr: 0.000025, loss: 0.000101, loss_predicate: 0.024003, speed: 1.97 step/s
+epoch: 10 / 50, steps: 1100 / 2809, lr: 0.000025, loss: 0.000154, loss_predicate: 0.025394, speed: 1.97 step/s
+epoch: 10 / 50, steps: 1200 / 2809, lr: 0.000025, loss: 0.000161, loss_predicate: 0.019077, speed: 1.97 step/s
+epoch: 10 / 50, steps: 1300 / 2809, lr: 0.000025, loss: 0.000124, loss_predicate: 0.031561, speed: 1.95 step/s
+epoch: 10 / 50, steps: 1400 / 2809, lr: 0.000025, loss: 0.000094, loss_predicate: 0.027778, speed: 1.94 step/s
+epoch: 10 / 50, steps: 1500 / 2809, lr: 0.000025, loss: 0.000103, loss_predicate: 0.024000, speed: 1.96 step/s
+epoch: 10 / 50, steps: 1600 / 2809, lr: 0.000025, loss: 0.000112, loss_predicate: 0.027550, speed: 1.96 step/s
+epoch: 10 / 50, steps: 1700 / 2809, lr: 0.000025, loss: 0.000086, loss_predicate: 0.025465, speed: 1.95 step/s
+epoch: 10 / 50, steps: 1800 / 2809, lr: 0.000025, loss: 0.000099, loss_predicate: 0.018873, speed: 1.95 step/s
+epoch: 10 / 50, steps: 1900 / 2809, lr: 0.000025, loss: 0.000109, loss_predicate: 0.029027, speed: 1.94 step/s
+epoch: 10 / 50, steps: 2000 / 2809, lr: 0.000025, loss: 0.000091, loss_predicate: 0.019556, speed: 1.96 step/s
+epoch: 10 / 50, steps: 2100 / 2809, lr: 0.000025, loss: 0.000102, loss_predicate: 0.029579, speed: 1.96 step/s
+epoch: 10 / 50, steps: 2200 / 2809, lr: 0.000025, loss: 0.000098, loss_predicate: 0.028761, speed: 1.97 step/s
+epoch: 10 / 50, steps: 2300 / 2809, lr: 0.000025, loss: 0.000112, loss_predicate: 0.026574, speed: 1.97 step/s
+epoch: 10 / 50, steps: 2400 / 2809, lr: 0.000025, loss: 0.000133, loss_predicate: 0.035081, speed: 1.97 step/s
+epoch: 10 / 50, steps: 2500 / 2809, lr: 0.000025, loss: 0.000126, loss_predicate: 0.029155, speed: 1.97 step/s
+epoch: 10 / 50, steps: 2600 / 2809, lr: 0.000025, loss: 0.000135, loss_predicate: 0.036665, speed: 1.96 step/s
+epoch: 10 / 50, steps: 2700 / 2809, lr: 0.000025, loss: 0.000106, loss_predicate: 0.017318, speed: 1.97 step/s
+epoch: 10 / 50, steps: 2800 / 2809, lr: 0.000025, loss: 0.000167, loss_predicate: 0.028550, speed: 1.97 step/s
+
+=====start evaluating of 11 epochs=====
+eval loss: 0.002128
+precision: 84.90	 recall: 88.27	 f1: 86.55	
+precision_predicate: 90.94	 recall_predicate: 87.84	 f1_predicate: 89.36	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 47 sec
+
+=====start training of 11 epochs=====
+epoch: 11 / 50, steps: 100 / 2809, lr: 0.000025, loss: 0.000097, loss_predicate: 0.018897, speed: 1.89 step/s
+epoch: 11 / 50, steps: 200 / 2809, lr: 0.000025, loss: 0.000104, loss_predicate: 0.019842, speed: 1.99 step/s
+epoch: 11 / 50, steps: 300 / 2809, lr: 0.000025, loss: 0.000127, loss_predicate: 0.025843, speed: 1.97 step/s
+epoch: 11 / 50, steps: 400 / 2809, lr: 0.000025, loss: 0.000111, loss_predicate: 0.032520, speed: 1.96 step/s
+epoch: 11 / 50, steps: 500 / 2809, lr: 0.000025, loss: 0.000098, loss_predicate: 0.025280, speed: 1.97 step/s
+epoch: 11 / 50, steps: 600 / 2809, lr: 0.000025, loss: 0.000117, loss_predicate: 0.016147, speed: 1.97 step/s
+epoch: 11 / 50, steps: 700 / 2809, lr: 0.000025, loss: 0.000095, loss_predicate: 0.020984, speed: 1.97 step/s
+epoch: 11 / 50, steps: 800 / 2809, lr: 0.000025, loss: 0.000093, loss_predicate: 0.025769, speed: 1.96 step/s
+epoch: 11 / 50, steps: 900 / 2809, lr: 0.000025, loss: 0.000088, loss_predicate: 0.023483, speed: 1.97 step/s
+epoch: 11 / 50, steps: 1000 / 2809, lr: 0.000025, loss: 0.000095, loss_predicate: 0.023975, speed: 1.97 step/s
+epoch: 11 / 50, steps: 1100 / 2809, lr: 0.000025, loss: 0.000150, loss_predicate: 0.033855, speed: 1.96 step/s
+epoch: 11 / 50, steps: 1200 / 2809, lr: 0.000025, loss: 0.000105, loss_predicate: 0.032088, speed: 1.97 step/s
+epoch: 11 / 50, steps: 1300 / 2809, lr: 0.000025, loss: 0.000095, loss_predicate: 0.015804, speed: 1.97 step/s
+epoch: 11 / 50, steps: 1400 / 2809, lr: 0.000025, loss: 0.000113, loss_predicate: 0.025120, speed: 1.96 step/s
+epoch: 11 / 50, steps: 1500 / 2809, lr: 0.000025, loss: 0.000107, loss_predicate: 0.026191, speed: 1.94 step/s
+epoch: 11 / 50, steps: 1600 / 2809, lr: 0.000025, loss: 0.000101, loss_predicate: 0.024686, speed: 1.95 step/s
+epoch: 11 / 50, steps: 1700 / 2809, lr: 0.000025, loss: 0.000100, loss_predicate: 0.016596, speed: 1.95 step/s
+epoch: 11 / 50, steps: 1800 / 2809, lr: 0.000024, loss: 0.000108, loss_predicate: 0.017160, speed: 1.94 step/s
+epoch: 11 / 50, steps: 1900 / 2809, lr: 0.000024, loss: 0.000101, loss_predicate: 0.015064, speed: 1.96 step/s
+epoch: 11 / 50, steps: 2000 / 2809, lr: 0.000024, loss: 0.000099, loss_predicate: 0.017946, speed: 1.96 step/s
+epoch: 11 / 50, steps: 2100 / 2809, lr: 0.000024, loss: 0.000094, loss_predicate: 0.019920, speed: 1.96 step/s
+epoch: 11 / 50, steps: 2200 / 2809, lr: 0.000024, loss: 0.000140, loss_predicate: 0.029461, speed: 1.96 step/s
+epoch: 11 / 50, steps: 2300 / 2809, lr: 0.000024, loss: 0.000133, loss_predicate: 0.027722, speed: 1.95 step/s
+epoch: 11 / 50, steps: 2400 / 2809, lr: 0.000024, loss: 0.000117, loss_predicate: 0.024352, speed: 1.96 step/s
+epoch: 11 / 50, steps: 2500 / 2809, lr: 0.000024, loss: 0.000115, loss_predicate: 0.032572, speed: 1.97 step/s
+epoch: 11 / 50, steps: 2600 / 2809, lr: 0.000024, loss: 0.000106, loss_predicate: 0.032848, speed: 1.96 step/s
+epoch: 11 / 50, steps: 2700 / 2809, lr: 0.000024, loss: 0.000146, loss_predicate: 0.028916, speed: 1.96 step/s
+epoch: 11 / 50, steps: 2800 / 2809, lr: 0.000024, loss: 0.000143, loss_predicate: 0.033513, speed: 1.96 step/s
+
+=====start evaluating of 12 epochs=====
+eval loss: 0.002049
+precision: 85.85	 recall: 88.30	 f1: 87.06	
+precision_predicate: 90.94	 recall_predicate: 87.84	 f1_predicate: 89.36	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 48 sec
+
+=====start training of 12 epochs=====
+epoch: 12 / 50, steps: 100 / 2809, lr: 0.000024, loss: 0.000161, loss_predicate: 0.029507, speed: 1.88 step/s
+epoch: 12 / 50, steps: 200 / 2809, lr: 0.000024, loss: 0.000075, loss_predicate: 0.018509, speed: 2.00 step/s
+epoch: 12 / 50, steps: 300 / 2809, lr: 0.000024, loss: 0.000110, loss_predicate: 0.021810, speed: 1.97 step/s
+epoch: 12 / 50, steps: 400 / 2809, lr: 0.000024, loss: 0.000114, loss_predicate: 0.014649, speed: 1.97 step/s
+epoch: 12 / 50, steps: 500 / 2809, lr: 0.000024, loss: 0.000096, loss_predicate: 0.031852, speed: 1.96 step/s
+epoch: 12 / 50, steps: 600 / 2809, lr: 0.000024, loss: 0.000105, loss_predicate: 0.017576, speed: 1.97 step/s
+epoch: 12 / 50, steps: 700 / 2809, lr: 0.000024, loss: 0.000124, loss_predicate: 0.027399, speed: 1.96 step/s
+epoch: 12 / 50, steps: 800 / 2809, lr: 0.000024, loss: 0.000098, loss_predicate: 0.032448, speed: 1.96 step/s
+epoch: 12 / 50, steps: 900 / 2809, lr: 0.000024, loss: 0.000088, loss_predicate: 0.019792, speed: 1.96 step/s
+epoch: 12 / 50, steps: 1000 / 2809, lr: 0.000024, loss: 0.000065, loss_predicate: 0.016656, speed: 1.96 step/s
+epoch: 12 / 50, steps: 1100 / 2809, lr: 0.000024, loss: 0.000077, loss_predicate: 0.017147, speed: 1.96 step/s
+epoch: 12 / 50, steps: 1200 / 2809, lr: 0.000024, loss: 0.000100, loss_predicate: 0.019019, speed: 1.97 step/s
+epoch: 12 / 50, steps: 1300 / 2809, lr: 0.000024, loss: 0.000075, loss_predicate: 0.014559, speed: 1.98 step/s
+epoch: 12 / 50, steps: 1400 / 2809, lr: 0.000024, loss: 0.000125, loss_predicate: 0.033229, speed: 1.97 step/s
+epoch: 12 / 50, steps: 1500 / 2809, lr: 0.000024, loss: 0.000060, loss_predicate: 0.012676, speed: 1.97 step/s
+epoch: 12 / 50, steps: 1600 / 2809, lr: 0.000024, loss: 0.000085, loss_predicate: 0.017561, speed: 1.96 step/s
+epoch: 12 / 50, steps: 1700 / 2809, lr: 0.000024, loss: 0.000097, loss_predicate: 0.021927, speed: 1.94 step/s
+epoch: 12 / 50, steps: 1800 / 2809, lr: 0.000024, loss: 0.000130, loss_predicate: 0.023434, speed: 1.95 step/s
+epoch: 12 / 50, steps: 1900 / 2809, lr: 0.000024, loss: 0.000079, loss_predicate: 0.022923, speed: 1.93 step/s
+epoch: 12 / 50, steps: 2000 / 2809, lr: 0.000024, loss: 0.000113, loss_predicate: 0.029608, speed: 1.94 step/s
+epoch: 12 / 50, steps: 2100 / 2809, lr: 0.000024, loss: 0.000077, loss_predicate: 0.016753, speed: 1.94 step/s
+epoch: 12 / 50, steps: 2200 / 2809, lr: 0.000024, loss: 0.000080, loss_predicate: 0.024304, speed: 1.95 step/s
+epoch: 12 / 50, steps: 2300 / 2809, lr: 0.000024, loss: 0.000095, loss_predicate: 0.031043, speed: 1.96 step/s
+epoch: 12 / 50, steps: 2400 / 2809, lr: 0.000024, loss: 0.000110, loss_predicate: 0.022729, speed: 1.96 step/s
+epoch: 12 / 50, steps: 2500 / 2809, lr: 0.000024, loss: 0.000117, loss_predicate: 0.015923, speed: 1.95 step/s
+epoch: 12 / 50, steps: 2600 / 2809, lr: 0.000024, loss: 0.000114, loss_predicate: 0.036650, speed: 1.96 step/s
+epoch: 12 / 50, steps: 2700 / 2809, lr: 0.000024, loss: 0.000085, loss_predicate: 0.016194, speed: 1.96 step/s
+epoch: 12 / 50, steps: 2800 / 2809, lr: 0.000024, loss: 0.000083, loss_predicate: 0.024034, speed: 1.97 step/s
+
+=====start evaluating of 13 epochs=====
+eval loss: 0.002342
+precision: 85.72	 recall: 88.69	 f1: 87.18	
+precision_predicate: 90.15	 recall_predicate: 88.62	 f1_predicate: 89.38	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 50 sec
+
+=====start training of 13 epochs=====
+epoch: 13 / 50, steps: 100 / 2809, lr: 0.000024, loss: 0.000102, loss_predicate: 0.023151, speed: 1.90 step/s
+epoch: 13 / 50, steps: 200 / 2809, lr: 0.000024, loss: 0.000109, loss_predicate: 0.025204, speed: 1.98 step/s
+epoch: 13 / 50, steps: 300 / 2809, lr: 0.000024, loss: 0.000110, loss_predicate: 0.018722, speed: 1.99 step/s
+epoch: 13 / 50, steps: 400 / 2809, lr: 0.000024, loss: 0.000081, loss_predicate: 0.019981, speed: 1.97 step/s
+epoch: 13 / 50, steps: 500 / 2809, lr: 0.000024, loss: 0.000071, loss_predicate: 0.020347, speed: 1.98 step/s
+epoch: 13 / 50, steps: 600 / 2809, lr: 0.000023, loss: 0.000089, loss_predicate: 0.027203, speed: 1.97 step/s
+epoch: 13 / 50, steps: 700 / 2809, lr: 0.000023, loss: 0.000116, loss_predicate: 0.027498, speed: 1.97 step/s
+epoch: 13 / 50, steps: 800 / 2809, lr: 0.000023, loss: 0.000084, loss_predicate: 0.021224, speed: 1.97 step/s
+epoch: 13 / 50, steps: 900 / 2809, lr: 0.000023, loss: 0.000069, loss_predicate: 0.015211, speed: 1.96 step/s
+epoch: 13 / 50, steps: 1000 / 2809, lr: 0.000023, loss: 0.000082, loss_predicate: 0.028413, speed: 1.97 step/s
+epoch: 13 / 50, steps: 1100 / 2809, lr: 0.000023, loss: 0.000133, loss_predicate: 0.031609, speed: 1.97 step/s
+epoch: 13 / 50, steps: 1200 / 2809, lr: 0.000023, loss: 0.000147, loss_predicate: 0.042411, speed: 1.96 step/s
+epoch: 13 / 50, steps: 1300 / 2809, lr: 0.000023, loss: 0.000131, loss_predicate: 0.039860, speed: 1.97 step/s
+epoch: 13 / 50, steps: 1400 / 2809, lr: 0.000023, loss: 0.000111, loss_predicate: 0.033602, speed: 1.96 step/s
+epoch: 13 / 50, steps: 1500 / 2809, lr: 0.000023, loss: 0.000091, loss_predicate: 0.021063, speed: 1.97 step/s
+epoch: 13 / 50, steps: 1600 / 2809, lr: 0.000023, loss: 0.000087, loss_predicate: 0.030848, speed: 1.96 step/s
+epoch: 13 / 50, steps: 1700 / 2809, lr: 0.000023, loss: 0.000111, loss_predicate: 0.024625, speed: 1.96 step/s
+epoch: 13 / 50, steps: 1800 / 2809, lr: 0.000023, loss: 0.000073, loss_predicate: 0.016606, speed: 1.95 step/s
+epoch: 13 / 50, steps: 1900 / 2809, lr: 0.000023, loss: 0.000094, loss_predicate: 0.019508, speed: 1.94 step/s
+epoch: 13 / 50, steps: 2000 / 2809, lr: 0.000023, loss: 0.000125, loss_predicate: 0.030909, speed: 1.95 step/s
+epoch: 13 / 50, steps: 2100 / 2809, lr: 0.000023, loss: 0.000101, loss_predicate: 0.020627, speed: 1.94 step/s
+epoch: 13 / 50, steps: 2200 / 2809, lr: 0.000023, loss: 0.000143, loss_predicate: 0.022970, speed: 1.94 step/s
+epoch: 13 / 50, steps: 2300 / 2809, lr: 0.000023, loss: 0.000155, loss_predicate: 0.037800, speed: 1.96 step/s
+epoch: 13 / 50, steps: 2400 / 2809, lr: 0.000023, loss: 0.000132, loss_predicate: 0.037148, speed: 1.96 step/s
+epoch: 13 / 50, steps: 2500 / 2809, lr: 0.000023, loss: 0.000173, loss_predicate: 0.031989, speed: 1.94 step/s
+epoch: 13 / 50, steps: 2600 / 2809, lr: 0.000023, loss: 0.000106, loss_predicate: 0.019571, speed: 1.97 step/s
+epoch: 13 / 50, steps: 2700 / 2809, lr: 0.000023, loss: 0.000093, loss_predicate: 0.018497, speed: 1.97 step/s
+epoch: 13 / 50, steps: 2800 / 2809, lr: 0.000023, loss: 0.000116, loss_predicate: 0.030733, speed: 1.97 step/s
+
+=====start evaluating of 14 epochs=====
+eval loss: 0.002142
+precision: 84.24	 recall: 89.00	 f1: 86.55	
+precision_predicate: 91.18	 recall_predicate: 88.57	 f1_predicate: 89.86	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+Saving model checkpoint to ./log/0421/transfromer_2class_bert/PRE/model_best
+epoch time footprint: 0 hour 25 min 48 sec
+
+=====start training of 14 epochs=====
+epoch: 14 / 50, steps: 100 / 2809, lr: 0.000023, loss: 0.000092, loss_predicate: 0.028962, speed: 1.89 step/s
+epoch: 14 / 50, steps: 200 / 2809, lr: 0.000023, loss: 0.000084, loss_predicate: 0.015095, speed: 1.99 step/s
+epoch: 14 / 50, steps: 300 / 2809, lr: 0.000023, loss: 0.000088, loss_predicate: 0.025211, speed: 1.97 step/s
+epoch: 14 / 50, steps: 400 / 2809, lr: 0.000023, loss: 0.000090, loss_predicate: 0.016871, speed: 1.98 step/s
+epoch: 14 / 50, steps: 500 / 2809, lr: 0.000023, loss: 0.000089, loss_predicate: 0.016541, speed: 1.98 step/s
+epoch: 14 / 50, steps: 600 / 2809, lr: 0.000023, loss: 0.000070, loss_predicate: 0.010879, speed: 1.98 step/s
+epoch: 14 / 50, steps: 700 / 2809, lr: 0.000023, loss: 0.000063, loss_predicate: 0.012112, speed: 1.97 step/s
+epoch: 14 / 50, steps: 800 / 2809, lr: 0.000023, loss: 0.000087, loss_predicate: 0.017325, speed: 1.96 step/s
+epoch: 14 / 50, steps: 900 / 2809, lr: 0.000023, loss: 0.000076, loss_predicate: 0.015912, speed: 1.97 step/s
+epoch: 14 / 50, steps: 1000 / 2809, lr: 0.000023, loss: 0.000077, loss_predicate: 0.024462, speed: 1.96 step/s
+epoch: 14 / 50, steps: 1100 / 2809, lr: 0.000023, loss: 0.000055, loss_predicate: 0.012515, speed: 1.96 step/s
+epoch: 14 / 50, steps: 1200 / 2809, lr: 0.000023, loss: 0.000090, loss_predicate: 0.011457, speed: 1.96 step/s
+epoch: 14 / 50, steps: 1300 / 2809, lr: 0.000023, loss: 0.000091, loss_predicate: 0.030548, speed: 1.97 step/s
+epoch: 14 / 50, steps: 1400 / 2809, lr: 0.000023, loss: 0.000100, loss_predicate: 0.024975, speed: 1.97 step/s
+epoch: 14 / 50, steps: 1500 / 2809, lr: 0.000023, loss: 0.000118, loss_predicate: 0.024363, speed: 1.96 step/s
+epoch: 14 / 50, steps: 1600 / 2809, lr: 0.000023, loss: 0.000134, loss_predicate: 0.026522, speed: 1.96 step/s
+epoch: 14 / 50, steps: 1700 / 2809, lr: 0.000023, loss: 0.000149, loss_predicate: 0.028544, speed: 1.96 step/s
+epoch: 14 / 50, steps: 1800 / 2809, lr: 0.000023, loss: 0.000125, loss_predicate: 0.026245, speed: 1.97 step/s
+epoch: 14 / 50, steps: 1900 / 2809, lr: 0.000023, loss: 0.000078, loss_predicate: 0.017487, speed: 1.97 step/s
+epoch: 14 / 50, steps: 2000 / 2809, lr: 0.000023, loss: 0.000086, loss_predicate: 0.016755, speed: 1.96 step/s
+epoch: 14 / 50, steps: 2100 / 2809, lr: 0.000023, loss: 0.000117, loss_predicate: 0.031773, speed: 1.95 step/s
+epoch: 14 / 50, steps: 2200 / 2809, lr: 0.000022, loss: 0.000091, loss_predicate: 0.024051, speed: 1.95 step/s
+epoch: 14 / 50, steps: 2300 / 2809, lr: 0.000022, loss: 0.000115, loss_predicate: 0.029002, speed: 1.95 step/s
+epoch: 14 / 50, steps: 2400 / 2809, lr: 0.000022, loss: 0.000128, loss_predicate: 0.024606, speed: 1.96 step/s
+epoch: 14 / 50, steps: 2500 / 2809, lr: 0.000022, loss: 0.000084, loss_predicate: 0.025289, speed: 1.95 step/s
+epoch: 14 / 50, steps: 2600 / 2809, lr: 0.000022, loss: 0.000098, loss_predicate: 0.033791, speed: 1.96 step/s
+epoch: 14 / 50, steps: 2700 / 2809, lr: 0.000022, loss: 0.000075, loss_predicate: 0.011494, speed: 1.95 step/s
+epoch: 14 / 50, steps: 2800 / 2809, lr: 0.000022, loss: 0.000059, loss_predicate: 0.006966, speed: 1.96 step/s
+
+=====start evaluating of 15 epochs=====
+eval loss: 0.002211
+precision: 83.70	 recall: 89.46	 f1: 86.48	
+precision_predicate: 89.84	 recall_predicate: 89.29	 f1_predicate: 89.56	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 46 sec
+
+=====start training of 15 epochs=====
+epoch: 15 / 50, steps: 100 / 2809, lr: 0.000022, loss: 0.000057, loss_predicate: 0.011543, speed: 1.88 step/s
+epoch: 15 / 50, steps: 200 / 2809, lr: 0.000022, loss: 0.000077, loss_predicate: 0.018244, speed: 1.99 step/s
+epoch: 15 / 50, steps: 300 / 2809, lr: 0.000022, loss: 0.000099, loss_predicate: 0.025569, speed: 1.98 step/s
+epoch: 15 / 50, steps: 400 / 2809, lr: 0.000022, loss: 0.000071, loss_predicate: 0.015550, speed: 1.98 step/s
+epoch: 15 / 50, steps: 500 / 2809, lr: 0.000022, loss: 0.000053, loss_predicate: 0.014255, speed: 1.97 step/s
+epoch: 15 / 50, steps: 600 / 2809, lr: 0.000022, loss: 0.000101, loss_predicate: 0.028330, speed: 1.96 step/s
+epoch: 15 / 50, steps: 700 / 2809, lr: 0.000022, loss: 0.000099, loss_predicate: 0.024651, speed: 1.96 step/s
+epoch: 15 / 50, steps: 800 / 2809, lr: 0.000022, loss: 0.000098, loss_predicate: 0.029136, speed: 1.96 step/s
+epoch: 15 / 50, steps: 900 / 2809, lr: 0.000022, loss: 0.000080, loss_predicate: 0.016357, speed: 1.97 step/s
+epoch: 15 / 50, steps: 1000 / 2809, lr: 0.000022, loss: 0.000095, loss_predicate: 0.017182, speed: 1.97 step/s
+epoch: 15 / 50, steps: 1100 / 2809, lr: 0.000022, loss: 0.000079, loss_predicate: 0.019267, speed: 1.96 step/s
+epoch: 15 / 50, steps: 1200 / 2809, lr: 0.000022, loss: 0.000083, loss_predicate: 0.022841, speed: 1.97 step/s
+epoch: 15 / 50, steps: 1300 / 2809, lr: 0.000022, loss: 0.000078, loss_predicate: 0.015751, speed: 1.96 step/s
+epoch: 15 / 50, steps: 1400 / 2809, lr: 0.000022, loss: 0.000089, loss_predicate: 0.028088, speed: 1.97 step/s
+epoch: 15 / 50, steps: 1500 / 2809, lr: 0.000022, loss: 0.000075, loss_predicate: 0.016379, speed: 1.97 step/s
+epoch: 15 / 50, steps: 1600 / 2809, lr: 0.000022, loss: 0.000072, loss_predicate: 0.014330, speed: 1.97 step/s
+epoch: 15 / 50, steps: 1700 / 2809, lr: 0.000022, loss: 0.000056, loss_predicate: 0.018165, speed: 1.96 step/s
+epoch: 15 / 50, steps: 1800 / 2809, lr: 0.000022, loss: 0.000065, loss_predicate: 0.018814, speed: 1.96 step/s
+epoch: 15 / 50, steps: 1900 / 2809, lr: 0.000022, loss: 0.000090, loss_predicate: 0.016679, speed: 1.96 step/s
+epoch: 15 / 50, steps: 2000 / 2809, lr: 0.000022, loss: 0.000067, loss_predicate: 0.018199, speed: 1.96 step/s
+epoch: 15 / 50, steps: 2100 / 2809, lr: 0.000022, loss: 0.000074, loss_predicate: 0.014515, speed: 1.97 step/s
+epoch: 15 / 50, steps: 2200 / 2809, lr: 0.000022, loss: 0.000080, loss_predicate: 0.013342, speed: 1.95 step/s
+epoch: 15 / 50, steps: 2300 / 2809, lr: 0.000022, loss: 0.000078, loss_predicate: 0.018447, speed: 1.94 step/s
+epoch: 15 / 50, steps: 2400 / 2809, lr: 0.000022, loss: 0.000085, loss_predicate: 0.020089, speed: 1.93 step/s
+epoch: 15 / 50, steps: 2500 / 2809, lr: 0.000022, loss: 0.000095, loss_predicate: 0.020563, speed: 1.95 step/s
+epoch: 15 / 50, steps: 2600 / 2809, lr: 0.000022, loss: 0.000183, loss_predicate: 0.034702, speed: 1.95 step/s
+epoch: 15 / 50, steps: 2700 / 2809, lr: 0.000022, loss: 0.000083, loss_predicate: 0.013982, speed: 1.94 step/s
+epoch: 15 / 50, steps: 2800 / 2809, lr: 0.000022, loss: 0.000096, loss_predicate: 0.022550, speed: 1.96 step/s
+
+=====start evaluating of 16 epochs=====
+eval loss: 0.002174
+precision: 83.93	 recall: 89.20	 f1: 86.49	
+precision_predicate: 90.34	 recall_predicate: 88.67	 f1_predicate: 89.50	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 49 sec
+
+=====start training of 16 epochs=====
+epoch: 16 / 50, steps: 100 / 2809, lr: 0.000022, loss: 0.000054, loss_predicate: 0.017141, speed: 1.89 step/s
+epoch: 16 / 50, steps: 200 / 2809, lr: 0.000022, loss: 0.000059, loss_predicate: 0.011056, speed: 1.99 step/s
+epoch: 16 / 50, steps: 300 / 2809, lr: 0.000022, loss: 0.000067, loss_predicate: 0.022588, speed: 1.97 step/s
+epoch: 16 / 50, steps: 400 / 2809, lr: 0.000022, loss: 0.000140, loss_predicate: 0.020384, speed: 1.96 step/s
+epoch: 16 / 50, steps: 500 / 2809, lr: 0.000022, loss: 0.000127, loss_predicate: 0.028049, speed: 1.97 step/s
+epoch: 16 / 50, steps: 600 / 2809, lr: 0.000022, loss: 0.000083, loss_predicate: 0.022328, speed: 1.97 step/s
+epoch: 16 / 50, steps: 700 / 2809, lr: 0.000022, loss: 0.000090, loss_predicate: 0.014549, speed: 1.96 step/s
+epoch: 16 / 50, steps: 800 / 2809, lr: 0.000022, loss: 0.000082, loss_predicate: 0.021877, speed: 1.97 step/s
+epoch: 16 / 50, steps: 900 / 2809, lr: 0.000021, loss: 0.000092, loss_predicate: 0.019078, speed: 1.98 step/s
+epoch: 16 / 50, steps: 1000 / 2809, lr: 0.000021, loss: 0.000156, loss_predicate: 0.030288, speed: 1.97 step/s
+epoch: 16 / 50, steps: 1100 / 2809, lr: 0.000021, loss: 0.000057, loss_predicate: 0.009879, speed: 1.96 step/s
+epoch: 16 / 50, steps: 1200 / 2809, lr: 0.000021, loss: 0.000083, loss_predicate: 0.026784, speed: 1.97 step/s
+epoch: 16 / 50, steps: 1300 / 2809, lr: 0.000021, loss: 0.000093, loss_predicate: 0.031188, speed: 1.96 step/s
+epoch: 16 / 50, steps: 1400 / 2809, lr: 0.000021, loss: 0.000083, loss_predicate: 0.019652, speed: 1.96 step/s
+epoch: 16 / 50, steps: 1500 / 2809, lr: 0.000021, loss: 0.000062, loss_predicate: 0.011924, speed: 1.96 step/s
+epoch: 16 / 50, steps: 1600 / 2809, lr: 0.000021, loss: 0.000079, loss_predicate: 0.011117, speed: 1.97 step/s
+epoch: 16 / 50, steps: 1700 / 2809, lr: 0.000021, loss: 0.000099, loss_predicate: 0.024907, speed: 1.98 step/s
+epoch: 16 / 50, steps: 1800 / 2809, lr: 0.000021, loss: 0.000084, loss_predicate: 0.014140, speed: 1.98 step/s
+epoch: 16 / 50, steps: 1900 / 2809, lr: 0.000021, loss: 0.000081, loss_predicate: 0.017685, speed: 1.96 step/s
+epoch: 16 / 50, steps: 2000 / 2809, lr: 0.000021, loss: 0.000126, loss_predicate: 0.039381, speed: 1.96 step/s
+epoch: 16 / 50, steps: 2100 / 2809, lr: 0.000021, loss: 0.000083, loss_predicate: 0.023092, speed: 1.98 step/s
+epoch: 16 / 50, steps: 2200 / 2809, lr: 0.000021, loss: 0.000041, loss_predicate: 0.008952, speed: 1.97 step/s
+epoch: 16 / 50, steps: 2300 / 2809, lr: 0.000021, loss: 0.000083, loss_predicate: 0.019171, speed: 1.96 step/s
+epoch: 16 / 50, steps: 2400 / 2809, lr: 0.000021, loss: 0.000082, loss_predicate: 0.016451, speed: 1.95 step/s
+epoch: 16 / 50, steps: 2500 / 2809, lr: 0.000021, loss: 0.000091, loss_predicate: 0.015452, speed: 1.95 step/s
+epoch: 16 / 50, steps: 2600 / 2809, lr: 0.000021, loss: 0.000078, loss_predicate: 0.014134, speed: 1.94 step/s
+epoch: 16 / 50, steps: 2700 / 2809, lr: 0.000021, loss: 0.000159, loss_predicate: 0.019511, speed: 1.94 step/s
+epoch: 16 / 50, steps: 2800 / 2809, lr: 0.000021, loss: 0.000124, loss_predicate: 0.021900, speed: 1.94 step/s
+
+=====start evaluating of 17 epochs=====
+eval loss: 0.002109
+precision: 84.56	 recall: 89.20	 f1: 86.82	
+precision_predicate: 90.51	 recall_predicate: 88.99	 f1_predicate: 89.74	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 47 sec
+
+=====start training of 17 epochs=====
+epoch: 17 / 50, steps: 100 / 2809, lr: 0.000021, loss: 0.000069, loss_predicate: 0.014134, speed: 1.88 step/s
+epoch: 17 / 50, steps: 200 / 2809, lr: 0.000021, loss: 0.000056, loss_predicate: 0.010461, speed: 1.98 step/s
+epoch: 17 / 50, steps: 300 / 2809, lr: 0.000021, loss: 0.000069, loss_predicate: 0.014669, speed: 1.98 step/s
+epoch: 17 / 50, steps: 400 / 2809, lr: 0.000021, loss: 0.000071, loss_predicate: 0.017693, speed: 1.95 step/s
+epoch: 17 / 50, steps: 500 / 2809, lr: 0.000021, loss: 0.000075, loss_predicate: 0.019081, speed: 1.97 step/s
+epoch: 17 / 50, steps: 600 / 2809, lr: 0.000021, loss: 0.000055, loss_predicate: 0.014339, speed: 1.97 step/s
+epoch: 17 / 50, steps: 700 / 2809, lr: 0.000021, loss: 0.000087, loss_predicate: 0.022905, speed: 1.97 step/s
+epoch: 17 / 50, steps: 800 / 2809, lr: 0.000021, loss: 0.000130, loss_predicate: 0.029990, speed: 1.97 step/s
+epoch: 17 / 50, steps: 900 / 2809, lr: 0.000021, loss: 0.000084, loss_predicate: 0.023231, speed: 1.96 step/s
+epoch: 17 / 50, steps: 1000 / 2809, lr: 0.000021, loss: 0.000070, loss_predicate: 0.016225, speed: 1.96 step/s
+epoch: 17 / 50, steps: 1100 / 2809, lr: 0.000021, loss: 0.000068, loss_predicate: 0.015532, speed: 1.94 step/s
+epoch: 17 / 50, steps: 1200 / 2809, lr: 0.000021, loss: 0.000072, loss_predicate: 0.012371, speed: 1.96 step/s
+epoch: 17 / 50, steps: 1300 / 2809, lr: 0.000021, loss: 0.000060, loss_predicate: 0.014428, speed: 1.97 step/s
+epoch: 17 / 50, steps: 1400 / 2809, lr: 0.000021, loss: 0.000073, loss_predicate: 0.009845, speed: 1.95 step/s
+epoch: 17 / 50, steps: 1500 / 2809, lr: 0.000021, loss: 0.000064, loss_predicate: 0.014916, speed: 1.96 step/s
+epoch: 17 / 50, steps: 1600 / 2809, lr: 0.000021, loss: 0.000086, loss_predicate: 0.017270, speed: 1.96 step/s
+epoch: 17 / 50, steps: 1700 / 2809, lr: 0.000021, loss: 0.000070, loss_predicate: 0.014026, speed: 1.96 step/s
+epoch: 17 / 50, steps: 1800 / 2809, lr: 0.000021, loss: 0.000090, loss_predicate: 0.022031, speed: 1.96 step/s
+epoch: 17 / 50, steps: 1900 / 2809, lr: 0.000021, loss: 0.000084, loss_predicate: 0.014967, speed: 1.96 step/s
+epoch: 17 / 50, steps: 2000 / 2809, lr: 0.000021, loss: 0.000063, loss_predicate: 0.008432, speed: 1.97 step/s
+epoch: 17 / 50, steps: 2100 / 2809, lr: 0.000021, loss: 0.000085, loss_predicate: 0.014641, speed: 1.96 step/s
+epoch: 17 / 50, steps: 2200 / 2809, lr: 0.000021, loss: 0.000083, loss_predicate: 0.029719, speed: 1.95 step/s
+epoch: 17 / 50, steps: 2300 / 2809, lr: 0.000021, loss: 0.000067, loss_predicate: 0.017885, speed: 1.95 step/s
+epoch: 17 / 50, steps: 2400 / 2809, lr: 0.000021, loss: 0.000105, loss_predicate: 0.024754, speed: 1.96 step/s
+epoch: 17 / 50, steps: 2500 / 2809, lr: 0.000020, loss: 0.000084, loss_predicate: 0.022869, speed: 1.97 step/s
+epoch: 17 / 50, steps: 2600 / 2809, lr: 0.000020, loss: 0.000080, loss_predicate: 0.024217, speed: 1.95 step/s
+epoch: 17 / 50, steps: 2700 / 2809, lr: 0.000020, loss: 0.000111, loss_predicate: 0.020219, speed: 1.94 step/s
+epoch: 17 / 50, steps: 2800 / 2809, lr: 0.000020, loss: 0.000120, loss_predicate: 0.023633, speed: 1.93 step/s
+
+=====start evaluating of 18 epochs=====
+eval loss: 0.002144
+precision: 83.24	 recall: 89.30	 f1: 86.17	
+precision_predicate: 89.85	 recall_predicate: 88.73	 f1_predicate: 89.28	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 55 sec
+
+=====start training of 18 epochs=====
+epoch: 18 / 50, steps: 100 / 2809, lr: 0.000020, loss: 0.000064, loss_predicate: 0.015772, speed: 1.87 step/s
+epoch: 18 / 50, steps: 200 / 2809, lr: 0.000020, loss: 0.000076, loss_predicate: 0.012583, speed: 1.97 step/s
+epoch: 18 / 50, steps: 300 / 2809, lr: 0.000020, loss: 0.000086, loss_predicate: 0.013503, speed: 1.98 step/s
+epoch: 18 / 50, steps: 400 / 2809, lr: 0.000020, loss: 0.000054, loss_predicate: 0.013154, speed: 1.98 step/s
+epoch: 18 / 50, steps: 500 / 2809, lr: 0.000020, loss: 0.000052, loss_predicate: 0.013010, speed: 1.99 step/s
+epoch: 18 / 50, steps: 600 / 2809, lr: 0.000020, loss: 0.000074, loss_predicate: 0.017587, speed: 1.98 step/s
+epoch: 18 / 50, steps: 700 / 2809, lr: 0.000020, loss: 0.000041, loss_predicate: 0.013131, speed: 1.97 step/s
+epoch: 18 / 50, steps: 800 / 2809, lr: 0.000020, loss: 0.000065, loss_predicate: 0.010291, speed: 1.97 step/s
+epoch: 18 / 50, steps: 900 / 2809, lr: 0.000020, loss: 0.000066, loss_predicate: 0.015032, speed: 1.95 step/s
+epoch: 18 / 50, steps: 1000 / 2809, lr: 0.000020, loss: 0.000063, loss_predicate: 0.017036, speed: 1.96 step/s
+epoch: 18 / 50, steps: 1100 / 2809, lr: 0.000020, loss: 0.000060, loss_predicate: 0.008157, speed: 1.96 step/s
+epoch: 18 / 50, steps: 1200 / 2809, lr: 0.000020, loss: 0.000059, loss_predicate: 0.020098, speed: 1.96 step/s
+epoch: 18 / 50, steps: 1300 / 2809, lr: 0.000020, loss: 0.000055, loss_predicate: 0.019666, speed: 1.96 step/s
+epoch: 18 / 50, steps: 1400 / 2809, lr: 0.000020, loss: 0.000054, loss_predicate: 0.012040, speed: 1.98 step/s
+epoch: 18 / 50, steps: 1500 / 2809, lr: 0.000020, loss: 0.000089, loss_predicate: 0.016524, speed: 1.96 step/s
+epoch: 18 / 50, steps: 1600 / 2809, lr: 0.000020, loss: 0.000087, loss_predicate: 0.018904, speed: 1.97 step/s
+epoch: 18 / 50, steps: 1700 / 2809, lr: 0.000020, loss: 0.000063, loss_predicate: 0.014930, speed: 1.96 step/s
+epoch: 18 / 50, steps: 1800 / 2809, lr: 0.000020, loss: 0.000102, loss_predicate: 0.026519, speed: 1.94 step/s
+epoch: 18 / 50, steps: 1900 / 2809, lr: 0.000020, loss: 0.000073, loss_predicate: 0.022338, speed: 1.96 step/s
+epoch: 18 / 50, steps: 2000 / 2809, lr: 0.000020, loss: 0.000067, loss_predicate: 0.017927, speed: 1.97 step/s
+epoch: 18 / 50, steps: 2100 / 2809, lr: 0.000020, loss: 0.000064, loss_predicate: 0.010524, speed: 1.96 step/s
+epoch: 18 / 50, steps: 2200 / 2809, lr: 0.000020, loss: 0.000037, loss_predicate: 0.003717, speed: 1.97 step/s
+epoch: 18 / 50, steps: 2300 / 2809, lr: 0.000020, loss: 0.000081, loss_predicate: 0.016162, speed: 1.95 step/s
+epoch: 18 / 50, steps: 2400 / 2809, lr: 0.000020, loss: 0.000065, loss_predicate: 0.021212, speed: 1.96 step/s
+epoch: 18 / 50, steps: 2500 / 2809, lr: 0.000020, loss: 0.000070, loss_predicate: 0.017179, speed: 1.99 step/s
+epoch: 18 / 50, steps: 2600 / 2809, lr: 0.000020, loss: 0.000059, loss_predicate: 0.011243, speed: 1.99 step/s
+epoch: 18 / 50, steps: 2700 / 2809, lr: 0.000020, loss: 0.000057, loss_predicate: 0.012134, speed: 1.98 step/s
+epoch: 18 / 50, steps: 2800 / 2809, lr: 0.000020, loss: 0.000057, loss_predicate: 0.008585, speed: 1.96 step/s
+
+=====start evaluating of 19 epochs=====
+eval loss: 0.002361
+precision: 84.27	 recall: 89.33	 f1: 86.72	
+precision_predicate: 89.83	 recall_predicate: 89.09	 f1_predicate: 89.46	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 48 sec
+
+=====start training of 19 epochs=====
+epoch: 19 / 50, steps: 100 / 2809, lr: 0.000020, loss: 0.000052, loss_predicate: 0.015017, speed: 1.85 step/s
+epoch: 19 / 50, steps: 200 / 2809, lr: 0.000020, loss: 0.000062, loss_predicate: 0.014948, speed: 1.97 step/s
+epoch: 19 / 50, steps: 300 / 2809, lr: 0.000020, loss: 0.000067, loss_predicate: 0.021602, speed: 1.96 step/s
+epoch: 19 / 50, steps: 400 / 2809, lr: 0.000020, loss: 0.000036, loss_predicate: 0.012558, speed: 1.95 step/s
+epoch: 19 / 50, steps: 500 / 2809, lr: 0.000020, loss: 0.000057, loss_predicate: 0.009429, speed: 1.95 step/s
+epoch: 19 / 50, steps: 600 / 2809, lr: 0.000020, loss: 0.000041, loss_predicate: 0.010872, speed: 1.95 step/s
+epoch: 19 / 50, steps: 700 / 2809, lr: 0.000020, loss: 0.000046, loss_predicate: 0.010143, speed: 1.96 step/s
+epoch: 19 / 50, steps: 800 / 2809, lr: 0.000020, loss: 0.000055, loss_predicate: 0.008266, speed: 1.97 step/s
+epoch: 19 / 50, steps: 900 / 2809, lr: 0.000020, loss: 0.000049, loss_predicate: 0.007540, speed: 1.97 step/s
+epoch: 19 / 50, steps: 1000 / 2809, lr: 0.000020, loss: 0.000047, loss_predicate: 0.012692, speed: 1.96 step/s
+epoch: 19 / 50, steps: 1100 / 2809, lr: 0.000020, loss: 0.000065, loss_predicate: 0.008860, speed: 1.96 step/s
+epoch: 19 / 50, steps: 1200 / 2809, lr: 0.000020, loss: 0.000044, loss_predicate: 0.011555, speed: 1.97 step/s
+epoch: 19 / 50, steps: 1300 / 2809, lr: 0.000019, loss: 0.000085, loss_predicate: 0.018191, speed: 1.96 step/s
+epoch: 19 / 50, steps: 1400 / 2809, lr: 0.000019, loss: 0.000095, loss_predicate: 0.018282, speed: 1.97 step/s
+epoch: 19 / 50, steps: 1500 / 2809, lr: 0.000019, loss: 0.000067, loss_predicate: 0.011015, speed: 1.98 step/s
+epoch: 19 / 50, steps: 1600 / 2809, lr: 0.000019, loss: 0.000073, loss_predicate: 0.015690, speed: 1.98 step/s
+epoch: 19 / 50, steps: 1700 / 2809, lr: 0.000019, loss: 0.000069, loss_predicate: 0.016139, speed: 1.99 step/s
+epoch: 19 / 50, steps: 1800 / 2809, lr: 0.000019, loss: 0.000060, loss_predicate: 0.015399, speed: 1.98 step/s
+epoch: 19 / 50, steps: 1900 / 2809, lr: 0.000019, loss: 0.000070, loss_predicate: 0.025039, speed: 1.97 step/s
+epoch: 19 / 50, steps: 2000 / 2809, lr: 0.000019, loss: 0.000058, loss_predicate: 0.017161, speed: 1.97 step/s
+epoch: 19 / 50, steps: 2100 / 2809, lr: 0.000019, loss: 0.000082, loss_predicate: 0.022652, speed: 1.99 step/s
+epoch: 19 / 50, steps: 2200 / 2809, lr: 0.000019, loss: 0.000059, loss_predicate: 0.008215, speed: 2.00 step/s
+epoch: 19 / 50, steps: 2300 / 2809, lr: 0.000019, loss: 0.000064, loss_predicate: 0.011072, speed: 2.00 step/s
+epoch: 19 / 50, steps: 2400 / 2809, lr: 0.000019, loss: 0.000057, loss_predicate: 0.013153, speed: 1.99 step/s
+epoch: 19 / 50, steps: 2500 / 2809, lr: 0.000019, loss: 0.000053, loss_predicate: 0.017202, speed: 2.00 step/s
+epoch: 19 / 50, steps: 2600 / 2809, lr: 0.000019, loss: 0.000120, loss_predicate: 0.027260, speed: 1.98 step/s
+epoch: 19 / 50, steps: 2700 / 2809, lr: 0.000019, loss: 0.000097, loss_predicate: 0.018027, speed: 1.98 step/s
+epoch: 19 / 50, steps: 2800 / 2809, lr: 0.000019, loss: 0.000060, loss_predicate: 0.012203, speed: 1.99 step/s
+
+=====start evaluating of 20 epochs=====
+eval loss: 0.002207
+precision: 86.25	 recall: 88.54	 f1: 87.38	
+precision_predicate: 91.12	 recall_predicate: 88.50	 f1_predicate: 89.79	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 44 sec
+
+=====start training of 20 epochs=====
+epoch: 20 / 50, steps: 100 / 2809, lr: 0.000019, loss: 0.000044, loss_predicate: 0.004185, speed: 1.89 step/s
+epoch: 20 / 50, steps: 200 / 2809, lr: 0.000019, loss: 0.000050, loss_predicate: 0.009472, speed: 1.99 step/s
+epoch: 20 / 50, steps: 300 / 2809, lr: 0.000019, loss: 0.000054, loss_predicate: 0.011011, speed: 1.98 step/s
+epoch: 20 / 50, steps: 400 / 2809, lr: 0.000019, loss: 0.000071, loss_predicate: 0.011879, speed: 1.99 step/s
+epoch: 20 / 50, steps: 500 / 2809, lr: 0.000019, loss: 0.000075, loss_predicate: 0.007883, speed: 2.00 step/s
+epoch: 20 / 50, steps: 600 / 2809, lr: 0.000019, loss: 0.000038, loss_predicate: 0.009190, speed: 2.01 step/s
+epoch: 20 / 50, steps: 700 / 2809, lr: 0.000019, loss: 0.000073, loss_predicate: 0.022170, speed: 2.01 step/s
+epoch: 20 / 50, steps: 800 / 2809, lr: 0.000019, loss: 0.000071, loss_predicate: 0.014476, speed: 1.99 step/s
+epoch: 20 / 50, steps: 900 / 2809, lr: 0.000019, loss: 0.000059, loss_predicate: 0.012921, speed: 1.99 step/s
+epoch: 20 / 50, steps: 1000 / 2809, lr: 0.000019, loss: 0.000066, loss_predicate: 0.019521, speed: 1.97 step/s
+epoch: 20 / 50, steps: 1100 / 2809, lr: 0.000019, loss: 0.000084, loss_predicate: 0.015943, speed: 1.98 step/s
+epoch: 20 / 50, steps: 1200 / 2809, lr: 0.000019, loss: 0.000056, loss_predicate: 0.008251, speed: 2.00 step/s
+epoch: 20 / 50, steps: 1300 / 2809, lr: 0.000019, loss: 0.000049, loss_predicate: 0.022681, speed: 2.00 step/s
+epoch: 20 / 50, steps: 1400 / 2809, lr: 0.000019, loss: 0.000048, loss_predicate: 0.012912, speed: 2.01 step/s
+epoch: 20 / 50, steps: 1500 / 2809, lr: 0.000019, loss: 0.000062, loss_predicate: 0.013481, speed: 2.00 step/s
+epoch: 20 / 50, steps: 1600 / 2809, lr: 0.000019, loss: 0.000047, loss_predicate: 0.011565, speed: 1.98 step/s
+epoch: 20 / 50, steps: 1700 / 2809, lr: 0.000019, loss: 0.000036, loss_predicate: 0.007180, speed: 1.97 step/s
+epoch: 20 / 50, steps: 1800 / 2809, lr: 0.000019, loss: 0.000067, loss_predicate: 0.022762, speed: 1.98 step/s
+epoch: 20 / 50, steps: 1900 / 2809, lr: 0.000019, loss: 0.000056, loss_predicate: 0.015277, speed: 1.99 step/s
+epoch: 20 / 50, steps: 2000 / 2809, lr: 0.000019, loss: 0.000059, loss_predicate: 0.012977, speed: 1.99 step/s
+epoch: 20 / 50, steps: 2100 / 2809, lr: 0.000019, loss: 0.000052, loss_predicate: 0.008629, speed: 2.01 step/s
+epoch: 20 / 50, steps: 2200 / 2809, lr: 0.000019, loss: 0.000069, loss_predicate: 0.019886, speed: 1.99 step/s
+epoch: 20 / 50, steps: 2300 / 2809, lr: 0.000019, loss: 0.000064, loss_predicate: 0.013040, speed: 1.98 step/s
+epoch: 20 / 50, steps: 2400 / 2809, lr: 0.000019, loss: 0.000062, loss_predicate: 0.013341, speed: 1.96 step/s
+epoch: 20 / 50, steps: 2500 / 2809, lr: 0.000019, loss: 0.000047, loss_predicate: 0.010730, speed: 1.96 step/s
+epoch: 20 / 50, steps: 2600 / 2809, lr: 0.000019, loss: 0.000052, loss_predicate: 0.010392, speed: 1.95 step/s
+epoch: 20 / 50, steps: 2700 / 2809, lr: 0.000019, loss: 0.000067, loss_predicate: 0.016622, speed: 1.96 step/s
+epoch: 20 / 50, steps: 2800 / 2809, lr: 0.000019, loss: 0.000048, loss_predicate: 0.010568, speed: 1.97 step/s
+
+=====start evaluating of 21 epochs=====
+eval loss: 0.002238
+precision: 86.21	 recall: 88.80	 f1: 87.48	
+precision_predicate: 91.18	 recall_predicate: 88.65	 f1_predicate: 89.90	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+Saving model checkpoint to ./log/0421/transfromer_2class_bert/PRE/model_best
+epoch time footprint: 0 hour 25 min 34 sec
+
+=====start training of 21 epochs=====
+epoch: 21 / 50, steps: 100 / 2809, lr: 0.000018, loss: 0.000054, loss_predicate: 0.009573, speed: 1.87 step/s
+epoch: 21 / 50, steps: 200 / 2809, lr: 0.000018, loss: 0.000045, loss_predicate: 0.011002, speed: 1.97 step/s
+epoch: 21 / 50, steps: 300 / 2809, lr: 0.000018, loss: 0.000046, loss_predicate: 0.015360, speed: 1.92 step/s
+epoch: 21 / 50, steps: 400 / 2809, lr: 0.000018, loss: 0.000062, loss_predicate: 0.011590, speed: 1.94 step/s
+epoch: 21 / 50, steps: 500 / 2809, lr: 0.000018, loss: 0.000079, loss_predicate: 0.012592, speed: 1.95 step/s
+epoch: 21 / 50, steps: 600 / 2809, lr: 0.000018, loss: 0.000051, loss_predicate: 0.011482, speed: 1.95 step/s
+epoch: 21 / 50, steps: 700 / 2809, lr: 0.000018, loss: 0.000084, loss_predicate: 0.015689, speed: 1.96 step/s
+epoch: 21 / 50, steps: 800 / 2809, lr: 0.000018, loss: 0.000076, loss_predicate: 0.015186, speed: 1.96 step/s
+epoch: 21 / 50, steps: 900 / 2809, lr: 0.000018, loss: 0.000086, loss_predicate: 0.017209, speed: 1.98 step/s
+epoch: 21 / 50, steps: 1000 / 2809, lr: 0.000018, loss: 0.000028, loss_predicate: 0.009983, speed: 1.97 step/s
+epoch: 21 / 50, steps: 1100 / 2809, lr: 0.000018, loss: 0.000047, loss_predicate: 0.006364, speed: 1.96 step/s
+epoch: 21 / 50, steps: 1200 / 2809, lr: 0.000018, loss: 0.000053, loss_predicate: 0.011996, speed: 1.98 step/s
+epoch: 21 / 50, steps: 1300 / 2809, lr: 0.000018, loss: 0.000063, loss_predicate: 0.015167, speed: 1.97 step/s
+epoch: 21 / 50, steps: 1400 / 2809, lr: 0.000018, loss: 0.000045, loss_predicate: 0.009625, speed: 1.97 step/s
+epoch: 21 / 50, steps: 1500 / 2809, lr: 0.000018, loss: 0.000064, loss_predicate: 0.005281, speed: 1.97 step/s
+epoch: 21 / 50, steps: 1600 / 2809, lr: 0.000018, loss: 0.000048, loss_predicate: 0.009864, speed: 1.96 step/s
+epoch: 21 / 50, steps: 1700 / 2809, lr: 0.000018, loss: 0.000093, loss_predicate: 0.024174, speed: 1.97 step/s
+epoch: 21 / 50, steps: 1800 / 2809, lr: 0.000018, loss: 0.000069, loss_predicate: 0.013281, speed: 1.96 step/s
+epoch: 21 / 50, steps: 1900 / 2809, lr: 0.000018, loss: 0.000070, loss_predicate: 0.010962, speed: 1.95 step/s
+epoch: 21 / 50, steps: 2000 / 2809, lr: 0.000018, loss: 0.000057, loss_predicate: 0.013234, speed: 1.96 step/s
+epoch: 21 / 50, steps: 2100 / 2809, lr: 0.000018, loss: 0.000061, loss_predicate: 0.010191, speed: 1.96 step/s
+epoch: 21 / 50, steps: 2200 / 2809, lr: 0.000018, loss: 0.000071, loss_predicate: 0.014289, speed: 1.96 step/s
+epoch: 21 / 50, steps: 2300 / 2809, lr: 0.000018, loss: 0.000068, loss_predicate: 0.012192, speed: 1.96 step/s
+epoch: 21 / 50, steps: 2400 / 2809, lr: 0.000018, loss: 0.000047, loss_predicate: 0.008325, speed: 1.97 step/s
+epoch: 21 / 50, steps: 2500 / 2809, lr: 0.000018, loss: 0.000066, loss_predicate: 0.010740, speed: 1.96 step/s
+epoch: 21 / 50, steps: 2600 / 2809, lr: 0.000018, loss: 0.000049, loss_predicate: 0.013582, speed: 1.97 step/s
+epoch: 21 / 50, steps: 2700 / 2809, lr: 0.000018, loss: 0.000045, loss_predicate: 0.015719, speed: 1.96 step/s
+epoch: 21 / 50, steps: 2800 / 2809, lr: 0.000018, loss: 0.000060, loss_predicate: 0.012047, speed: 1.95 step/s
+
+=====start evaluating of 22 epochs=====
+eval loss: 0.002329
+precision: 87.76	 recall: 88.67	 f1: 88.21	
+precision_predicate: 92.56	 recall_predicate: 88.38	 f1_predicate: 90.42	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+Saving model checkpoint to ./log/0421/transfromer_2class_bert/PRE/model_best
+epoch time footprint: 0 hour 25 min 50 sec
+
+=====start training of 22 epochs=====
+epoch: 22 / 50, steps: 100 / 2809, lr: 0.000018, loss: 0.000048, loss_predicate: 0.007420, speed: 1.89 step/s
+epoch: 22 / 50, steps: 200 / 2809, lr: 0.000018, loss: 0.000030, loss_predicate: 0.005925, speed: 1.99 step/s
+epoch: 22 / 50, steps: 300 / 2809, lr: 0.000018, loss: 0.000042, loss_predicate: 0.007840, speed: 1.97 step/s
+epoch: 22 / 50, steps: 400 / 2809, lr: 0.000018, loss: 0.000048, loss_predicate: 0.006209, speed: 1.96 step/s
+epoch: 22 / 50, steps: 500 / 2809, lr: 0.000018, loss: 0.000056, loss_predicate: 0.011921, speed: 1.93 step/s
+epoch: 22 / 50, steps: 600 / 2809, lr: 0.000018, loss: 0.000068, loss_predicate: 0.011444, speed: 1.94 step/s
+epoch: 22 / 50, steps: 700 / 2809, lr: 0.000018, loss: 0.000052, loss_predicate: 0.012684, speed: 1.95 step/s
+epoch: 22 / 50, steps: 800 / 2809, lr: 0.000018, loss: 0.000069, loss_predicate: 0.012537, speed: 1.95 step/s
+epoch: 22 / 50, steps: 900 / 2809, lr: 0.000018, loss: 0.000079, loss_predicate: 0.017833, speed: 1.95 step/s
+epoch: 22 / 50, steps: 1000 / 2809, lr: 0.000018, loss: 0.000063, loss_predicate: 0.015110, speed: 1.96 step/s
+epoch: 22 / 50, steps: 1100 / 2809, lr: 0.000018, loss: 0.000042, loss_predicate: 0.007548, speed: 1.96 step/s
+epoch: 22 / 50, steps: 1200 / 2809, lr: 0.000018, loss: 0.000045, loss_predicate: 0.006733, speed: 1.95 step/s
+epoch: 22 / 50, steps: 1300 / 2809, lr: 0.000018, loss: 0.000040, loss_predicate: 0.005759, speed: 1.97 step/s
+epoch: 22 / 50, steps: 1400 / 2809, lr: 0.000018, loss: 0.000082, loss_predicate: 0.021464, speed: 1.97 step/s
+epoch: 22 / 50, steps: 1500 / 2809, lr: 0.000018, loss: 0.000105, loss_predicate: 0.026188, speed: 1.96 step/s
+epoch: 22 / 50, steps: 1600 / 2809, lr: 0.000018, loss: 0.000050, loss_predicate: 0.005650, speed: 1.96 step/s
+epoch: 22 / 50, steps: 1700 / 2809, lr: 0.000017, loss: 0.000064, loss_predicate: 0.007740, speed: 1.96 step/s
+epoch: 22 / 50, steps: 1800 / 2809, lr: 0.000017, loss: 0.000057, loss_predicate: 0.008564, speed: 1.96 step/s
+epoch: 22 / 50, steps: 1900 / 2809, lr: 0.000017, loss: 0.000047, loss_predicate: 0.013341, speed: 1.97 step/s
+epoch: 22 / 50, steps: 2000 / 2809, lr: 0.000017, loss: 0.000057, loss_predicate: 0.021067, speed: 1.96 step/s
+epoch: 22 / 50, steps: 2100 / 2809, lr: 0.000017, loss: 0.000059, loss_predicate: 0.014969, speed: 1.97 step/s
+epoch: 22 / 50, steps: 2200 / 2809, lr: 0.000017, loss: 0.000044, loss_predicate: 0.008449, speed: 1.97 step/s
+epoch: 22 / 50, steps: 2300 / 2809, lr: 0.000017, loss: 0.000063, loss_predicate: 0.018824, speed: 1.96 step/s
+epoch: 22 / 50, steps: 2400 / 2809, lr: 0.000017, loss: 0.000056, loss_predicate: 0.008242, speed: 1.97 step/s
+epoch: 22 / 50, steps: 2500 / 2809, lr: 0.000017, loss: 0.000067, loss_predicate: 0.014367, speed: 1.97 step/s
+epoch: 22 / 50, steps: 2600 / 2809, lr: 0.000017, loss: 0.000058, loss_predicate: 0.011178, speed: 1.96 step/s
+epoch: 22 / 50, steps: 2700 / 2809, lr: 0.000017, loss: 0.000055, loss_predicate: 0.008304, speed: 1.95 step/s
+epoch: 22 / 50, steps: 2800 / 2809, lr: 0.000017, loss: 0.000046, loss_predicate: 0.011005, speed: 1.96 step/s
+
+=====start evaluating of 23 epochs=====
+eval loss: 0.002331
+precision: 86.30	 recall: 88.91	 f1: 87.59	
+precision_predicate: 91.62	 recall_predicate: 88.69	 f1_predicate: 90.13	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 49 sec
+
+=====start training of 23 epochs=====
+epoch: 23 / 50, steps: 100 / 2809, lr: 0.000017, loss: 0.000058, loss_predicate: 0.008715, speed: 1.88 step/s
+epoch: 23 / 50, steps: 200 / 2809, lr: 0.000017, loss: 0.000061, loss_predicate: 0.007962, speed: 1.98 step/s
+epoch: 23 / 50, steps: 300 / 2809, lr: 0.000017, loss: 0.000084, loss_predicate: 0.015993, speed: 1.98 step/s
+epoch: 23 / 50, steps: 400 / 2809, lr: 0.000017, loss: 0.000030, loss_predicate: 0.006672, speed: 1.98 step/s
+epoch: 23 / 50, steps: 500 / 2809, lr: 0.000017, loss: 0.000029, loss_predicate: 0.006896, speed: 1.97 step/s
+epoch: 23 / 50, steps: 600 / 2809, lr: 0.000017, loss: 0.000029, loss_predicate: 0.008593, speed: 1.94 step/s
+epoch: 23 / 50, steps: 700 / 2809, lr: 0.000017, loss: 0.000067, loss_predicate: 0.021053, speed: 1.94 step/s
+epoch: 23 / 50, steps: 800 / 2809, lr: 0.000017, loss: 0.000032, loss_predicate: 0.007430, speed: 1.94 step/s
+epoch: 23 / 50, steps: 900 / 2809, lr: 0.000017, loss: 0.000044, loss_predicate: 0.013103, speed: 1.95 step/s
+epoch: 23 / 50, steps: 1000 / 2809, lr: 0.000017, loss: 0.000056, loss_predicate: 0.011885, speed: 1.95 step/s
+epoch: 23 / 50, steps: 1100 / 2809, lr: 0.000017, loss: 0.000073, loss_predicate: 0.013780, speed: 1.95 step/s
+epoch: 23 / 50, steps: 1200 / 2809, lr: 0.000017, loss: 0.000053, loss_predicate: 0.010108, speed: 1.95 step/s
+epoch: 23 / 50, steps: 1300 / 2809, lr: 0.000017, loss: 0.000045, loss_predicate: 0.006593, speed: 1.96 step/s
+epoch: 23 / 50, steps: 1400 / 2809, lr: 0.000017, loss: 0.000045, loss_predicate: 0.008106, speed: 1.95 step/s
+epoch: 23 / 50, steps: 1500 / 2809, lr: 0.000017, loss: 0.000025, loss_predicate: 0.011451, speed: 1.98 step/s
+epoch: 23 / 50, steps: 1600 / 2809, lr: 0.000017, loss: 0.000050, loss_predicate: 0.007916, speed: 1.99 step/s
+epoch: 23 / 50, steps: 1700 / 2809, lr: 0.000017, loss: 0.000078, loss_predicate: 0.017221, speed: 1.98 step/s
+epoch: 23 / 50, steps: 1800 / 2809, lr: 0.000017, loss: 0.000036, loss_predicate: 0.008495, speed: 1.98 step/s
+epoch: 23 / 50, steps: 1900 / 2809, lr: 0.000017, loss: 0.000050, loss_predicate: 0.010079, speed: 1.95 step/s
+epoch: 23 / 50, steps: 2000 / 2809, lr: 0.000017, loss: 0.000067, loss_predicate: 0.021903, speed: 1.95 step/s
+epoch: 23 / 50, steps: 2100 / 2809, lr: 0.000017, loss: 0.000047, loss_predicate: 0.016838, speed: 1.95 step/s
+epoch: 23 / 50, steps: 2200 / 2809, lr: 0.000017, loss: 0.000039, loss_predicate: 0.010753, speed: 1.96 step/s
+epoch: 23 / 50, steps: 2300 / 2809, lr: 0.000017, loss: 0.000059, loss_predicate: 0.009935, speed: 1.95 step/s
+epoch: 23 / 50, steps: 2400 / 2809, lr: 0.000017, loss: 0.000065, loss_predicate: 0.017320, speed: 1.95 step/s
+epoch: 23 / 50, steps: 2500 / 2809, lr: 0.000017, loss: 0.000050, loss_predicate: 0.013449, speed: 1.96 step/s
+epoch: 23 / 50, steps: 2600 / 2809, lr: 0.000017, loss: 0.000078, loss_predicate: 0.022289, speed: 1.96 step/s
+epoch: 23 / 50, steps: 2700 / 2809, lr: 0.000017, loss: 0.000048, loss_predicate: 0.009090, speed: 1.96 step/s
+epoch: 23 / 50, steps: 2800 / 2809, lr: 0.000017, loss: 0.000039, loss_predicate: 0.015334, speed: 1.96 step/s
+
+=====start evaluating of 24 epochs=====
+eval loss: 0.002326
+precision: 85.68	 recall: 89.41	 f1: 87.50	
+precision_predicate: 90.74	 recall_predicate: 89.25	 f1_predicate: 89.99	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 50 sec
+
+=====start training of 24 epochs=====
+epoch: 24 / 50, steps: 100 / 2809, lr: 0.000017, loss: 0.000029, loss_predicate: 0.010887, speed: 1.88 step/s
+epoch: 24 / 50, steps: 200 / 2809, lr: 0.000017, loss: 0.000025, loss_predicate: 0.001149, speed: 1.99 step/s
+epoch: 24 / 50, steps: 300 / 2809, lr: 0.000017, loss: 0.000038, loss_predicate: 0.005170, speed: 1.98 step/s
+epoch: 24 / 50, steps: 400 / 2809, lr: 0.000017, loss: 0.000034, loss_predicate: 0.009201, speed: 1.97 step/s
+epoch: 24 / 50, steps: 500 / 2809, lr: 0.000016, loss: 0.000052, loss_predicate: 0.012739, speed: 1.97 step/s
+epoch: 24 / 50, steps: 600 / 2809, lr: 0.000016, loss: 0.000043, loss_predicate: 0.008740, speed: 1.97 step/s
+epoch: 24 / 50, steps: 700 / 2809, lr: 0.000016, loss: 0.000051, loss_predicate: 0.015391, speed: 1.96 step/s
+epoch: 24 / 50, steps: 800 / 2809, lr: 0.000016, loss: 0.000036, loss_predicate: 0.013148, speed: 1.94 step/s
+epoch: 24 / 50, steps: 900 / 2809, lr: 0.000016, loss: 0.000039, loss_predicate: 0.008946, speed: 1.94 step/s
+epoch: 24 / 50, steps: 1000 / 2809, lr: 0.000016, loss: 0.000064, loss_predicate: 0.023490, speed: 1.94 step/s
+epoch: 24 / 50, steps: 1100 / 2809, lr: 0.000016, loss: 0.000062, loss_predicate: 0.010172, speed: 1.95 step/s
+epoch: 24 / 50, steps: 1200 / 2809, lr: 0.000016, loss: 0.000052, loss_predicate: 0.014422, speed: 1.93 step/s
+epoch: 24 / 50, steps: 1300 / 2809, lr: 0.000016, loss: 0.000034, loss_predicate: 0.009611, speed: 1.95 step/s
+epoch: 24 / 50, steps: 1400 / 2809, lr: 0.000016, loss: 0.000048, loss_predicate: 0.010701, speed: 1.94 step/s
+epoch: 24 / 50, steps: 1500 / 2809, lr: 0.000016, loss: 0.000050, loss_predicate: 0.011419, speed: 1.95 step/s
+epoch: 24 / 50, steps: 1600 / 2809, lr: 0.000016, loss: 0.000043, loss_predicate: 0.009490, speed: 1.97 step/s
+epoch: 24 / 50, steps: 1700 / 2809, lr: 0.000016, loss: 0.000036, loss_predicate: 0.008242, speed: 1.95 step/s
+epoch: 24 / 50, steps: 1800 / 2809, lr: 0.000016, loss: 0.000051, loss_predicate: 0.010136, speed: 1.96 step/s
+epoch: 24 / 50, steps: 1900 / 2809, lr: 0.000016, loss: 0.000057, loss_predicate: 0.009317, speed: 1.96 step/s
+epoch: 24 / 50, steps: 2000 / 2809, lr: 0.000016, loss: 0.000056, loss_predicate: 0.011224, speed: 1.96 step/s
+epoch: 24 / 50, steps: 2100 / 2809, lr: 0.000016, loss: 0.000057, loss_predicate: 0.008511, speed: 1.96 step/s
+epoch: 24 / 50, steps: 2200 / 2809, lr: 0.000016, loss: 0.000036, loss_predicate: 0.009722, speed: 1.98 step/s
+epoch: 24 / 50, steps: 2300 / 2809, lr: 0.000016, loss: 0.000052, loss_predicate: 0.006937, speed: 1.97 step/s
+epoch: 24 / 50, steps: 2400 / 2809, lr: 0.000016, loss: 0.000052, loss_predicate: 0.010438, speed: 1.97 step/s
+epoch: 24 / 50, steps: 2500 / 2809, lr: 0.000016, loss: 0.000051, loss_predicate: 0.018207, speed: 1.97 step/s
+epoch: 24 / 50, steps: 2600 / 2809, lr: 0.000016, loss: 0.000052, loss_predicate: 0.017898, speed: 1.96 step/s
+epoch: 24 / 50, steps: 2700 / 2809, lr: 0.000016, loss: 0.000046, loss_predicate: 0.014858, speed: 1.97 step/s
+epoch: 24 / 50, steps: 2800 / 2809, lr: 0.000016, loss: 0.000071, loss_predicate: 0.015354, speed: 1.97 step/s
+
+=====start evaluating of 25 epochs=====
+eval loss: 0.002292
+precision: 85.56	 recall: 89.28	 f1: 87.38	
+precision_predicate: 91.47	 recall_predicate: 88.89	 f1_predicate: 90.16	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 50 sec
+
+=====start training of 25 epochs=====
+epoch: 25 / 50, steps: 100 / 2809, lr: 0.000016, loss: 0.000039, loss_predicate: 0.011163, speed: 1.90 step/s
+epoch: 25 / 50, steps: 200 / 2809, lr: 0.000016, loss: 0.000030, loss_predicate: 0.011182, speed: 1.99 step/s
+epoch: 25 / 50, steps: 300 / 2809, lr: 0.000016, loss: 0.000046, loss_predicate: 0.008578, speed: 1.97 step/s
+epoch: 25 / 50, steps: 400 / 2809, lr: 0.000016, loss: 0.000042, loss_predicate: 0.007792, speed: 1.97 step/s
+epoch: 25 / 50, steps: 500 / 2809, lr: 0.000016, loss: 0.000032, loss_predicate: 0.006403, speed: 1.98 step/s
+epoch: 25 / 50, steps: 600 / 2809, lr: 0.000016, loss: 0.000046, loss_predicate: 0.005694, speed: 1.96 step/s
+epoch: 25 / 50, steps: 700 / 2809, lr: 0.000016, loss: 0.000055, loss_predicate: 0.012832, speed: 1.96 step/s
+epoch: 25 / 50, steps: 800 / 2809, lr: 0.000016, loss: 0.000032, loss_predicate: 0.011334, speed: 1.95 step/s
+epoch: 25 / 50, steps: 900 / 2809, lr: 0.000016, loss: 0.000043, loss_predicate: 0.005127, speed: 1.94 step/s
+epoch: 25 / 50, steps: 1000 / 2809, lr: 0.000016, loss: 0.000033, loss_predicate: 0.005787, speed: 1.95 step/s
+epoch: 25 / 50, steps: 1100 / 2809, lr: 0.000016, loss: 0.000027, loss_predicate: 0.002381, speed: 1.95 step/s
+epoch: 25 / 50, steps: 1200 / 2809, lr: 0.000016, loss: 0.000051, loss_predicate: 0.009842, speed: 1.94 step/s
+epoch: 25 / 50, steps: 1300 / 2809, lr: 0.000016, loss: 0.000022, loss_predicate: 0.004635, speed: 1.94 step/s
+epoch: 25 / 50, steps: 1400 / 2809, lr: 0.000016, loss: 0.000052, loss_predicate: 0.012373, speed: 1.95 step/s
+epoch: 25 / 50, steps: 1500 / 2809, lr: 0.000016, loss: 0.000043, loss_predicate: 0.013694, speed: 1.95 step/s
+epoch: 25 / 50, steps: 1600 / 2809, lr: 0.000016, loss: 0.000039, loss_predicate: 0.008668, speed: 1.94 step/s
+epoch: 25 / 50, steps: 1700 / 2809, lr: 0.000016, loss: 0.000041, loss_predicate: 0.006073, speed: 1.97 step/s
+epoch: 25 / 50, steps: 1800 / 2809, lr: 0.000016, loss: 0.000068, loss_predicate: 0.013886, speed: 1.95 step/s
+epoch: 25 / 50, steps: 1900 / 2809, lr: 0.000016, loss: 0.000037, loss_predicate: 0.007659, speed: 1.96 step/s
+epoch: 25 / 50, steps: 2000 / 2809, lr: 0.000016, loss: 0.000064, loss_predicate: 0.015259, speed: 1.95 step/s
+epoch: 25 / 50, steps: 2100 / 2809, lr: 0.000015, loss: 0.000035, loss_predicate: 0.015240, speed: 2.00 step/s
+epoch: 25 / 50, steps: 2200 / 2809, lr: 0.000015, loss: 0.000026, loss_predicate: 0.006642, speed: 1.99 step/s
+epoch: 25 / 50, steps: 2300 / 2809, lr: 0.000015, loss: 0.000034, loss_predicate: 0.007641, speed: 1.97 step/s
+epoch: 25 / 50, steps: 2400 / 2809, lr: 0.000015, loss: 0.000034, loss_predicate: 0.011125, speed: 1.97 step/s
+epoch: 25 / 50, steps: 2500 / 2809, lr: 0.000015, loss: 0.000031, loss_predicate: 0.006552, speed: 1.96 step/s
+epoch: 25 / 50, steps: 2600 / 2809, lr: 0.000015, loss: 0.000055, loss_predicate: 0.011315, speed: 1.95 step/s
+epoch: 25 / 50, steps: 2700 / 2809, lr: 0.000015, loss: 0.000039, loss_predicate: 0.008885, speed: 1.96 step/s
+epoch: 25 / 50, steps: 2800 / 2809, lr: 0.000015, loss: 0.000044, loss_predicate: 0.007419, speed: 1.96 step/s
+
+=====start evaluating of 26 epochs=====
+eval loss: 0.002278
+precision: 85.28	 recall: 89.49	 f1: 87.34	
+precision_predicate: 91.16	 recall_predicate: 89.14	 f1_predicate: 90.14	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 48 sec
+
+=====start training of 26 epochs=====
+epoch: 26 / 50, steps: 100 / 2809, lr: 0.000015, loss: 0.000023, loss_predicate: 0.004518, speed: 1.89 step/s
+epoch: 26 / 50, steps: 200 / 2809, lr: 0.000015, loss: 0.000031, loss_predicate: 0.006917, speed: 1.98 step/s
+epoch: 26 / 50, steps: 300 / 2809, lr: 0.000015, loss: 0.000029, loss_predicate: 0.004981, speed: 1.99 step/s
+epoch: 26 / 50, steps: 400 / 2809, lr: 0.000015, loss: 0.000033, loss_predicate: 0.006897, speed: 1.97 step/s
+epoch: 26 / 50, steps: 500 / 2809, lr: 0.000015, loss: 0.000019, loss_predicate: 0.005802, speed: 1.98 step/s
+epoch: 26 / 50, steps: 600 / 2809, lr: 0.000015, loss: 0.000042, loss_predicate: 0.011040, speed: 1.98 step/s
+epoch: 26 / 50, steps: 700 / 2809, lr: 0.000015, loss: 0.000036, loss_predicate: 0.002578, speed: 1.97 step/s
+epoch: 26 / 50, steps: 800 / 2809, lr: 0.000015, loss: 0.000030, loss_predicate: 0.005942, speed: 1.96 step/s
+epoch: 26 / 50, steps: 900 / 2809, lr: 0.000015, loss: 0.000037, loss_predicate: 0.009672, speed: 1.98 step/s
+epoch: 26 / 50, steps: 1000 / 2809, lr: 0.000015, loss: 0.000057, loss_predicate: 0.009809, speed: 1.95 step/s
+epoch: 26 / 50, steps: 1100 / 2809, lr: 0.000015, loss: 0.000039, loss_predicate: 0.007555, speed: 1.94 step/s
+epoch: 26 / 50, steps: 1200 / 2809, lr: 0.000015, loss: 0.000044, loss_predicate: 0.008427, speed: 1.94 step/s
+epoch: 26 / 50, steps: 1300 / 2809, lr: 0.000015, loss: 0.000020, loss_predicate: 0.009863, speed: 1.93 step/s
+epoch: 26 / 50, steps: 1400 / 2809, lr: 0.000015, loss: 0.000042, loss_predicate: 0.017740, speed: 1.94 step/s
+epoch: 26 / 50, steps: 1500 / 2809, lr: 0.000015, loss: 0.000042, loss_predicate: 0.010663, speed: 1.95 step/s
+epoch: 26 / 50, steps: 1600 / 2809, lr: 0.000015, loss: 0.000029, loss_predicate: 0.011859, speed: 1.95 step/s
+epoch: 26 / 50, steps: 1700 / 2809, lr: 0.000015, loss: 0.000023, loss_predicate: 0.011855, speed: 1.97 step/s
+epoch: 26 / 50, steps: 1800 / 2809, lr: 0.000015, loss: 0.000032, loss_predicate: 0.008991, speed: 1.96 step/s
+epoch: 26 / 50, steps: 1900 / 2809, lr: 0.000015, loss: 0.000066, loss_predicate: 0.012917, speed: 1.96 step/s
+epoch: 26 / 50, steps: 2000 / 2809, lr: 0.000015, loss: 0.000040, loss_predicate: 0.009630, speed: 1.96 step/s
+epoch: 26 / 50, steps: 2100 / 2809, lr: 0.000015, loss: 0.000031, loss_predicate: 0.006203, speed: 1.96 step/s
+epoch: 26 / 50, steps: 2200 / 2809, lr: 0.000015, loss: 0.000031, loss_predicate: 0.006034, speed: 1.95 step/s
+epoch: 26 / 50, steps: 2300 / 2809, lr: 0.000015, loss: 0.000031, loss_predicate: 0.010061, speed: 1.95 step/s
+epoch: 26 / 50, steps: 2400 / 2809, lr: 0.000015, loss: 0.000033, loss_predicate: 0.008989, speed: 1.95 step/s
+epoch: 26 / 50, steps: 2500 / 2809, lr: 0.000015, loss: 0.000036, loss_predicate: 0.008819, speed: 1.96 step/s
+epoch: 26 / 50, steps: 2600 / 2809, lr: 0.000015, loss: 0.000057, loss_predicate: 0.015469, speed: 1.98 step/s
+epoch: 26 / 50, steps: 2700 / 2809, lr: 0.000015, loss: 0.000073, loss_predicate: 0.017047, speed: 1.97 step/s
+epoch: 26 / 50, steps: 2800 / 2809, lr: 0.000015, loss: 0.000050, loss_predicate: 0.009757, speed: 1.97 step/s
+
+=====start evaluating of 27 epochs=====
+eval loss: 0.002358
+precision: 85.82	 recall: 89.25	 f1: 87.50	
+precision_predicate: 91.36	 recall_predicate: 89.01	 f1_predicate: 90.17	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 48 sec
+
+=====start training of 27 epochs=====
+epoch: 27 / 50, steps: 100 / 2809, lr: 0.000015, loss: 0.000024, loss_predicate: 0.008061, speed: 1.88 step/s
+epoch: 27 / 50, steps: 200 / 2809, lr: 0.000015, loss: 0.000032, loss_predicate: 0.010134, speed: 1.98 step/s
+epoch: 27 / 50, steps: 300 / 2809, lr: 0.000015, loss: 0.000030, loss_predicate: 0.010817, speed: 1.99 step/s
+epoch: 27 / 50, steps: 400 / 2809, lr: 0.000015, loss: 0.000021, loss_predicate: 0.004282, speed: 1.97 step/s
+epoch: 27 / 50, steps: 500 / 2809, lr: 0.000015, loss: 0.000039, loss_predicate: 0.008178, speed: 1.97 step/s
+epoch: 27 / 50, steps: 600 / 2809, lr: 0.000015, loss: 0.000042, loss_predicate: 0.016402, speed: 1.97 step/s
+epoch: 27 / 50, steps: 700 / 2809, lr: 0.000015, loss: 0.000053, loss_predicate: 0.011620, speed: 1.96 step/s
+epoch: 27 / 50, steps: 800 / 2809, lr: 0.000014, loss: 0.000029, loss_predicate: 0.005533, speed: 1.96 step/s
+epoch: 27 / 50, steps: 900 / 2809, lr: 0.000014, loss: 0.000039, loss_predicate: 0.015199, speed: 1.96 step/s
+epoch: 27 / 50, steps: 1000 / 2809, lr: 0.000014, loss: 0.000039, loss_predicate: 0.010070, speed: 1.97 step/s
+epoch: 27 / 50, steps: 1100 / 2809, lr: 0.000014, loss: 0.000042, loss_predicate: 0.012516, speed: 1.96 step/s
+epoch: 27 / 50, steps: 1200 / 2809, lr: 0.000014, loss: 0.000029, loss_predicate: 0.006634, speed: 1.96 step/s
+epoch: 27 / 50, steps: 1300 / 2809, lr: 0.000014, loss: 0.000039, loss_predicate: 0.007338, speed: 1.93 step/s
+epoch: 27 / 50, steps: 1400 / 2809, lr: 0.000014, loss: 0.000033, loss_predicate: 0.007414, speed: 1.93 step/s
+epoch: 27 / 50, steps: 1500 / 2809, lr: 0.000014, loss: 0.000039, loss_predicate: 0.006651, speed: 1.94 step/s
+epoch: 27 / 50, steps: 1600 / 2809, lr: 0.000014, loss: 0.000045, loss_predicate: 0.009562, speed: 1.94 step/s
+epoch: 27 / 50, steps: 1700 / 2809, lr: 0.000014, loss: 0.000045, loss_predicate: 0.010885, speed: 1.94 step/s
+epoch: 27 / 50, steps: 1800 / 2809, lr: 0.000014, loss: 0.000034, loss_predicate: 0.009512, speed: 1.96 step/s
+epoch: 27 / 50, steps: 1900 / 2809, lr: 0.000014, loss: 0.000019, loss_predicate: 0.003378, speed: 1.95 step/s
+epoch: 27 / 50, steps: 2000 / 2809, lr: 0.000014, loss: 0.000046, loss_predicate: 0.006688, speed: 1.95 step/s
+epoch: 27 / 50, steps: 2100 / 2809, lr: 0.000014, loss: 0.000032, loss_predicate: 0.004887, speed: 1.96 step/s
+epoch: 27 / 50, steps: 2200 / 2809, lr: 0.000014, loss: 0.000040, loss_predicate: 0.005084, speed: 1.97 step/s
+epoch: 27 / 50, steps: 2300 / 2809, lr: 0.000014, loss: 0.000029, loss_predicate: 0.010400, speed: 1.97 step/s
+epoch: 27 / 50, steps: 2400 / 2809, lr: 0.000014, loss: 0.000045, loss_predicate: 0.010040, speed: 1.96 step/s
+epoch: 27 / 50, steps: 2500 / 2809, lr: 0.000014, loss: 0.000037, loss_predicate: 0.011163, speed: 1.96 step/s
+epoch: 27 / 50, steps: 2600 / 2809, lr: 0.000014, loss: 0.000032, loss_predicate: 0.006139, speed: 1.96 step/s
+epoch: 27 / 50, steps: 2700 / 2809, lr: 0.000014, loss: 0.000036, loss_predicate: 0.011268, speed: 1.96 step/s
+epoch: 27 / 50, steps: 2800 / 2809, lr: 0.000014, loss: 0.000034, loss_predicate: 0.008569, speed: 1.97 step/s
+
+=====start evaluating of 28 epochs=====
+eval loss: 0.002369
+precision: 86.03	 recall: 89.19	 f1: 87.58	
+precision_predicate: 90.99	 recall_predicate: 89.13	 f1_predicate: 90.05	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 51 sec
+
+=====start training of 28 epochs=====
+epoch: 28 / 50, steps: 100 / 2809, lr: 0.000014, loss: 0.000040, loss_predicate: 0.009440, speed: 1.89 step/s
+epoch: 28 / 50, steps: 200 / 2809, lr: 0.000014, loss: 0.000033, loss_predicate: 0.011356, speed: 1.98 step/s
+epoch: 28 / 50, steps: 300 / 2809, lr: 0.000014, loss: 0.000031, loss_predicate: 0.004429, speed: 1.98 step/s
+epoch: 28 / 50, steps: 400 / 2809, lr: 0.000014, loss: 0.000096, loss_predicate: 0.012947, speed: 1.97 step/s
+epoch: 28 / 50, steps: 500 / 2809, lr: 0.000014, loss: 0.000058, loss_predicate: 0.013137, speed: 1.98 step/s
+epoch: 28 / 50, steps: 600 / 2809, lr: 0.000014, loss: 0.000035, loss_predicate: 0.009147, speed: 1.96 step/s
+epoch: 28 / 50, steps: 700 / 2809, lr: 0.000014, loss: 0.000042, loss_predicate: 0.008233, speed: 1.96 step/s
+epoch: 28 / 50, steps: 800 / 2809, lr: 0.000014, loss: 0.000038, loss_predicate: 0.014670, speed: 1.96 step/s
+epoch: 28 / 50, steps: 900 / 2809, lr: 0.000014, loss: 0.000024, loss_predicate: 0.008735, speed: 1.95 step/s
+epoch: 28 / 50, steps: 1000 / 2809, lr: 0.000014, loss: 0.000037, loss_predicate: 0.007163, speed: 1.96 step/s
+epoch: 28 / 50, steps: 1100 / 2809, lr: 0.000014, loss: 0.000019, loss_predicate: 0.007866, speed: 1.95 step/s
+epoch: 28 / 50, steps: 1200 / 2809, lr: 0.000014, loss: 0.000056, loss_predicate: 0.005030, speed: 1.96 step/s
+epoch: 28 / 50, steps: 1300 / 2809, lr: 0.000014, loss: 0.000028, loss_predicate: 0.004765, speed: 1.97 step/s
+epoch: 28 / 50, steps: 1400 / 2809, lr: 0.000014, loss: 0.000031, loss_predicate: 0.004038, speed: 1.95 step/s
+epoch: 28 / 50, steps: 1500 / 2809, lr: 0.000014, loss: 0.000023, loss_predicate: 0.006414, speed: 1.95 step/s
+epoch: 28 / 50, steps: 1600 / 2809, lr: 0.000014, loss: 0.000033, loss_predicate: 0.007267, speed: 1.96 step/s
+epoch: 28 / 50, steps: 1700 / 2809, lr: 0.000014, loss: 0.000024, loss_predicate: 0.004130, speed: 1.95 step/s
+epoch: 28 / 50, steps: 1800 / 2809, lr: 0.000014, loss: 0.000024, loss_predicate: 0.006238, speed: 1.95 step/s
+epoch: 28 / 50, steps: 1900 / 2809, lr: 0.000014, loss: 0.000024, loss_predicate: 0.010548, speed: 1.94 step/s
+epoch: 28 / 50, steps: 2000 / 2809, lr: 0.000014, loss: 0.000034, loss_predicate: 0.005890, speed: 1.95 step/s
+epoch: 28 / 50, steps: 2100 / 2809, lr: 0.000014, loss: 0.000033, loss_predicate: 0.009499, speed: 1.95 step/s
+epoch: 28 / 50, steps: 2200 / 2809, lr: 0.000014, loss: 0.000020, loss_predicate: 0.005628, speed: 1.96 step/s
+epoch: 28 / 50, steps: 2300 / 2809, lr: 0.000014, loss: 0.000015, loss_predicate: 0.002155, speed: 1.96 step/s
+epoch: 28 / 50, steps: 2400 / 2809, lr: 0.000013, loss: 0.000022, loss_predicate: 0.004811, speed: 1.96 step/s
+epoch: 28 / 50, steps: 2500 / 2809, lr: 0.000013, loss: 0.000043, loss_predicate: 0.015603, speed: 1.96 step/s
+epoch: 28 / 50, steps: 2600 / 2809, lr: 0.000013, loss: 0.000029, loss_predicate: 0.013293, speed: 1.96 step/s
+epoch: 28 / 50, steps: 2700 / 2809, lr: 0.000013, loss: 0.000038, loss_predicate: 0.006623, speed: 1.96 step/s
+epoch: 28 / 50, steps: 2800 / 2809, lr: 0.000013, loss: 0.000033, loss_predicate: 0.008518, speed: 1.96 step/s
+
+=====start evaluating of 29 epochs=====
+eval loss: 0.002465
+precision: 87.28	 recall: 88.62	 f1: 87.95	
+precision_predicate: 92.63	 recall_predicate: 88.35	 f1_predicate: 90.44	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+Saving model checkpoint to ./log/0421/transfromer_2class_bert/PRE/model_best
+epoch time footprint: 0 hour 25 min 52 sec
+
+=====start training of 29 epochs=====
+epoch: 29 / 50, steps: 100 / 2809, lr: 0.000013, loss: 0.000044, loss_predicate: 0.002237, speed: 1.89 step/s
+epoch: 29 / 50, steps: 200 / 2809, lr: 0.000013, loss: 0.000030, loss_predicate: 0.003657, speed: 1.99 step/s
+epoch: 29 / 50, steps: 300 / 2809, lr: 0.000013, loss: 0.000041, loss_predicate: 0.006656, speed: 1.98 step/s
+epoch: 29 / 50, steps: 400 / 2809, lr: 0.000013, loss: 0.000022, loss_predicate: 0.007789, speed: 1.97 step/s
+epoch: 29 / 50, steps: 500 / 2809, lr: 0.000013, loss: 0.000043, loss_predicate: 0.012337, speed: 1.97 step/s
+epoch: 29 / 50, steps: 600 / 2809, lr: 0.000013, loss: 0.000030, loss_predicate: 0.007903, speed: 1.96 step/s
+epoch: 29 / 50, steps: 700 / 2809, lr: 0.000013, loss: 0.000034, loss_predicate: 0.008016, speed: 1.96 step/s
+epoch: 29 / 50, steps: 800 / 2809, lr: 0.000013, loss: 0.000020, loss_predicate: 0.004608, speed: 1.96 step/s
+epoch: 29 / 50, steps: 900 / 2809, lr: 0.000013, loss: 0.000029, loss_predicate: 0.004629, speed: 1.96 step/s
+epoch: 29 / 50, steps: 1000 / 2809, lr: 0.000013, loss: 0.000024, loss_predicate: 0.012859, speed: 1.97 step/s
+epoch: 29 / 50, steps: 1100 / 2809, lr: 0.000013, loss: 0.000026, loss_predicate: 0.005441, speed: 1.96 step/s
+epoch: 29 / 50, steps: 1200 / 2809, lr: 0.000013, loss: 0.000017, loss_predicate: 0.003592, speed: 1.96 step/s
+epoch: 29 / 50, steps: 1300 / 2809, lr: 0.000013, loss: 0.000022, loss_predicate: 0.002453, speed: 1.96 step/s
+epoch: 29 / 50, steps: 1400 / 2809, lr: 0.000013, loss: 0.000030, loss_predicate: 0.007138, speed: 1.97 step/s
+epoch: 29 / 50, steps: 1500 / 2809, lr: 0.000013, loss: 0.000026, loss_predicate: 0.006536, speed: 1.96 step/s
+epoch: 29 / 50, steps: 1600 / 2809, lr: 0.000013, loss: 0.000026, loss_predicate: 0.009465, speed: 1.96 step/s
+epoch: 29 / 50, steps: 1700 / 2809, lr: 0.000013, loss: 0.000025, loss_predicate: 0.007299, speed: 1.94 step/s
+epoch: 29 / 50, steps: 1800 / 2809, lr: 0.000013, loss: 0.000019, loss_predicate: 0.006546, speed: 1.95 step/s
+epoch: 29 / 50, steps: 1900 / 2809, lr: 0.000013, loss: 0.000024, loss_predicate: 0.005139, speed: 1.96 step/s
+epoch: 29 / 50, steps: 2000 / 2809, lr: 0.000013, loss: 0.000033, loss_predicate: 0.007528, speed: 1.94 step/s
+epoch: 29 / 50, steps: 2100 / 2809, lr: 0.000013, loss: 0.000021, loss_predicate: 0.009891, speed: 1.95 step/s
+epoch: 29 / 50, steps: 2200 / 2809, lr: 0.000013, loss: 0.000037, loss_predicate: 0.009839, speed: 1.96 step/s
+epoch: 29 / 50, steps: 2300 / 2809, lr: 0.000013, loss: 0.000020, loss_predicate: 0.003482, speed: 1.95 step/s
+epoch: 29 / 50, steps: 2400 / 2809, lr: 0.000013, loss: 0.000025, loss_predicate: 0.006445, speed: 1.95 step/s
+epoch: 29 / 50, steps: 2500 / 2809, lr: 0.000013, loss: 0.000025, loss_predicate: 0.004189, speed: 1.96 step/s
+epoch: 29 / 50, steps: 2600 / 2809, lr: 0.000013, loss: 0.000030, loss_predicate: 0.007280, speed: 1.96 step/s
+epoch: 29 / 50, steps: 2700 / 2809, lr: 0.000013, loss: 0.000040, loss_predicate: 0.009074, speed: 1.95 step/s
+epoch: 29 / 50, steps: 2800 / 2809, lr: 0.000013, loss: 0.000027, loss_predicate: 0.004727, speed: 1.96 step/s
+
+=====start evaluating of 30 epochs=====
+eval loss: 0.002394
+precision: 86.66	 recall: 89.15	 f1: 87.89	
+precision_predicate: 91.71	 recall_predicate: 89.10	 f1_predicate: 90.39	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 48 sec
+
+=====start training of 30 epochs=====
+epoch: 30 / 50, steps: 100 / 2809, lr: 0.000013, loss: 0.000025, loss_predicate: 0.005268, speed: 1.89 step/s
+epoch: 30 / 50, steps: 200 / 2809, lr: 0.000013, loss: 0.000022, loss_predicate: 0.003076, speed: 1.98 step/s
+epoch: 30 / 50, steps: 300 / 2809, lr: 0.000013, loss: 0.000027, loss_predicate: 0.009855, speed: 1.98 step/s
+epoch: 30 / 50, steps: 400 / 2809, lr: 0.000013, loss: 0.000020, loss_predicate: 0.005444, speed: 1.98 step/s
+epoch: 30 / 50, steps: 500 / 2809, lr: 0.000013, loss: 0.000025, loss_predicate: 0.006561, speed: 1.96 step/s
+epoch: 30 / 50, steps: 600 / 2809, lr: 0.000013, loss: 0.000020, loss_predicate: 0.001800, speed: 1.97 step/s
+epoch: 30 / 50, steps: 700 / 2809, lr: 0.000013, loss: 0.000017, loss_predicate: 0.002844, speed: 1.96 step/s
+epoch: 30 / 50, steps: 800 / 2809, lr: 0.000013, loss: 0.000040, loss_predicate: 0.014811, speed: 1.96 step/s
+epoch: 30 / 50, steps: 900 / 2809, lr: 0.000013, loss: 0.000027, loss_predicate: 0.008779, speed: 1.97 step/s
+epoch: 30 / 50, steps: 1000 / 2809, lr: 0.000013, loss: 0.000026, loss_predicate: 0.006921, speed: 1.97 step/s
+epoch: 30 / 50, steps: 1100 / 2809, lr: 0.000013, loss: 0.000027, loss_predicate: 0.008330, speed: 1.96 step/s
+epoch: 30 / 50, steps: 1200 / 2809, lr: 0.000012, loss: 0.000025, loss_predicate: 0.006991, speed: 1.97 step/s
+epoch: 30 / 50, steps: 1300 / 2809, lr: 0.000012, loss: 0.000025, loss_predicate: 0.011520, speed: 1.96 step/s
+epoch: 30 / 50, steps: 1400 / 2809, lr: 0.000012, loss: 0.000033, loss_predicate: 0.007655, speed: 1.96 step/s
+epoch: 30 / 50, steps: 1500 / 2809, lr: 0.000012, loss: 0.000038, loss_predicate: 0.006945, speed: 1.95 step/s
+epoch: 30 / 50, steps: 1600 / 2809, lr: 0.000012, loss: 0.000038, loss_predicate: 0.013778, speed: 1.96 step/s
+epoch: 30 / 50, steps: 1700 / 2809, lr: 0.000012, loss: 0.000020, loss_predicate: 0.007471, speed: 1.97 step/s
+epoch: 30 / 50, steps: 1800 / 2809, lr: 0.000012, loss: 0.000030, loss_predicate: 0.002253, speed: 1.97 step/s
+epoch: 30 / 50, steps: 1900 / 2809, lr: 0.000012, loss: 0.000031, loss_predicate: 0.008848, speed: 1.98 step/s
+epoch: 30 / 50, steps: 2000 / 2809, lr: 0.000012, loss: 0.000013, loss_predicate: 0.002645, speed: 1.96 step/s
+epoch: 30 / 50, steps: 2100 / 2809, lr: 0.000012, loss: 0.000034, loss_predicate: 0.006433, speed: 1.95 step/s
+epoch: 30 / 50, steps: 2200 / 2809, lr: 0.000012, loss: 0.000026, loss_predicate: 0.005677, speed: 1.95 step/s
+epoch: 30 / 50, steps: 2300 / 2809, lr: 0.000012, loss: 0.000020, loss_predicate: 0.005416, speed: 1.95 step/s
+epoch: 30 / 50, steps: 2400 / 2809, lr: 0.000012, loss: 0.000026, loss_predicate: 0.004669, speed: 1.95 step/s
+epoch: 30 / 50, steps: 2500 / 2809, lr: 0.000012, loss: 0.000025, loss_predicate: 0.006553, speed: 1.95 step/s
+epoch: 30 / 50, steps: 2600 / 2809, lr: 0.000012, loss: 0.000034, loss_predicate: 0.013288, speed: 1.96 step/s
+epoch: 30 / 50, steps: 2700 / 2809, lr: 0.000012, loss: 0.000032, loss_predicate: 0.006835, speed: 1.96 step/s
+epoch: 30 / 50, steps: 2800 / 2809, lr: 0.000012, loss: 0.000027, loss_predicate: 0.012625, speed: 1.96 step/s
+
+=====start evaluating of 31 epochs=====
+eval loss: 0.002325
+precision: 87.01	 recall: 89.04	 f1: 88.01	
+precision_predicate: 92.11	 recall_predicate: 88.85	 f1_predicate: 90.45	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+Saving model checkpoint to ./log/0421/transfromer_2class_bert/PRE/model_best
+epoch time footprint: 0 hour 25 min 51 sec
+
+=====start training of 31 epochs=====
+epoch: 31 / 50, steps: 100 / 2809, lr: 0.000012, loss: 0.000031, loss_predicate: 0.007735, speed: 1.90 step/s
+epoch: 31 / 50, steps: 200 / 2809, lr: 0.000012, loss: 0.000028, loss_predicate: 0.009182, speed: 1.98 step/s
+epoch: 31 / 50, steps: 300 / 2809, lr: 0.000012, loss: 0.000041, loss_predicate: 0.002223, speed: 1.98 step/s
+epoch: 31 / 50, steps: 400 / 2809, lr: 0.000012, loss: 0.000018, loss_predicate: 0.003567, speed: 1.96 step/s
+epoch: 31 / 50, steps: 500 / 2809, lr: 0.000012, loss: 0.000013, loss_predicate: 0.001094, speed: 1.96 step/s
+epoch: 31 / 50, steps: 600 / 2809, lr: 0.000012, loss: 0.000010, loss_predicate: 0.000549, speed: 1.96 step/s
+epoch: 31 / 50, steps: 700 / 2809, lr: 0.000012, loss: 0.000022, loss_predicate: 0.005244, speed: 1.96 step/s
+epoch: 31 / 50, steps: 800 / 2809, lr: 0.000012, loss: 0.000027, loss_predicate: 0.008636, speed: 1.96 step/s
+epoch: 31 / 50, steps: 900 / 2809, lr: 0.000012, loss: 0.000020, loss_predicate: 0.006082, speed: 1.96 step/s
+epoch: 31 / 50, steps: 1000 / 2809, lr: 0.000012, loss: 0.000024, loss_predicate: 0.002598, speed: 1.97 step/s
+epoch: 31 / 50, steps: 1100 / 2809, lr: 0.000012, loss: 0.000011, loss_predicate: 0.000416, speed: 1.97 step/s
+epoch: 31 / 50, steps: 1200 / 2809, lr: 0.000012, loss: 0.000014, loss_predicate: 0.002904, speed: 1.96 step/s
+epoch: 31 / 50, steps: 1300 / 2809, lr: 0.000012, loss: 0.000015, loss_predicate: 0.006036, speed: 1.96 step/s
+epoch: 31 / 50, steps: 1400 / 2809, lr: 0.000012, loss: 0.000021, loss_predicate: 0.000958, speed: 1.96 step/s
+epoch: 31 / 50, steps: 1500 / 2809, lr: 0.000012, loss: 0.000023, loss_predicate: 0.009918, speed: 1.96 step/s
+epoch: 31 / 50, steps: 1600 / 2809, lr: 0.000012, loss: 0.000018, loss_predicate: 0.006486, speed: 1.97 step/s
+epoch: 31 / 50, steps: 1700 / 2809, lr: 0.000012, loss: 0.000020, loss_predicate: 0.009127, speed: 1.97 step/s
+epoch: 31 / 50, steps: 1800 / 2809, lr: 0.000012, loss: 0.000017, loss_predicate: 0.007612, speed: 1.97 step/s
+epoch: 31 / 50, steps: 1900 / 2809, lr: 0.000012, loss: 0.000024, loss_predicate: 0.006540, speed: 1.95 step/s
+epoch: 31 / 50, steps: 2000 / 2809, lr: 0.000012, loss: 0.000030, loss_predicate: 0.011758, speed: 1.95 step/s
+epoch: 31 / 50, steps: 2100 / 2809, lr: 0.000012, loss: 0.000028, loss_predicate: 0.008757, speed: 1.93 step/s
+epoch: 31 / 50, steps: 2200 / 2809, lr: 0.000012, loss: 0.000028, loss_predicate: 0.003411, speed: 1.95 step/s
+epoch: 31 / 50, steps: 2300 / 2809, lr: 0.000012, loss: 0.000041, loss_predicate: 0.006336, speed: 1.94 step/s
+epoch: 31 / 50, steps: 2400 / 2809, lr: 0.000012, loss: 0.000019, loss_predicate: 0.006930, speed: 1.96 step/s
+epoch: 31 / 50, steps: 2500 / 2809, lr: 0.000012, loss: 0.000021, loss_predicate: 0.006760, speed: 1.95 step/s
+epoch: 31 / 50, steps: 2600 / 2809, lr: 0.000012, loss: 0.000019, loss_predicate: 0.004169, speed: 1.95 step/s
+epoch: 31 / 50, steps: 2700 / 2809, lr: 0.000012, loss: 0.000035, loss_predicate: 0.002751, speed: 1.94 step/s
+epoch: 31 / 50, steps: 2800 / 2809, lr: 0.000011, loss: 0.000035, loss_predicate: 0.003259, speed: 1.96 step/s
+
+=====start evaluating of 32 epochs=====
+eval loss: 0.002462
+precision: 86.05	 recall: 89.53	 f1: 87.76	
+precision_predicate: 91.21	 recall_predicate: 89.39	 f1_predicate: 90.29	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 51 sec
+
+=====start training of 32 epochs=====
+epoch: 32 / 50, steps: 100 / 2809, lr: 0.000011, loss: 0.000014, loss_predicate: 0.000534, speed: 1.88 step/s
+epoch: 32 / 50, steps: 200 / 2809, lr: 0.000011, loss: 0.000015, loss_predicate: 0.000501, speed: 1.99 step/s
+epoch: 32 / 50, steps: 300 / 2809, lr: 0.000011, loss: 0.000014, loss_predicate: 0.003798, speed: 1.98 step/s
+epoch: 32 / 50, steps: 400 / 2809, lr: 0.000011, loss: 0.000031, loss_predicate: 0.010715, speed: 1.98 step/s
+epoch: 32 / 50, steps: 500 / 2809, lr: 0.000011, loss: 0.000019, loss_predicate: 0.002781, speed: 1.96 step/s
+epoch: 32 / 50, steps: 600 / 2809, lr: 0.000011, loss: 0.000019, loss_predicate: 0.006543, speed: 1.98 step/s
+epoch: 32 / 50, steps: 700 / 2809, lr: 0.000011, loss: 0.000014, loss_predicate: 0.001249, speed: 1.97 step/s
+epoch: 32 / 50, steps: 800 / 2809, lr: 0.000011, loss: 0.000020, loss_predicate: 0.001792, speed: 1.96 step/s
+epoch: 32 / 50, steps: 900 / 2809, lr: 0.000011, loss: 0.000019, loss_predicate: 0.002780, speed: 1.97 step/s
+epoch: 32 / 50, steps: 1000 / 2809, lr: 0.000011, loss: 0.000024, loss_predicate: 0.007849, speed: 1.96 step/s
+epoch: 32 / 50, steps: 1100 / 2809, lr: 0.000011, loss: 0.000052, loss_predicate: 0.006368, speed: 1.98 step/s
+epoch: 32 / 50, steps: 1200 / 2809, lr: 0.000011, loss: 0.000016, loss_predicate: 0.004536, speed: 1.96 step/s
+epoch: 32 / 50, steps: 1300 / 2809, lr: 0.000011, loss: 0.000020, loss_predicate: 0.006782, speed: 1.96 step/s
+epoch: 32 / 50, steps: 1400 / 2809, lr: 0.000011, loss: 0.000021, loss_predicate: 0.005213, speed: 1.95 step/s
+epoch: 32 / 50, steps: 1500 / 2809, lr: 0.000011, loss: 0.000033, loss_predicate: 0.002730, speed: 1.96 step/s
+epoch: 32 / 50, steps: 1600 / 2809, lr: 0.000011, loss: 0.000024, loss_predicate: 0.007418, speed: 1.94 step/s
+epoch: 32 / 50, steps: 1700 / 2809, lr: 0.000011, loss: 0.000020, loss_predicate: 0.003483, speed: 1.95 step/s
+epoch: 32 / 50, steps: 1800 / 2809, lr: 0.000011, loss: 0.000018, loss_predicate: 0.008159, speed: 1.96 step/s
+epoch: 32 / 50, steps: 1900 / 2809, lr: 0.000011, loss: 0.000019, loss_predicate: 0.003310, speed: 1.97 step/s
+epoch: 32 / 50, steps: 2000 / 2809, lr: 0.000011, loss: 0.000019, loss_predicate: 0.005454, speed: 1.96 step/s
+epoch: 32 / 50, steps: 2100 / 2809, lr: 0.000011, loss: 0.000015, loss_predicate: 0.007339, speed: 1.96 step/s
+epoch: 32 / 50, steps: 2200 / 2809, lr: 0.000011, loss: 0.000019, loss_predicate: 0.004532, speed: 1.95 step/s
+epoch: 32 / 50, steps: 2300 / 2809, lr: 0.000011, loss: 0.000014, loss_predicate: 0.002894, speed: 1.94 step/s
+epoch: 32 / 50, steps: 2400 / 2809, lr: 0.000011, loss: 0.000015, loss_predicate: 0.002840, speed: 1.95 step/s
+epoch: 32 / 50, steps: 2500 / 2809, lr: 0.000011, loss: 0.000016, loss_predicate: 0.006588, speed: 1.95 step/s
+epoch: 32 / 50, steps: 2600 / 2809, lr: 0.000011, loss: 0.000023, loss_predicate: 0.007711, speed: 1.95 step/s
+epoch: 32 / 50, steps: 2700 / 2809, lr: 0.000011, loss: 0.000036, loss_predicate: 0.009366, speed: 1.95 step/s
+epoch: 32 / 50, steps: 2800 / 2809, lr: 0.000011, loss: 0.000024, loss_predicate: 0.004674, speed: 1.96 step/s
+
+=====start evaluating of 33 epochs=====
+eval loss: 0.002544
+precision: 85.92	 recall: 89.54	 f1: 87.69	
+precision_predicate: 91.55	 recall_predicate: 89.24	 f1_predicate: 90.38	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 50 sec
+
+=====start training of 33 epochs=====
+epoch: 33 / 50, steps: 100 / 2809, lr: 0.000011, loss: 0.000023, loss_predicate: 0.004377, speed: 1.89 step/s
+epoch: 33 / 50, steps: 200 / 2809, lr: 0.000011, loss: 0.000031, loss_predicate: 0.011492, speed: 1.99 step/s
+epoch: 33 / 50, steps: 300 / 2809, lr: 0.000011, loss: 0.000017, loss_predicate: 0.005660, speed: 1.98 step/s
+epoch: 33 / 50, steps: 400 / 2809, lr: 0.000011, loss: 0.000012, loss_predicate: 0.003558, speed: 1.97 step/s
+epoch: 33 / 50, steps: 500 / 2809, lr: 0.000011, loss: 0.000010, loss_predicate: 0.003592, speed: 1.96 step/s
+epoch: 33 / 50, steps: 600 / 2809, lr: 0.000011, loss: 0.000029, loss_predicate: 0.008891, speed: 1.97 step/s
+epoch: 33 / 50, steps: 700 / 2809, lr: 0.000011, loss: 0.000027, loss_predicate: 0.003196, speed: 1.97 step/s
+epoch: 33 / 50, steps: 800 / 2809, lr: 0.000011, loss: 0.000022, loss_predicate: 0.007433, speed: 1.98 step/s
+epoch: 33 / 50, steps: 900 / 2809, lr: 0.000011, loss: 0.000017, loss_predicate: 0.015425, speed: 1.97 step/s
+epoch: 33 / 50, steps: 1000 / 2809, lr: 0.000011, loss: 0.000041, loss_predicate: 0.009874, speed: 1.97 step/s
+epoch: 33 / 50, steps: 1100 / 2809, lr: 0.000011, loss: 0.000032, loss_predicate: 0.004086, speed: 1.96 step/s
+epoch: 33 / 50, steps: 1200 / 2809, lr: 0.000011, loss: 0.000012, loss_predicate: 0.003224, speed: 1.96 step/s
+epoch: 33 / 50, steps: 1300 / 2809, lr: 0.000011, loss: 0.000028, loss_predicate: 0.005687, speed: 1.96 step/s
+epoch: 33 / 50, steps: 1400 / 2809, lr: 0.000011, loss: 0.000022, loss_predicate: 0.007151, speed: 1.97 step/s
+epoch: 33 / 50, steps: 1500 / 2809, lr: 0.000011, loss: 0.000051, loss_predicate: 0.021112, speed: 1.97 step/s
+epoch: 33 / 50, steps: 1600 / 2809, lr: 0.000010, loss: 0.000020, loss_predicate: 0.003781, speed: 1.97 step/s
+epoch: 33 / 50, steps: 1700 / 2809, lr: 0.000010, loss: 0.000024, loss_predicate: 0.004147, speed: 1.97 step/s
+epoch: 33 / 50, steps: 1800 / 2809, lr: 0.000010, loss: 0.000014, loss_predicate: 0.003625, speed: 1.97 step/s
+epoch: 33 / 50, steps: 1900 / 2809, lr: 0.000010, loss: 0.000029, loss_predicate: 0.006385, speed: 1.96 step/s
+epoch: 33 / 50, steps: 2000 / 2809, lr: 0.000010, loss: 0.000020, loss_predicate: 0.004557, speed: 1.96 step/s
+epoch: 33 / 50, steps: 2100 / 2809, lr: 0.000010, loss: 0.000032, loss_predicate: 0.005610, speed: 1.96 step/s
+epoch: 33 / 50, steps: 2200 / 2809, lr: 0.000010, loss: 0.000017, loss_predicate: 0.002630, speed: 1.97 step/s
+epoch: 33 / 50, steps: 2300 / 2809, lr: 0.000010, loss: 0.000018, loss_predicate: 0.003292, speed: 1.95 step/s
+epoch: 33 / 50, steps: 2400 / 2809, lr: 0.000010, loss: 0.000025, loss_predicate: 0.006012, speed: 1.97 step/s
+epoch: 33 / 50, steps: 2500 / 2809, lr: 0.000010, loss: 0.000019, loss_predicate: 0.001920, speed: 1.94 step/s
+epoch: 33 / 50, steps: 2600 / 2809, lr: 0.000010, loss: 0.000014, loss_predicate: 0.006220, speed: 1.94 step/s
+epoch: 33 / 50, steps: 2700 / 2809, lr: 0.000010, loss: 0.000020, loss_predicate: 0.003736, speed: 1.94 step/s
+epoch: 33 / 50, steps: 2800 / 2809, lr: 0.000010, loss: 0.000012, loss_predicate: 0.004906, speed: 1.95 step/s
+
+=====start evaluating of 34 epochs=====
+eval loss: 0.002589
+precision: 87.71	 recall: 89.01	 f1: 88.36	
+precision_predicate: 92.40	 recall_predicate: 88.88	 f1_predicate: 90.61	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+Saving model checkpoint to ./log/0421/transfromer_2class_bert/PRE/model_best
+epoch time footprint: 0 hour 25 min 49 sec
+
+=====start training of 34 epochs=====
+epoch: 34 / 50, steps: 100 / 2809, lr: 0.000010, loss: 0.000020, loss_predicate: 0.005140, speed: 1.87 step/s
+epoch: 34 / 50, steps: 200 / 2809, lr: 0.000010, loss: 0.000009, loss_predicate: 0.004079, speed: 1.98 step/s
+epoch: 34 / 50, steps: 300 / 2809, lr: 0.000010, loss: 0.000016, loss_predicate: 0.003978, speed: 1.96 step/s
+epoch: 34 / 50, steps: 400 / 2809, lr: 0.000010, loss: 0.000014, loss_predicate: 0.002245, speed: 1.97 step/s
+epoch: 34 / 50, steps: 500 / 2809, lr: 0.000010, loss: 0.000018, loss_predicate: 0.003687, speed: 1.97 step/s
+epoch: 34 / 50, steps: 600 / 2809, lr: 0.000010, loss: 0.000017, loss_predicate: 0.001520, speed: 1.96 step/s
+epoch: 34 / 50, steps: 700 / 2809, lr: 0.000010, loss: 0.000017, loss_predicate: 0.004364, speed: 1.97 step/s
+epoch: 34 / 50, steps: 800 / 2809, lr: 0.000010, loss: 0.000030, loss_predicate: 0.002367, speed: 1.96 step/s
+epoch: 34 / 50, steps: 900 / 2809, lr: 0.000010, loss: 0.000031, loss_predicate: 0.004696, speed: 1.96 step/s
+epoch: 34 / 50, steps: 1000 / 2809, lr: 0.000010, loss: 0.000014, loss_predicate: 0.003538, speed: 1.97 step/s
+epoch: 34 / 50, steps: 1100 / 2809, lr: 0.000010, loss: 0.000020, loss_predicate: 0.005164, speed: 1.97 step/s
+epoch: 34 / 50, steps: 1200 / 2809, lr: 0.000010, loss: 0.000009, loss_predicate: 0.002030, speed: 1.96 step/s
+epoch: 34 / 50, steps: 1300 / 2809, lr: 0.000010, loss: 0.000036, loss_predicate: 0.006574, speed: 1.96 step/s
+epoch: 34 / 50, steps: 1400 / 2809, lr: 0.000010, loss: 0.000040, loss_predicate: 0.004696, speed: 1.98 step/s
+epoch: 34 / 50, steps: 1500 / 2809, lr: 0.000010, loss: 0.000014, loss_predicate: 0.003379, speed: 2.00 step/s
+epoch: 34 / 50, steps: 1600 / 2809, lr: 0.000010, loss: 0.000018, loss_predicate: 0.002806, speed: 1.99 step/s
+epoch: 34 / 50, steps: 1700 / 2809, lr: 0.000010, loss: 0.000011, loss_predicate: 0.003027, speed: 1.97 step/s
+epoch: 34 / 50, steps: 1800 / 2809, lr: 0.000010, loss: 0.000010, loss_predicate: 0.001318, speed: 1.97 step/s
+epoch: 34 / 50, steps: 1900 / 2809, lr: 0.000010, loss: 0.000016, loss_predicate: 0.002562, speed: 1.96 step/s
+epoch: 34 / 50, steps: 2000 / 2809, lr: 0.000010, loss: 0.000019, loss_predicate: 0.001528, speed: 1.94 step/s
+epoch: 34 / 50, steps: 2100 / 2809, lr: 0.000010, loss: 0.000031, loss_predicate: 0.011962, speed: 1.96 step/s
+epoch: 34 / 50, steps: 2200 / 2809, lr: 0.000010, loss: 0.000016, loss_predicate: 0.007457, speed: 1.96 step/s
+epoch: 34 / 50, steps: 2300 / 2809, lr: 0.000010, loss: 0.000013, loss_predicate: 0.005213, speed: 1.95 step/s
+epoch: 34 / 50, steps: 2400 / 2809, lr: 0.000010, loss: 0.000044, loss_predicate: 0.007011, speed: 1.95 step/s
+epoch: 34 / 50, steps: 2500 / 2809, lr: 0.000010, loss: 0.000014, loss_predicate: 0.002519, speed: 1.96 step/s
+epoch: 34 / 50, steps: 2600 / 2809, lr: 0.000010, loss: 0.000018, loss_predicate: 0.001602, speed: 1.95 step/s
+epoch: 34 / 50, steps: 2700 / 2809, lr: 0.000010, loss: 0.000025, loss_predicate: 0.011012, speed: 1.93 step/s
+epoch: 34 / 50, steps: 2800 / 2809, lr: 0.000010, loss: 0.000020, loss_predicate: 0.001701, speed: 1.95 step/s
+
+=====start evaluating of 35 epochs=====
+eval loss: 0.002519
+precision: 85.96	 recall: 89.48	 f1: 87.69	
+precision_predicate: 91.69	 recall_predicate: 89.29	 f1_predicate: 90.48	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 47 sec
+
+=====start training of 35 epochs=====
+epoch: 35 / 50, steps: 100 / 2809, lr: 0.000010, loss: 0.000021, loss_predicate: 0.006039, speed: 1.87 step/s
+epoch: 35 / 50, steps: 200 / 2809, lr: 0.000010, loss: 0.000032, loss_predicate: 0.004302, speed: 1.97 step/s
+epoch: 35 / 50, steps: 300 / 2809, lr: 0.000010, loss: 0.000017, loss_predicate: 0.005563, speed: 1.97 step/s
+epoch: 35 / 50, steps: 400 / 2809, lr: 0.000009, loss: 0.000012, loss_predicate: 0.002125, speed: 1.96 step/s
+epoch: 35 / 50, steps: 500 / 2809, lr: 0.000009, loss: 0.000013, loss_predicate: 0.003579, speed: 1.96 step/s
+epoch: 35 / 50, steps: 600 / 2809, lr: 0.000009, loss: 0.000011, loss_predicate: 0.004816, speed: 1.95 step/s
+epoch: 35 / 50, steps: 700 / 2809, lr: 0.000009, loss: 0.000028, loss_predicate: 0.001900, speed: 1.96 step/s
+epoch: 35 / 50, steps: 800 / 2809, lr: 0.000009, loss: 0.000008, loss_predicate: 0.001752, speed: 1.97 step/s
+epoch: 35 / 50, steps: 900 / 2809, lr: 0.000009, loss: 0.000016, loss_predicate: 0.004377, speed: 1.96 step/s
+epoch: 35 / 50, steps: 1000 / 2809, lr: 0.000009, loss: 0.000011, loss_predicate: 0.001345, speed: 1.96 step/s
+epoch: 35 / 50, steps: 1100 / 2809, lr: 0.000009, loss: 0.000014, loss_predicate: 0.003813, speed: 1.96 step/s
+epoch: 35 / 50, steps: 1200 / 2809, lr: 0.000009, loss: 0.000013, loss_predicate: 0.002376, speed: 1.97 step/s
+epoch: 35 / 50, steps: 1300 / 2809, lr: 0.000009, loss: 0.000016, loss_predicate: 0.005116, speed: 1.96 step/s
+epoch: 35 / 50, steps: 1400 / 2809, lr: 0.000009, loss: 0.000022, loss_predicate: 0.005297, speed: 1.97 step/s
+epoch: 35 / 50, steps: 1500 / 2809, lr: 0.000009, loss: 0.000014, loss_predicate: 0.002030, speed: 1.95 step/s
+epoch: 35 / 50, steps: 1600 / 2809, lr: 0.000009, loss: 0.000020, loss_predicate: 0.008415, speed: 1.96 step/s
+epoch: 35 / 50, steps: 1700 / 2809, lr: 0.000009, loss: 0.000008, loss_predicate: 0.001388, speed: 1.96 step/s
+epoch: 35 / 50, steps: 1800 / 2809, lr: 0.000009, loss: 0.000019, loss_predicate: 0.004479, speed: 1.97 step/s
+epoch: 35 / 50, steps: 1900 / 2809, lr: 0.000009, loss: 0.000013, loss_predicate: 0.002190, speed: 1.97 step/s
+epoch: 35 / 50, steps: 2000 / 2809, lr: 0.000009, loss: 0.000010, loss_predicate: 0.003340, speed: 1.97 step/s
+epoch: 35 / 50, steps: 2100 / 2809, lr: 0.000009, loss: 0.000013, loss_predicate: 0.003718, speed: 1.96 step/s
+epoch: 35 / 50, steps: 2200 / 2809, lr: 0.000009, loss: 0.000014, loss_predicate: 0.002366, speed: 1.95 step/s
+epoch: 35 / 50, steps: 2300 / 2809, lr: 0.000009, loss: 0.000020, loss_predicate: 0.003108, speed: 1.96 step/s
+epoch: 35 / 50, steps: 2400 / 2809, lr: 0.000009, loss: 0.000025, loss_predicate: 0.004587, speed: 1.96 step/s
+epoch: 35 / 50, steps: 2500 / 2809, lr: 0.000009, loss: 0.000048, loss_predicate: 0.011966, speed: 1.97 step/s
+epoch: 35 / 50, steps: 2600 / 2809, lr: 0.000009, loss: 0.000043, loss_predicate: 0.009238, speed: 1.97 step/s
+epoch: 35 / 50, steps: 2700 / 2809, lr: 0.000009, loss: 0.000026, loss_predicate: 0.005279, speed: 1.96 step/s
+epoch: 35 / 50, steps: 2800 / 2809, lr: 0.000009, loss: 0.000017, loss_predicate: 0.002803, speed: 1.96 step/s
+
+=====start evaluating of 36 epochs=====
+eval loss: 0.002489
+precision: 86.32	 recall: 89.28	 f1: 87.78	
+precision_predicate: 91.57	 recall_predicate: 89.18	 f1_predicate: 90.36	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 50 sec
+
+=====start training of 36 epochs=====
+epoch: 36 / 50, steps: 100 / 2809, lr: 0.000009, loss: 0.000014, loss_predicate: 0.003583, speed: 1.86 step/s
+epoch: 36 / 50, steps: 200 / 2809, lr: 0.000009, loss: 0.000013, loss_predicate: 0.003501, speed: 1.98 step/s
+epoch: 36 / 50, steps: 300 / 2809, lr: 0.000009, loss: 0.000011, loss_predicate: 0.005248, speed: 1.97 step/s
+epoch: 36 / 50, steps: 400 / 2809, lr: 0.000009, loss: 0.000018, loss_predicate: 0.000748, speed: 1.97 step/s
+epoch: 36 / 50, steps: 500 / 2809, lr: 0.000009, loss: 0.000031, loss_predicate: 0.005626, speed: 1.95 step/s
+epoch: 36 / 50, steps: 600 / 2809, lr: 0.000009, loss: 0.000013, loss_predicate: 0.007464, speed: 1.96 step/s
+epoch: 36 / 50, steps: 700 / 2809, lr: 0.000009, loss: 0.000009, loss_predicate: 0.004223, speed: 1.98 step/s
+epoch: 36 / 50, steps: 800 / 2809, lr: 0.000009, loss: 0.000019, loss_predicate: 0.004656, speed: 1.96 step/s
+epoch: 36 / 50, steps: 900 / 2809, lr: 0.000009, loss: 0.000045, loss_predicate: 0.008807, speed: 1.96 step/s
+epoch: 36 / 50, steps: 1000 / 2809, lr: 0.000009, loss: 0.000042, loss_predicate: 0.006130, speed: 1.96 step/s
+epoch: 36 / 50, steps: 1100 / 2809, lr: 0.000009, loss: 0.000020, loss_predicate: 0.001886, speed: 1.96 step/s
+epoch: 36 / 50, steps: 1200 / 2809, lr: 0.000009, loss: 0.000030, loss_predicate: 0.005507, speed: 1.96 step/s
+epoch: 36 / 50, steps: 1300 / 2809, lr: 0.000009, loss: 0.000020, loss_predicate: 0.007439, speed: 1.96 step/s
+epoch: 36 / 50, steps: 1400 / 2809, lr: 0.000009, loss: 0.000029, loss_predicate: 0.004324, speed: 1.98 step/s
+epoch: 36 / 50, steps: 1500 / 2809, lr: 0.000009, loss: 0.000021, loss_predicate: 0.001830, speed: 1.96 step/s
+epoch: 36 / 50, steps: 1600 / 2809, lr: 0.000009, loss: 0.000024, loss_predicate: 0.004017, speed: 1.97 step/s
+epoch: 36 / 50, steps: 1700 / 2809, lr: 0.000009, loss: 0.000018, loss_predicate: 0.003843, speed: 1.97 step/s
+epoch: 36 / 50, steps: 1800 / 2809, lr: 0.000009, loss: 0.000010, loss_predicate: 0.001377, speed: 1.97 step/s
+epoch: 36 / 50, steps: 1900 / 2809, lr: 0.000009, loss: 0.000012, loss_predicate: 0.002764, speed: 1.97 step/s
+epoch: 36 / 50, steps: 2000 / 2809, lr: 0.000008, loss: 0.000020, loss_predicate: 0.003357, speed: 1.97 step/s
+epoch: 36 / 50, steps: 2100 / 2809, lr: 0.000008, loss: 0.000016, loss_predicate: 0.006774, speed: 1.96 step/s
+epoch: 36 / 50, steps: 2200 / 2809, lr: 0.000008, loss: 0.000010, loss_predicate: 0.002578, speed: 1.97 step/s
+epoch: 36 / 50, steps: 2300 / 2809, lr: 0.000008, loss: 0.000025, loss_predicate: 0.001471, speed: 1.96 step/s
+epoch: 36 / 50, steps: 2400 / 2809, lr: 0.000008, loss: 0.000009, loss_predicate: 0.000689, speed: 1.96 step/s
+epoch: 36 / 50, steps: 2500 / 2809, lr: 0.000008, loss: 0.000013, loss_predicate: 0.000504, speed: 1.97 step/s
+epoch: 36 / 50, steps: 2600 / 2809, lr: 0.000008, loss: 0.000009, loss_predicate: 0.001187, speed: 1.97 step/s
+epoch: 36 / 50, steps: 2700 / 2809, lr: 0.000008, loss: 0.000010, loss_predicate: 0.001233, speed: 1.96 step/s
+epoch: 36 / 50, steps: 2800 / 2809, lr: 0.000008, loss: 0.000009, loss_predicate: 0.002855, speed: 1.98 step/s
+
+=====start evaluating of 37 epochs=====
+eval loss: 0.002573
+precision: 86.85	 recall: 89.58	 f1: 88.19	
+precision_predicate: 91.89	 recall_predicate: 89.38	 f1_predicate: 90.62	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+Saving model checkpoint to ./log/0421/transfromer_2class_bert/PRE/model_best
+epoch time footprint: 0 hour 25 min 49 sec
+
+=====start training of 37 epochs=====
+epoch: 37 / 50, steps: 100 / 2809, lr: 0.000008, loss: 0.000029, loss_predicate: 0.009179, speed: 1.85 step/s
+epoch: 37 / 50, steps: 200 / 2809, lr: 0.000008, loss: 0.000015, loss_predicate: 0.003533, speed: 1.93 step/s
+epoch: 37 / 50, steps: 300 / 2809, lr: 0.000008, loss: 0.000019, loss_predicate: 0.002158, speed: 1.95 step/s
+epoch: 37 / 50, steps: 400 / 2809, lr: 0.000008, loss: 0.000015, loss_predicate: 0.002544, speed: 1.97 step/s
+epoch: 37 / 50, steps: 500 / 2809, lr: 0.000008, loss: 0.000016, loss_predicate: 0.005608, speed: 1.96 step/s
+epoch: 37 / 50, steps: 600 / 2809, lr: 0.000008, loss: 0.000011, loss_predicate: 0.004258, speed: 1.95 step/s
+epoch: 37 / 50, steps: 700 / 2809, lr: 0.000008, loss: 0.000007, loss_predicate: 0.003060, speed: 1.96 step/s
+epoch: 37 / 50, steps: 800 / 2809, lr: 0.000008, loss: 0.000010, loss_predicate: 0.001883, speed: 1.97 step/s
+epoch: 37 / 50, steps: 900 / 2809, lr: 0.000008, loss: 0.000008, loss_predicate: 0.003067, speed: 1.96 step/s
+epoch: 37 / 50, steps: 1000 / 2809, lr: 0.000008, loss: 0.000008, loss_predicate: 0.001234, speed: 1.97 step/s
+epoch: 37 / 50, steps: 1100 / 2809, lr: 0.000008, loss: 0.000019, loss_predicate: 0.001630, speed: 1.97 step/s
+epoch: 37 / 50, steps: 1200 / 2809, lr: 0.000008, loss: 0.000008, loss_predicate: 0.000310, speed: 1.96 step/s
+epoch: 37 / 50, steps: 1300 / 2809, lr: 0.000008, loss: 0.000011, loss_predicate: 0.003351, speed: 1.97 step/s
+epoch: 37 / 50, steps: 1400 / 2809, lr: 0.000008, loss: 0.000021, loss_predicate: 0.003292, speed: 1.96 step/s
+epoch: 37 / 50, steps: 1500 / 2809, lr: 0.000008, loss: 0.000012, loss_predicate: 0.005756, speed: 1.97 step/s
+epoch: 37 / 50, steps: 1600 / 2809, lr: 0.000008, loss: 0.000009, loss_predicate: 0.004194, speed: 1.96 step/s
+epoch: 37 / 50, steps: 1700 / 2809, lr: 0.000008, loss: 0.000011, loss_predicate: 0.000691, speed: 1.96 step/s
+epoch: 37 / 50, steps: 1800 / 2809, lr: 0.000008, loss: 0.000007, loss_predicate: 0.002436, speed: 1.97 step/s
+epoch: 37 / 50, steps: 1900 / 2809, lr: 0.000008, loss: 0.000013, loss_predicate: 0.001461, speed: 1.98 step/s
+epoch: 37 / 50, steps: 2000 / 2809, lr: 0.000008, loss: 0.000013, loss_predicate: 0.003783, speed: 1.96 step/s
+epoch: 37 / 50, steps: 2100 / 2809, lr: 0.000008, loss: 0.000015, loss_predicate: 0.003329, speed: 1.96 step/s
+epoch: 37 / 50, steps: 2200 / 2809, lr: 0.000008, loss: 0.000013, loss_predicate: 0.004780, speed: 1.97 step/s
+epoch: 37 / 50, steps: 2300 / 2809, lr: 0.000008, loss: 0.000030, loss_predicate: 0.002485, speed: 1.95 step/s
+epoch: 37 / 50, steps: 2400 / 2809, lr: 0.000008, loss: 0.000017, loss_predicate: 0.003734, speed: 1.96 step/s
+epoch: 37 / 50, steps: 2500 / 2809, lr: 0.000008, loss: 0.000012, loss_predicate: 0.002119, speed: 1.96 step/s
+epoch: 37 / 50, steps: 2600 / 2809, lr: 0.000008, loss: 0.000008, loss_predicate: 0.001687, speed: 1.97 step/s
+epoch: 37 / 50, steps: 2700 / 2809, lr: 0.000008, loss: 0.000022, loss_predicate: 0.004551, speed: 1.97 step/s
+epoch: 37 / 50, steps: 2800 / 2809, lr: 0.000008, loss: 0.000013, loss_predicate: 0.004781, speed: 1.97 step/s
+
+=====start evaluating of 38 epochs=====
+eval loss: 0.002486
+precision: 86.50	 recall: 89.29	 f1: 87.88	
+precision_predicate: 91.98	 recall_predicate: 89.24	 f1_predicate: 90.59	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 49 sec
+
+=====start training of 38 epochs=====
+epoch: 38 / 50, steps: 100 / 2809, lr: 0.000008, loss: 0.000017, loss_predicate: 0.002158, speed: 1.88 step/s
+epoch: 38 / 50, steps: 200 / 2809, lr: 0.000008, loss: 0.000013, loss_predicate: 0.003007, speed: 1.95 step/s
+epoch: 38 / 50, steps: 300 / 2809, lr: 0.000008, loss: 0.000009, loss_predicate: 0.000487, speed: 1.95 step/s
+epoch: 38 / 50, steps: 400 / 2809, lr: 0.000008, loss: 0.000023, loss_predicate: 0.005221, speed: 1.94 step/s
+epoch: 38 / 50, steps: 500 / 2809, lr: 0.000008, loss: 0.000018, loss_predicate: 0.002062, speed: 1.95 step/s
+epoch: 38 / 50, steps: 600 / 2809, lr: 0.000008, loss: 0.000014, loss_predicate: 0.005994, speed: 1.96 step/s
+epoch: 38 / 50, steps: 700 / 2809, lr: 0.000008, loss: 0.000009, loss_predicate: 0.001365, speed: 1.96 step/s
+epoch: 38 / 50, steps: 800 / 2809, lr: 0.000007, loss: 0.000011, loss_predicate: 0.009474, speed: 1.96 step/s
+epoch: 38 / 50, steps: 900 / 2809, lr: 0.000007, loss: 0.000010, loss_predicate: 0.003078, speed: 1.96 step/s
+epoch: 38 / 50, steps: 1000 / 2809, lr: 0.000007, loss: 0.000011, loss_predicate: 0.002213, speed: 1.96 step/s
+epoch: 38 / 50, steps: 1100 / 2809, lr: 0.000007, loss: 0.000008, loss_predicate: 0.000606, speed: 1.97 step/s
+epoch: 38 / 50, steps: 1200 / 2809, lr: 0.000007, loss: 0.000010, loss_predicate: 0.004404, speed: 1.97 step/s
+epoch: 38 / 50, steps: 1300 / 2809, lr: 0.000007, loss: 0.000013, loss_predicate: 0.002250, speed: 1.96 step/s
+epoch: 38 / 50, steps: 1400 / 2809, lr: 0.000007, loss: 0.000010, loss_predicate: 0.001064, speed: 1.95 step/s
+epoch: 38 / 50, steps: 1500 / 2809, lr: 0.000007, loss: 0.000019, loss_predicate: 0.001698, speed: 1.96 step/s
+epoch: 38 / 50, steps: 1600 / 2809, lr: 0.000007, loss: 0.000018, loss_predicate: 0.006913, speed: 1.96 step/s
+epoch: 38 / 50, steps: 1700 / 2809, lr: 0.000007, loss: 0.000008, loss_predicate: 0.000873, speed: 1.95 step/s
+epoch: 38 / 50, steps: 1800 / 2809, lr: 0.000007, loss: 0.000013, loss_predicate: 0.004124, speed: 1.96 step/s
+epoch: 38 / 50, steps: 1900 / 2809, lr: 0.000007, loss: 0.000015, loss_predicate: 0.006161, speed: 1.95 step/s
+epoch: 38 / 50, steps: 2000 / 2809, lr: 0.000007, loss: 0.000015, loss_predicate: 0.004246, speed: 1.96 step/s
+epoch: 38 / 50, steps: 2100 / 2809, lr: 0.000007, loss: 0.000012, loss_predicate: 0.004217, speed: 1.96 step/s
+epoch: 38 / 50, steps: 2200 / 2809, lr: 0.000007, loss: 0.000013, loss_predicate: 0.003383, speed: 1.96 step/s
+epoch: 38 / 50, steps: 2300 / 2809, lr: 0.000007, loss: 0.000006, loss_predicate: 0.002520, speed: 1.96 step/s
+epoch: 38 / 50, steps: 2400 / 2809, lr: 0.000007, loss: 0.000014, loss_predicate: 0.003108, speed: 1.96 step/s
+epoch: 38 / 50, steps: 2500 / 2809, lr: 0.000007, loss: 0.000014, loss_predicate: 0.004071, speed: 1.97 step/s
+epoch: 38 / 50, steps: 2600 / 2809, lr: 0.000007, loss: 0.000018, loss_predicate: 0.005555, speed: 1.96 step/s
+epoch: 38 / 50, steps: 2700 / 2809, lr: 0.000007, loss: 0.000018, loss_predicate: 0.000631, speed: 1.98 step/s
+epoch: 38 / 50, steps: 2800 / 2809, lr: 0.000007, loss: 0.000013, loss_predicate: 0.003134, speed: 1.95 step/s
+
+=====start evaluating of 39 epochs=====
+eval loss: 0.002561
+precision: 86.52	 recall: 89.23	 f1: 87.85	
+precision_predicate: 92.06	 recall_predicate: 89.04	 f1_predicate: 90.52	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 51 sec
+
+=====start training of 39 epochs=====
+epoch: 39 / 50, steps: 100 / 2809, lr: 0.000007, loss: 0.000013, loss_predicate: 0.003538, speed: 1.89 step/s
+epoch: 39 / 50, steps: 200 / 2809, lr: 0.000007, loss: 0.000011, loss_predicate: 0.002395, speed: 1.98 step/s
+epoch: 39 / 50, steps: 300 / 2809, lr: 0.000007, loss: 0.000011, loss_predicate: 0.004111, speed: 1.96 step/s
+epoch: 39 / 50, steps: 400 / 2809, lr: 0.000007, loss: 0.000016, loss_predicate: 0.000683, speed: 1.94 step/s
+epoch: 39 / 50, steps: 500 / 2809, lr: 0.000007, loss: 0.000011, loss_predicate: 0.006199, speed: 1.94 step/s
+epoch: 39 / 50, steps: 600 / 2809, lr: 0.000007, loss: 0.000010, loss_predicate: 0.000631, speed: 1.95 step/s
+epoch: 39 / 50, steps: 700 / 2809, lr: 0.000007, loss: 0.000009, loss_predicate: 0.002852, speed: 1.94 step/s
+epoch: 39 / 50, steps: 800 / 2809, lr: 0.000007, loss: 0.000011, loss_predicate: 0.000356, speed: 1.96 step/s
+epoch: 39 / 50, steps: 900 / 2809, lr: 0.000007, loss: 0.000013, loss_predicate: 0.002358, speed: 1.95 step/s
+epoch: 39 / 50, steps: 1000 / 2809, lr: 0.000007, loss: 0.000011, loss_predicate: 0.002757, speed: 1.95 step/s
+epoch: 39 / 50, steps: 1100 / 2809, lr: 0.000007, loss: 0.000007, loss_predicate: 0.001860, speed: 1.96 step/s
+epoch: 39 / 50, steps: 1200 / 2809, lr: 0.000007, loss: 0.000010, loss_predicate: 0.001192, speed: 1.96 step/s
+epoch: 39 / 50, steps: 1300 / 2809, lr: 0.000007, loss: 0.000012, loss_predicate: 0.007779, speed: 1.96 step/s
+epoch: 39 / 50, steps: 1400 / 2809, lr: 0.000007, loss: 0.000010, loss_predicate: 0.000992, speed: 1.97 step/s
+epoch: 39 / 50, steps: 1500 / 2809, lr: 0.000007, loss: 0.000010, loss_predicate: 0.002341, speed: 1.96 step/s
+epoch: 39 / 50, steps: 1600 / 2809, lr: 0.000007, loss: 0.000018, loss_predicate: 0.003718, speed: 1.96 step/s
+epoch: 39 / 50, steps: 1700 / 2809, lr: 0.000007, loss: 0.000006, loss_predicate: 0.001122, speed: 1.96 step/s
+epoch: 39 / 50, steps: 1800 / 2809, lr: 0.000007, loss: 0.000008, loss_predicate: 0.000698, speed: 1.97 step/s
+epoch: 39 / 50, steps: 1900 / 2809, lr: 0.000007, loss: 0.000009, loss_predicate: 0.001419, speed: 1.96 step/s
+epoch: 39 / 50, steps: 2000 / 2809, lr: 0.000007, loss: 0.000007, loss_predicate: 0.000222, speed: 1.95 step/s
+epoch: 39 / 50, steps: 2100 / 2809, lr: 0.000007, loss: 0.000007, loss_predicate: 0.003928, speed: 1.96 step/s
+epoch: 39 / 50, steps: 2200 / 2809, lr: 0.000007, loss: 0.000008, loss_predicate: 0.005586, speed: 1.97 step/s
+epoch: 39 / 50, steps: 2300 / 2809, lr: 0.000006, loss: 0.000016, loss_predicate: 0.008391, speed: 1.96 step/s
+epoch: 39 / 50, steps: 2400 / 2809, lr: 0.000006, loss: 0.000010, loss_predicate: 0.002354, speed: 1.96 step/s
+epoch: 39 / 50, steps: 2500 / 2809, lr: 0.000006, loss: 0.000009, loss_predicate: 0.002019, speed: 1.97 step/s
+epoch: 39 / 50, steps: 2600 / 2809, lr: 0.000006, loss: 0.000005, loss_predicate: 0.000666, speed: 1.97 step/s
+epoch: 39 / 50, steps: 2700 / 2809, lr: 0.000006, loss: 0.000008, loss_predicate: 0.004165, speed: 1.96 step/s
+epoch: 39 / 50, steps: 2800 / 2809, lr: 0.000006, loss: 0.000024, loss_predicate: 0.001284, speed: 1.96 step/s
+
+=====start evaluating of 40 epochs=====
+eval loss: 0.002659
+precision: 86.06	 recall: 89.13	 f1: 87.57	
+precision_predicate: 91.37	 recall_predicate: 89.10	 f1_predicate: 90.22	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 49 sec
+
+=====start training of 40 epochs=====
+epoch: 40 / 50, steps: 100 / 2809, lr: 0.000006, loss: 0.000005, loss_predicate: 0.000279, speed: 1.89 step/s
+epoch: 40 / 50, steps: 200 / 2809, lr: 0.000006, loss: 0.000009, loss_predicate: 0.000438, speed: 1.98 step/s
+epoch: 40 / 50, steps: 300 / 2809, lr: 0.000006, loss: 0.000009, loss_predicate: 0.003630, speed: 1.98 step/s
+epoch: 40 / 50, steps: 400 / 2809, lr: 0.000006, loss: 0.000007, loss_predicate: 0.002405, speed: 1.97 step/s
+epoch: 40 / 50, steps: 500 / 2809, lr: 0.000006, loss: 0.000005, loss_predicate: 0.001403, speed: 1.96 step/s
+epoch: 40 / 50, steps: 600 / 2809, lr: 0.000006, loss: 0.000009, loss_predicate: 0.002683, speed: 1.94 step/s
+epoch: 40 / 50, steps: 700 / 2809, lr: 0.000006, loss: 0.000007, loss_predicate: 0.004005, speed: 1.94 step/s
+epoch: 40 / 50, steps: 800 / 2809, lr: 0.000006, loss: 0.000006, loss_predicate: 0.001936, speed: 1.95 step/s
+epoch: 40 / 50, steps: 900 / 2809, lr: 0.000006, loss: 0.000005, loss_predicate: 0.000585, speed: 1.96 step/s
+epoch: 40 / 50, steps: 1000 / 2809, lr: 0.000006, loss: 0.000010, loss_predicate: 0.004356, speed: 1.95 step/s
+epoch: 40 / 50, steps: 1100 / 2809, lr: 0.000006, loss: 0.000014, loss_predicate: 0.000950, speed: 1.94 step/s
+epoch: 40 / 50, steps: 1200 / 2809, lr: 0.000006, loss: 0.000007, loss_predicate: 0.001006, speed: 1.96 step/s
+epoch: 40 / 50, steps: 1300 / 2809, lr: 0.000006, loss: 0.000012, loss_predicate: 0.002286, speed: 1.97 step/s
+epoch: 40 / 50, steps: 1400 / 2809, lr: 0.000006, loss: 0.000013, loss_predicate: 0.006556, speed: 1.96 step/s
+epoch: 40 / 50, steps: 1500 / 2809, lr: 0.000006, loss: 0.000012, loss_predicate: 0.002250, speed: 1.98 step/s
+epoch: 40 / 50, steps: 1600 / 2809, lr: 0.000006, loss: 0.000012, loss_predicate: 0.003461, speed: 1.96 step/s
+epoch: 40 / 50, steps: 1700 / 2809, lr: 0.000006, loss: 0.000006, loss_predicate: 0.000273, speed: 1.97 step/s
+epoch: 40 / 50, steps: 1800 / 2809, lr: 0.000006, loss: 0.000006, loss_predicate: 0.003314, speed: 1.97 step/s
+epoch: 40 / 50, steps: 1900 / 2809, lr: 0.000006, loss: 0.000010, loss_predicate: 0.002372, speed: 1.96 step/s
+epoch: 40 / 50, steps: 2000 / 2809, lr: 0.000006, loss: 0.000005, loss_predicate: 0.000368, speed: 1.96 step/s
+epoch: 40 / 50, steps: 2100 / 2809, lr: 0.000006, loss: 0.000006, loss_predicate: 0.003362, speed: 1.97 step/s
+epoch: 40 / 50, steps: 2200 / 2809, lr: 0.000006, loss: 0.000007, loss_predicate: 0.002151, speed: 1.96 step/s
+epoch: 40 / 50, steps: 2300 / 2809, lr: 0.000006, loss: 0.000007, loss_predicate: 0.001822, speed: 1.98 step/s
+epoch: 40 / 50, steps: 2400 / 2809, lr: 0.000006, loss: 0.000012, loss_predicate: 0.000412, speed: 1.97 step/s
+epoch: 40 / 50, steps: 2500 / 2809, lr: 0.000006, loss: 0.000008, loss_predicate: 0.003013, speed: 1.96 step/s
+epoch: 40 / 50, steps: 2600 / 2809, lr: 0.000006, loss: 0.000015, loss_predicate: 0.005896, speed: 1.96 step/s
+epoch: 40 / 50, steps: 2700 / 2809, lr: 0.000006, loss: 0.000009, loss_predicate: 0.001162, speed: 1.97 step/s
+epoch: 40 / 50, steps: 2800 / 2809, lr: 0.000006, loss: 0.000005, loss_predicate: 0.001526, speed: 1.97 step/s
+
+=====start evaluating of 41 epochs=====
+eval loss: 0.002714
+precision: 86.16	 recall: 89.42	 f1: 87.76	
+precision_predicate: 91.47	 recall_predicate: 89.13	 f1_predicate: 90.28	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 47 sec
+
+=====start training of 41 epochs=====
+epoch: 41 / 50, steps: 100 / 2809, lr: 0.000006, loss: 0.000013, loss_predicate: 0.007141, speed: 1.88 step/s
+epoch: 41 / 50, steps: 200 / 2809, lr: 0.000006, loss: 0.000011, loss_predicate: 0.001525, speed: 1.99 step/s
+epoch: 41 / 50, steps: 300 / 2809, lr: 0.000006, loss: 0.000012, loss_predicate: 0.004573, speed: 1.99 step/s
+epoch: 41 / 50, steps: 400 / 2809, lr: 0.000006, loss: 0.000012, loss_predicate: 0.001192, speed: 1.97 step/s
+epoch: 41 / 50, steps: 500 / 2809, lr: 0.000006, loss: 0.000010, loss_predicate: 0.001862, speed: 1.96 step/s
+epoch: 41 / 50, steps: 600 / 2809, lr: 0.000006, loss: 0.000014, loss_predicate: 0.004273, speed: 1.97 step/s
+epoch: 41 / 50, steps: 700 / 2809, lr: 0.000006, loss: 0.000016, loss_predicate: 0.008201, speed: 1.96 step/s
+epoch: 41 / 50, steps: 800 / 2809, lr: 0.000006, loss: 0.000007, loss_predicate: 0.001097, speed: 1.93 step/s
+epoch: 41 / 50, steps: 900 / 2809, lr: 0.000006, loss: 0.000009, loss_predicate: 0.003363, speed: 1.95 step/s
+epoch: 41 / 50, steps: 1000 / 2809, lr: 0.000006, loss: 0.000011, loss_predicate: 0.002200, speed: 1.95 step/s
+epoch: 41 / 50, steps: 1100 / 2809, lr: 0.000005, loss: 0.000006, loss_predicate: 0.001778, speed: 1.95 step/s
+epoch: 41 / 50, steps: 1200 / 2809, lr: 0.000005, loss: 0.000013, loss_predicate: 0.001808, speed: 1.96 step/s
+epoch: 41 / 50, steps: 1300 / 2809, lr: 0.000005, loss: 0.000010, loss_predicate: 0.001651, speed: 1.96 step/s
+epoch: 41 / 50, steps: 1400 / 2809, lr: 0.000005, loss: 0.000006, loss_predicate: 0.002921, speed: 1.96 step/s
+epoch: 41 / 50, steps: 1500 / 2809, lr: 0.000005, loss: 0.000009, loss_predicate: 0.003899, speed: 1.97 step/s
+epoch: 41 / 50, steps: 1600 / 2809, lr: 0.000005, loss: 0.000010, loss_predicate: 0.002660, speed: 1.96 step/s
+epoch: 41 / 50, steps: 1700 / 2809, lr: 0.000005, loss: 0.000011, loss_predicate: 0.001685, speed: 1.96 step/s
+epoch: 41 / 50, steps: 1800 / 2809, lr: 0.000005, loss: 0.000018, loss_predicate: 0.002875, speed: 1.96 step/s
+epoch: 41 / 50, steps: 1900 / 2809, lr: 0.000005, loss: 0.000004, loss_predicate: 0.002934, speed: 1.96 step/s
+epoch: 41 / 50, steps: 2000 / 2809, lr: 0.000005, loss: 0.000006, loss_predicate: 0.000236, speed: 1.97 step/s
+epoch: 41 / 50, steps: 2100 / 2809, lr: 0.000005, loss: 0.000008, loss_predicate: 0.000291, speed: 1.97 step/s
+epoch: 41 / 50, steps: 2200 / 2809, lr: 0.000005, loss: 0.000009, loss_predicate: 0.000354, speed: 1.96 step/s
+epoch: 41 / 50, steps: 2300 / 2809, lr: 0.000005, loss: 0.000005, loss_predicate: 0.001668, speed: 1.96 step/s
+epoch: 41 / 50, steps: 2400 / 2809, lr: 0.000005, loss: 0.000013, loss_predicate: 0.003340, speed: 1.97 step/s
+epoch: 41 / 50, steps: 2500 / 2809, lr: 0.000005, loss: 0.000006, loss_predicate: 0.002157, speed: 1.97 step/s
+epoch: 41 / 50, steps: 2600 / 2809, lr: 0.000005, loss: 0.000008, loss_predicate: 0.000572, speed: 1.97 step/s
+epoch: 41 / 50, steps: 2700 / 2809, lr: 0.000005, loss: 0.000009, loss_predicate: 0.002774, speed: 1.96 step/s
+epoch: 41 / 50, steps: 2800 / 2809, lr: 0.000005, loss: 0.000008, loss_predicate: 0.001113, speed: 1.97 step/s
+
+=====start evaluating of 42 epochs=====
+eval loss: 0.002704
+precision: 86.58	 recall: 89.23	 f1: 87.88	
+precision_predicate: 92.01	 recall_predicate: 89.05	 f1_predicate: 90.51	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 48 sec
+
+=====start training of 42 epochs=====
+epoch: 42 / 50, steps: 100 / 2809, lr: 0.000005, loss: 0.000014, loss_predicate: 0.005637, speed: 1.88 step/s
+epoch: 42 / 50, steps: 200 / 2809, lr: 0.000005, loss: 0.000007, loss_predicate: 0.001104, speed: 1.98 step/s
+epoch: 42 / 50, steps: 300 / 2809, lr: 0.000005, loss: 0.000009, loss_predicate: 0.002666, speed: 1.97 step/s
+epoch: 42 / 50, steps: 400 / 2809, lr: 0.000005, loss: 0.000006, loss_predicate: 0.000742, speed: 1.97 step/s
+epoch: 42 / 50, steps: 500 / 2809, lr: 0.000005, loss: 0.000018, loss_predicate: 0.002146, speed: 1.97 step/s
+epoch: 42 / 50, steps: 600 / 2809, lr: 0.000005, loss: 0.000005, loss_predicate: 0.001424, speed: 1.97 step/s
+epoch: 42 / 50, steps: 700 / 2809, lr: 0.000005, loss: 0.000005, loss_predicate: 0.000570, speed: 1.97 step/s
+epoch: 42 / 50, steps: 800 / 2809, lr: 0.000005, loss: 0.000008, loss_predicate: 0.001411, speed: 1.96 step/s
+epoch: 42 / 50, steps: 900 / 2809, lr: 0.000005, loss: 0.000006, loss_predicate: 0.002766, speed: 1.95 step/s
+epoch: 42 / 50, steps: 1000 / 2809, lr: 0.000005, loss: 0.000004, loss_predicate: 0.000895, speed: 1.93 step/s
+epoch: 42 / 50, steps: 1100 / 2809, lr: 0.000005, loss: 0.000007, loss_predicate: 0.000778, speed: 1.96 step/s
+epoch: 42 / 50, steps: 1200 / 2809, lr: 0.000005, loss: 0.000007, loss_predicate: 0.002409, speed: 1.95 step/s
+epoch: 42 / 50, steps: 1300 / 2809, lr: 0.000005, loss: 0.000004, loss_predicate: 0.001489, speed: 1.95 step/s
+epoch: 42 / 50, steps: 1400 / 2809, lr: 0.000005, loss: 0.000010, loss_predicate: 0.004210, speed: 1.95 step/s
+epoch: 42 / 50, steps: 1500 / 2809, lr: 0.000005, loss: 0.000024, loss_predicate: 0.001954, speed: 1.96 step/s
+epoch: 42 / 50, steps: 1600 / 2809, lr: 0.000005, loss: 0.000009, loss_predicate: 0.001811, speed: 1.96 step/s
+epoch: 42 / 50, steps: 1700 / 2809, lr: 0.000005, loss: 0.000011, loss_predicate: 0.003396, speed: 1.96 step/s
+epoch: 42 / 50, steps: 1800 / 2809, lr: 0.000005, loss: 0.000010, loss_predicate: 0.000441, speed: 1.96 step/s
+epoch: 42 / 50, steps: 1900 / 2809, lr: 0.000005, loss: 0.000004, loss_predicate: 0.000607, speed: 1.96 step/s
+epoch: 42 / 50, steps: 2000 / 2809, lr: 0.000005, loss: 0.000007, loss_predicate: 0.002731, speed: 1.97 step/s
+epoch: 42 / 50, steps: 2100 / 2809, lr: 0.000005, loss: 0.000007, loss_predicate: 0.001945, speed: 1.96 step/s
+epoch: 42 / 50, steps: 2200 / 2809, lr: 0.000005, loss: 0.000014, loss_predicate: 0.003385, speed: 1.98 step/s
+epoch: 42 / 50, steps: 2300 / 2809, lr: 0.000005, loss: 0.000007, loss_predicate: 0.001399, speed: 1.96 step/s
+epoch: 42 / 50, steps: 2400 / 2809, lr: 0.000005, loss: 0.000007, loss_predicate: 0.003158, speed: 1.96 step/s
+epoch: 42 / 50, steps: 2500 / 2809, lr: 0.000005, loss: 0.000008, loss_predicate: 0.008358, speed: 1.97 step/s
+epoch: 42 / 50, steps: 2600 / 2809, lr: 0.000005, loss: 0.000008, loss_predicate: 0.001450, speed: 1.97 step/s
+epoch: 42 / 50, steps: 2700 / 2809, lr: 0.000004, loss: 0.000018, loss_predicate: 0.001744, speed: 1.97 step/s
+epoch: 42 / 50, steps: 2800 / 2809, lr: 0.000004, loss: 0.000005, loss_predicate: 0.001723, speed: 1.99 step/s
+
+=====start evaluating of 43 epochs=====
+eval loss: 0.002650
+precision: 86.70	 recall: 89.22	 f1: 87.94	
+precision_predicate: 92.16	 recall_predicate: 89.18	 f1_predicate: 90.65	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+Saving model checkpoint to ./log/0421/transfromer_2class_bert/PRE/model_best
+epoch time footprint: 0 hour 25 min 49 sec
+
+=====start training of 43 epochs=====
+epoch: 43 / 50, steps: 100 / 2809, lr: 0.000004, loss: 0.000003, loss_predicate: 0.000800, speed: 1.84 step/s
+epoch: 43 / 50, steps: 200 / 2809, lr: 0.000004, loss: 0.000009, loss_predicate: 0.002948, speed: 2.00 step/s
+epoch: 43 / 50, steps: 300 / 2809, lr: 0.000004, loss: 0.000006, loss_predicate: 0.000739, speed: 2.00 step/s
+epoch: 43 / 50, steps: 400 / 2809, lr: 0.000004, loss: 0.000008, loss_predicate: 0.002408, speed: 2.00 step/s
+epoch: 43 / 50, steps: 500 / 2809, lr: 0.000004, loss: 0.000007, loss_predicate: 0.000712, speed: 2.01 step/s
+epoch: 43 / 50, steps: 600 / 2809, lr: 0.000004, loss: 0.000005, loss_predicate: 0.002436, speed: 2.00 step/s
+epoch: 43 / 50, steps: 700 / 2809, lr: 0.000004, loss: 0.000005, loss_predicate: 0.001966, speed: 1.98 step/s
+epoch: 43 / 50, steps: 800 / 2809, lr: 0.000004, loss: 0.000015, loss_predicate: 0.001080, speed: 1.97 step/s
+epoch: 43 / 50, steps: 900 / 2809, lr: 0.000004, loss: 0.000010, loss_predicate: 0.000723, speed: 1.98 step/s
+epoch: 43 / 50, steps: 1000 / 2809, lr: 0.000004, loss: 0.000008, loss_predicate: 0.000996, speed: 1.99 step/s
+epoch: 43 / 50, steps: 1100 / 2809, lr: 0.000004, loss: 0.000014, loss_predicate: 0.000490, speed: 1.99 step/s
+epoch: 43 / 50, steps: 1200 / 2809, lr: 0.000004, loss: 0.000004, loss_predicate: 0.003059, speed: 2.00 step/s
+epoch: 43 / 50, steps: 1300 / 2809, lr: 0.000004, loss: 0.000008, loss_predicate: 0.001996, speed: 2.00 step/s
+epoch: 43 / 50, steps: 1400 / 2809, lr: 0.000004, loss: 0.000011, loss_predicate: 0.000859, speed: 1.98 step/s
+epoch: 43 / 50, steps: 1500 / 2809, lr: 0.000004, loss: 0.000008, loss_predicate: 0.004056, speed: 1.97 step/s
+epoch: 43 / 50, steps: 1600 / 2809, lr: 0.000004, loss: 0.000038, loss_predicate: 0.005969, speed: 1.97 step/s
+epoch: 43 / 50, steps: 1700 / 2809, lr: 0.000004, loss: 0.000009, loss_predicate: 0.000335, speed: 1.99 step/s
+epoch: 43 / 50, steps: 1800 / 2809, lr: 0.000004, loss: 0.000004, loss_predicate: 0.000709, speed: 2.01 step/s
+epoch: 43 / 50, steps: 1900 / 2809, lr: 0.000004, loss: 0.000007, loss_predicate: 0.001293, speed: 2.01 step/s
+epoch: 43 / 50, steps: 2000 / 2809, lr: 0.000004, loss: 0.000008, loss_predicate: 0.001966, speed: 1.99 step/s
+epoch: 43 / 50, steps: 2100 / 2809, lr: 0.000004, loss: 0.000005, loss_predicate: 0.000420, speed: 1.98 step/s
+epoch: 43 / 50, steps: 2200 / 2809, lr: 0.000004, loss: 0.000007, loss_predicate: 0.001757, speed: 1.98 step/s
+epoch: 43 / 50, steps: 2300 / 2809, lr: 0.000004, loss: 0.000009, loss_predicate: 0.000360, speed: 1.98 step/s
+epoch: 43 / 50, steps: 2400 / 2809, lr: 0.000004, loss: 0.000016, loss_predicate: 0.005561, speed: 1.99 step/s
+epoch: 43 / 50, steps: 2500 / 2809, lr: 0.000004, loss: 0.000005, loss_predicate: 0.000427, speed: 2.00 step/s
+epoch: 43 / 50, steps: 2600 / 2809, lr: 0.000004, loss: 0.000004, loss_predicate: 0.000818, speed: 2.00 step/s
+epoch: 43 / 50, steps: 2700 / 2809, lr: 0.000004, loss: 0.000010, loss_predicate: 0.000357, speed: 1.99 step/s
+epoch: 43 / 50, steps: 2800 / 2809, lr: 0.000004, loss: 0.000006, loss_predicate: 0.001646, speed: 1.98 step/s
+
+=====start evaluating of 44 epochs=====
+eval loss: 0.002688
+precision: 86.03	 recall: 89.63	 f1: 87.80	
+precision_predicate: 91.58	 recall_predicate: 89.44	 f1_predicate: 90.50	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 31 sec
+
+=====start training of 44 epochs=====
+epoch: 44 / 50, steps: 100 / 2809, lr: 0.000004, loss: 0.000004, loss_predicate: 0.001206, speed: 1.90 step/s
+epoch: 44 / 50, steps: 200 / 2809, lr: 0.000004, loss: 0.000008, loss_predicate: 0.000696, speed: 2.03 step/s
+epoch: 44 / 50, steps: 300 / 2809, lr: 0.000004, loss: 0.000005, loss_predicate: 0.001498, speed: 2.01 step/s
+epoch: 44 / 50, steps: 400 / 2809, lr: 0.000004, loss: 0.000004, loss_predicate: 0.002382, speed: 2.00 step/s
+epoch: 44 / 50, steps: 500 / 2809, lr: 0.000004, loss: 0.000007, loss_predicate: 0.000678, speed: 1.97 step/s
+epoch: 44 / 50, steps: 600 / 2809, lr: 0.000004, loss: 0.000009, loss_predicate: 0.006920, speed: 1.97 step/s
+epoch: 44 / 50, steps: 700 / 2809, lr: 0.000004, loss: 0.000006, loss_predicate: 0.001678, speed: 1.98 step/s
+epoch: 44 / 50, steps: 800 / 2809, lr: 0.000004, loss: 0.000008, loss_predicate: 0.001718, speed: 2.00 step/s
+epoch: 44 / 50, steps: 900 / 2809, lr: 0.000004, loss: 0.000008, loss_predicate: 0.002795, speed: 2.01 step/s
+epoch: 44 / 50, steps: 1000 / 2809, lr: 0.000004, loss: 0.000007, loss_predicate: 0.004631, speed: 2.00 step/s
+epoch: 44 / 50, steps: 1100 / 2809, lr: 0.000004, loss: 0.000007, loss_predicate: 0.003633, speed: 1.99 step/s
+epoch: 44 / 50, steps: 1200 / 2809, lr: 0.000004, loss: 0.000007, loss_predicate: 0.002189, speed: 1.96 step/s
+epoch: 44 / 50, steps: 1300 / 2809, lr: 0.000004, loss: 0.000005, loss_predicate: 0.000478, speed: 1.96 step/s
+epoch: 44 / 50, steps: 1400 / 2809, lr: 0.000004, loss: 0.000005, loss_predicate: 0.001192, speed: 1.97 step/s
+epoch: 44 / 50, steps: 1500 / 2809, lr: 0.000003, loss: 0.000003, loss_predicate: 0.002838, speed: 2.00 step/s
+epoch: 44 / 50, steps: 1600 / 2809, lr: 0.000003, loss: 0.000010, loss_predicate: 0.004185, speed: 2.00 step/s
+epoch: 44 / 50, steps: 1700 / 2809, lr: 0.000003, loss: 0.000003, loss_predicate: 0.004654, speed: 2.01 step/s
+epoch: 44 / 50, steps: 1800 / 2809, lr: 0.000003, loss: 0.000007, loss_predicate: 0.001413, speed: 1.98 step/s
+epoch: 44 / 50, steps: 1900 / 2809, lr: 0.000003, loss: 0.000015, loss_predicate: 0.000478, speed: 1.97 step/s
+epoch: 44 / 50, steps: 2000 / 2809, lr: 0.000003, loss: 0.000011, loss_predicate: 0.007003, speed: 1.97 step/s
+epoch: 44 / 50, steps: 2100 / 2809, lr: 0.000003, loss: 0.000005, loss_predicate: 0.001600, speed: 2.00 step/s
+epoch: 44 / 50, steps: 2200 / 2809, lr: 0.000003, loss: 0.000005, loss_predicate: 0.003597, speed: 2.00 step/s
+epoch: 44 / 50, steps: 2300 / 2809, lr: 0.000003, loss: 0.000003, loss_predicate: 0.000324, speed: 2.01 step/s
+epoch: 44 / 50, steps: 2400 / 2809, lr: 0.000003, loss: 0.000006, loss_predicate: 0.004639, speed: 2.01 step/s
+epoch: 44 / 50, steps: 2500 / 2809, lr: 0.000003, loss: 0.000006, loss_predicate: 0.000829, speed: 1.99 step/s
+epoch: 44 / 50, steps: 2600 / 2809, lr: 0.000003, loss: 0.000005, loss_predicate: 0.001441, speed: 1.98 step/s
+epoch: 44 / 50, steps: 2700 / 2809, lr: 0.000003, loss: 0.000006, loss_predicate: 0.000513, speed: 1.98 step/s
+epoch: 44 / 50, steps: 2800 / 2809, lr: 0.000003, loss: 0.000002, loss_predicate: 0.000197, speed: 1.99 step/s
+
+=====start evaluating of 45 epochs=====
+eval loss: 0.002800
+precision: 85.94	 recall: 89.48	 f1: 87.68	
+precision_predicate: 91.56	 recall_predicate: 89.43	 f1_predicate: 90.48	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 27 sec
+
+=====start training of 45 epochs=====
+epoch: 45 / 50, steps: 100 / 2809, lr: 0.000003, loss: 0.000003, loss_predicate: 0.000260, speed: 1.91 step/s
+epoch: 45 / 50, steps: 200 / 2809, lr: 0.000003, loss: 0.000004, loss_predicate: 0.002755, speed: 1.99 step/s
+epoch: 45 / 50, steps: 300 / 2809, lr: 0.000003, loss: 0.000004, loss_predicate: 0.000279, speed: 1.98 step/s
+epoch: 45 / 50, steps: 400 / 2809, lr: 0.000003, loss: 0.000003, loss_predicate: 0.000150, speed: 2.00 step/s
+epoch: 45 / 50, steps: 500 / 2809, lr: 0.000003, loss: 0.000003, loss_predicate: 0.001291, speed: 2.00 step/s
+epoch: 45 / 50, steps: 600 / 2809, lr: 0.000003, loss: 0.000016, loss_predicate: 0.004891, speed: 2.00 step/s
+epoch: 45 / 50, steps: 700 / 2809, lr: 0.000003, loss: 0.000008, loss_predicate: 0.001570, speed: 2.00 step/s
+epoch: 45 / 50, steps: 800 / 2809, lr: 0.000003, loss: 0.000008, loss_predicate: 0.002136, speed: 2.00 step/s
+epoch: 45 / 50, steps: 900 / 2809, lr: 0.000003, loss: 0.000010, loss_predicate: 0.003910, speed: 1.99 step/s
+epoch: 45 / 50, steps: 1000 / 2809, lr: 0.000003, loss: 0.000004, loss_predicate: 0.000772, speed: 1.98 step/s
+epoch: 45 / 50, steps: 1100 / 2809, lr: 0.000003, loss: 0.000003, loss_predicate: 0.000417, speed: 1.98 step/s
+epoch: 45 / 50, steps: 1200 / 2809, lr: 0.000003, loss: 0.000003, loss_predicate: 0.001626, speed: 1.99 step/s
+epoch: 45 / 50, steps: 1300 / 2809, lr: 0.000003, loss: 0.000005, loss_predicate: 0.000313, speed: 1.99 step/s
+epoch: 45 / 50, steps: 1400 / 2809, lr: 0.000003, loss: 0.000005, loss_predicate: 0.001760, speed: 1.99 step/s
+epoch: 45 / 50, steps: 1500 / 2809, lr: 0.000003, loss: 0.000003, loss_predicate: 0.000337, speed: 1.98 step/s
+epoch: 45 / 50, steps: 1600 / 2809, lr: 0.000003, loss: 0.000013, loss_predicate: 0.003619, speed: 1.97 step/s
+epoch: 45 / 50, steps: 1700 / 2809, lr: 0.000003, loss: 0.000003, loss_predicate: 0.000935, speed: 1.97 step/s
+epoch: 45 / 50, steps: 1800 / 2809, lr: 0.000003, loss: 0.000008, loss_predicate: 0.000156, speed: 1.98 step/s
+epoch: 45 / 50, steps: 1900 / 2809, lr: 0.000003, loss: 0.000003, loss_predicate: 0.000237, speed: 1.99 step/s
+epoch: 45 / 50, steps: 2000 / 2809, lr: 0.000003, loss: 0.000005, loss_predicate: 0.001748, speed: 2.01 step/s
+epoch: 45 / 50, steps: 2100 / 2809, lr: 0.000003, loss: 0.000008, loss_predicate: 0.009439, speed: 2.00 step/s
+epoch: 45 / 50, steps: 2200 / 2809, lr: 0.000003, loss: 0.000004, loss_predicate: 0.000368, speed: 1.99 step/s
+epoch: 45 / 50, steps: 2300 / 2809, lr: 0.000003, loss: 0.000011, loss_predicate: 0.002428, speed: 1.99 step/s
+epoch: 45 / 50, steps: 2400 / 2809, lr: 0.000003, loss: 0.000006, loss_predicate: 0.000298, speed: 1.98 step/s
+epoch: 45 / 50, steps: 2500 / 2809, lr: 0.000003, loss: 0.000006, loss_predicate: 0.001152, speed: 1.98 step/s
+epoch: 45 / 50, steps: 2600 / 2809, lr: 0.000003, loss: 0.000003, loss_predicate: 0.001249, speed: 2.00 step/s
+epoch: 45 / 50, steps: 2700 / 2809, lr: 0.000003, loss: 0.000005, loss_predicate: 0.004319, speed: 2.00 step/s
+epoch: 45 / 50, steps: 2800 / 2809, lr: 0.000003, loss: 0.000006, loss_predicate: 0.000890, speed: 2.01 step/s
+
+=====start evaluating of 46 epochs=====
+eval loss: 0.002683
+precision: 87.13	 recall: 89.15	 f1: 88.13	
+precision_predicate: 92.52	 recall_predicate: 89.01	 f1_predicate: 90.74	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+Saving model checkpoint to ./log/0421/transfromer_2class_bert/PRE/model_best
+epoch time footprint: 0 hour 25 min 29 sec
+
+=====start training of 46 epochs=====
+epoch: 46 / 50, steps: 100 / 2809, lr: 0.000003, loss: 0.000007, loss_predicate: 0.001162, speed: 1.89 step/s
+epoch: 46 / 50, steps: 200 / 2809, lr: 0.000003, loss: 0.000004, loss_predicate: 0.001122, speed: 2.01 step/s
+epoch: 46 / 50, steps: 300 / 2809, lr: 0.000002, loss: 0.000003, loss_predicate: 0.000345, speed: 2.01 step/s
+epoch: 46 / 50, steps: 400 / 2809, lr: 0.000002, loss: 0.000009, loss_predicate: 0.001531, speed: 2.02 step/s
+epoch: 46 / 50, steps: 500 / 2809, lr: 0.000002, loss: 0.000007, loss_predicate: 0.000275, speed: 2.00 step/s
+epoch: 46 / 50, steps: 600 / 2809, lr: 0.000002, loss: 0.000003, loss_predicate: 0.000477, speed: 1.99 step/s
+epoch: 46 / 50, steps: 700 / 2809, lr: 0.000002, loss: 0.000005, loss_predicate: 0.000401, speed: 1.98 step/s
+epoch: 46 / 50, steps: 800 / 2809, lr: 0.000002, loss: 0.000004, loss_predicate: 0.001513, speed: 1.98 step/s
+epoch: 46 / 50, steps: 900 / 2809, lr: 0.000002, loss: 0.000005, loss_predicate: 0.002646, speed: 2.00 step/s
+epoch: 46 / 50, steps: 1000 / 2809, lr: 0.000002, loss: 0.000014, loss_predicate: 0.000600, speed: 2.00 step/s
+epoch: 46 / 50, steps: 1100 / 2809, lr: 0.000002, loss: 0.000008, loss_predicate: 0.001709, speed: 2.01 step/s
+epoch: 46 / 50, steps: 1200 / 2809, lr: 0.000002, loss: 0.000004, loss_predicate: 0.000309, speed: 2.02 step/s
+epoch: 46 / 50, steps: 1300 / 2809, lr: 0.000002, loss: 0.000004, loss_predicate: 0.000383, speed: 2.00 step/s
+epoch: 46 / 50, steps: 1400 / 2809, lr: 0.000002, loss: 0.000006, loss_predicate: 0.000631, speed: 1.98 step/s
+epoch: 46 / 50, steps: 1500 / 2809, lr: 0.000002, loss: 0.000015, loss_predicate: 0.001776, speed: 1.98 step/s
+epoch: 46 / 50, steps: 1600 / 2809, lr: 0.000002, loss: 0.000003, loss_predicate: 0.000642, speed: 1.97 step/s
+epoch: 46 / 50, steps: 1700 / 2809, lr: 0.000002, loss: 0.000004, loss_predicate: 0.000625, speed: 1.98 step/s
+epoch: 46 / 50, steps: 1800 / 2809, lr: 0.000002, loss: 0.000006, loss_predicate: 0.001233, speed: 1.99 step/s
+epoch: 46 / 50, steps: 1900 / 2809, lr: 0.000002, loss: 0.000004, loss_predicate: 0.000794, speed: 2.00 step/s
+epoch: 46 / 50, steps: 2000 / 2809, lr: 0.000002, loss: 0.000002, loss_predicate: 0.000905, speed: 1.99 step/s
+epoch: 46 / 50, steps: 2100 / 2809, lr: 0.000002, loss: 0.000003, loss_predicate: 0.001084, speed: 1.98 step/s
+epoch: 46 / 50, steps: 2200 / 2809, lr: 0.000002, loss: 0.000002, loss_predicate: 0.000210, speed: 1.97 step/s
+epoch: 46 / 50, steps: 2300 / 2809, lr: 0.000002, loss: 0.000005, loss_predicate: 0.001819, speed: 1.98 step/s
+epoch: 46 / 50, steps: 2400 / 2809, lr: 0.000002, loss: 0.000007, loss_predicate: 0.002569, speed: 2.00 step/s
+epoch: 46 / 50, steps: 2500 / 2809, lr: 0.000002, loss: 0.000025, loss_predicate: 0.004421, speed: 2.01 step/s
+epoch: 46 / 50, steps: 2600 / 2809, lr: 0.000002, loss: 0.000005, loss_predicate: 0.000730, speed: 2.01 step/s
+epoch: 46 / 50, steps: 2700 / 2809, lr: 0.000002, loss: 0.000002, loss_predicate: 0.002173, speed: 2.00 step/s
+epoch: 46 / 50, steps: 2800 / 2809, lr: 0.000002, loss: 0.000003, loss_predicate: 0.001369, speed: 1.98 step/s
+
+=====start evaluating of 47 epochs=====
+eval loss: 0.002714
+precision: 86.21	 recall: 89.52	 f1: 87.83	
+precision_predicate: 91.82	 recall_predicate: 89.38	 f1_predicate: 90.58	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 26 sec
+
+=====start training of 47 epochs=====
+epoch: 47 / 50, steps: 100 / 2809, lr: 0.000002, loss: 0.000011, loss_predicate: 0.000416, speed: 1.91 step/s
+epoch: 47 / 50, steps: 200 / 2809, lr: 0.000002, loss: 0.000005, loss_predicate: 0.001156, speed: 2.02 step/s
+epoch: 47 / 50, steps: 300 / 2809, lr: 0.000002, loss: 0.000006, loss_predicate: 0.001438, speed: 2.01 step/s
+epoch: 47 / 50, steps: 400 / 2809, lr: 0.000002, loss: 0.000004, loss_predicate: 0.000567, speed: 1.99 step/s
+epoch: 47 / 50, steps: 500 / 2809, lr: 0.000002, loss: 0.000014, loss_predicate: 0.000743, speed: 1.97 step/s
+epoch: 47 / 50, steps: 600 / 2809, lr: 0.000002, loss: 0.000003, loss_predicate: 0.000648, speed: 1.97 step/s
+epoch: 47 / 50, steps: 700 / 2809, lr: 0.000002, loss: 0.000003, loss_predicate: 0.000928, speed: 1.98 step/s
+epoch: 47 / 50, steps: 800 / 2809, lr: 0.000002, loss: 0.000005, loss_predicate: 0.001279, speed: 2.00 step/s
+epoch: 47 / 50, steps: 900 / 2809, lr: 0.000002, loss: 0.000003, loss_predicate: 0.001049, speed: 2.00 step/s
+epoch: 47 / 50, steps: 1000 / 2809, lr: 0.000002, loss: 0.000007, loss_predicate: 0.002432, speed: 1.99 step/s
+epoch: 47 / 50, steps: 1100 / 2809, lr: 0.000002, loss: 0.000004, loss_predicate: 0.000916, speed: 1.97 step/s
+epoch: 47 / 50, steps: 1200 / 2809, lr: 0.000002, loss: 0.000005, loss_predicate: 0.000341, speed: 1.96 step/s
+epoch: 47 / 50, steps: 1300 / 2809, lr: 0.000002, loss: 0.000012, loss_predicate: 0.004765, speed: 1.96 step/s
+epoch: 47 / 50, steps: 1400 / 2809, lr: 0.000002, loss: 0.000006, loss_predicate: 0.000999, speed: 1.96 step/s
+epoch: 47 / 50, steps: 1500 / 2809, lr: 0.000002, loss: 0.000006, loss_predicate: 0.000560, speed: 1.96 step/s
+epoch: 47 / 50, steps: 1600 / 2809, lr: 0.000002, loss: 0.000006, loss_predicate: 0.001712, speed: 1.96 step/s
+epoch: 47 / 50, steps: 1700 / 2809, lr: 0.000002, loss: 0.000007, loss_predicate: 0.006278, speed: 1.95 step/s
+epoch: 47 / 50, steps: 1800 / 2809, lr: 0.000002, loss: 0.000003, loss_predicate: 0.000356, speed: 1.94 step/s
+epoch: 47 / 50, steps: 1900 / 2809, lr: 0.000001, loss: 0.000003, loss_predicate: 0.001093, speed: 1.93 step/s
+epoch: 47 / 50, steps: 2000 / 2809, lr: 0.000001, loss: 0.000005, loss_predicate: 0.001734, speed: 1.99 step/s
+epoch: 47 / 50, steps: 2100 / 2809, lr: 0.000001, loss: 0.000003, loss_predicate: 0.000314, speed: 1.99 step/s
+epoch: 47 / 50, steps: 2200 / 2809, lr: 0.000001, loss: 0.000007, loss_predicate: 0.000107, speed: 1.99 step/s
+epoch: 47 / 50, steps: 2300 / 2809, lr: 0.000001, loss: 0.000003, loss_predicate: 0.000353, speed: 1.98 step/s
+epoch: 47 / 50, steps: 2400 / 2809, lr: 0.000001, loss: 0.000004, loss_predicate: 0.002038, speed: 1.97 step/s
+epoch: 47 / 50, steps: 2500 / 2809, lr: 0.000001, loss: 0.000007, loss_predicate: 0.000881, speed: 1.98 step/s
+epoch: 47 / 50, steps: 2600 / 2809, lr: 0.000001, loss: 0.000004, loss_predicate: 0.002209, speed: 1.99 step/s
+epoch: 47 / 50, steps: 2700 / 2809, lr: 0.000001, loss: 0.000005, loss_predicate: 0.000228, speed: 2.00 step/s
+epoch: 47 / 50, steps: 2800 / 2809, lr: 0.000001, loss: 0.000005, loss_predicate: 0.001902, speed: 1.99 step/s
+
+=====start evaluating of 48 epochs=====
+eval loss: 0.002707
+precision: 86.91	 recall: 89.37	 f1: 88.12	
+precision_predicate: 92.19	 recall_predicate: 89.24	 f1_predicate: 90.69	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 35 sec
+
+=====start training of 48 epochs=====
+epoch: 48 / 50, steps: 100 / 2809, lr: 0.000001, loss: 0.000005, loss_predicate: 0.001975, speed: 1.83 step/s
+epoch: 48 / 50, steps: 200 / 2809, lr: 0.000001, loss: 0.000009, loss_predicate: 0.002575, speed: 2.00 step/s
+epoch: 48 / 50, steps: 300 / 2809, lr: 0.000001, loss: 0.000005, loss_predicate: 0.002709, speed: 2.00 step/s
+epoch: 48 / 50, steps: 400 / 2809, lr: 0.000001, loss: 0.000005, loss_predicate: 0.000946, speed: 2.01 step/s
+epoch: 48 / 50, steps: 500 / 2809, lr: 0.000001, loss: 0.000004, loss_predicate: 0.000624, speed: 2.02 step/s
+epoch: 48 / 50, steps: 600 / 2809, lr: 0.000001, loss: 0.000008, loss_predicate: 0.000651, speed: 1.99 step/s
+epoch: 48 / 50, steps: 700 / 2809, lr: 0.000001, loss: 0.000005, loss_predicate: 0.000245, speed: 1.98 step/s
+epoch: 48 / 50, steps: 800 / 2809, lr: 0.000001, loss: 0.000004, loss_predicate: 0.000280, speed: 1.98 step/s
+epoch: 48 / 50, steps: 900 / 2809, lr: 0.000001, loss: 0.000020, loss_predicate: 0.000198, speed: 1.99 step/s
+epoch: 48 / 50, steps: 1000 / 2809, lr: 0.000001, loss: 0.000004, loss_predicate: 0.001382, speed: 2.00 step/s
+epoch: 48 / 50, steps: 1100 / 2809, lr: 0.000001, loss: 0.000006, loss_predicate: 0.000128, speed: 2.01 step/s
+epoch: 48 / 50, steps: 1200 / 2809, lr: 0.000001, loss: 0.000004, loss_predicate: 0.001042, speed: 2.01 step/s
+epoch: 48 / 50, steps: 1300 / 2809, lr: 0.000001, loss: 0.000007, loss_predicate: 0.001788, speed: 2.00 step/s
+epoch: 48 / 50, steps: 1400 / 2809, lr: 0.000001, loss: 0.000002, loss_predicate: 0.000630, speed: 1.99 step/s
+epoch: 48 / 50, steps: 1500 / 2809, lr: 0.000001, loss: 0.000008, loss_predicate: 0.002241, speed: 1.97 step/s
+epoch: 48 / 50, steps: 1600 / 2809, lr: 0.000001, loss: 0.000004, loss_predicate: 0.001839, speed: 1.98 step/s
+epoch: 48 / 50, steps: 1700 / 2809, lr: 0.000001, loss: 0.000003, loss_predicate: 0.000141, speed: 2.00 step/s
+epoch: 48 / 50, steps: 1800 / 2809, lr: 0.000001, loss: 0.000003, loss_predicate: 0.001432, speed: 1.99 step/s
+epoch: 48 / 50, steps: 1900 / 2809, lr: 0.000001, loss: 0.000002, loss_predicate: 0.000199, speed: 1.98 step/s
+epoch: 48 / 50, steps: 2000 / 2809, lr: 0.000001, loss: 0.000011, loss_predicate: 0.002246, speed: 1.98 step/s
+epoch: 48 / 50, steps: 2100 / 2809, lr: 0.000001, loss: 0.000005, loss_predicate: 0.002241, speed: 1.96 step/s
+epoch: 48 / 50, steps: 2200 / 2809, lr: 0.000001, loss: 0.000005, loss_predicate: 0.000994, speed: 1.97 step/s
+epoch: 48 / 50, steps: 2300 / 2809, lr: 0.000001, loss: 0.000006, loss_predicate: 0.000892, speed: 1.99 step/s
+epoch: 48 / 50, steps: 2400 / 2809, lr: 0.000001, loss: 0.000005, loss_predicate: 0.001233, speed: 1.99 step/s
+epoch: 48 / 50, steps: 2500 / 2809, lr: 0.000001, loss: 0.000003, loss_predicate: 0.000123, speed: 2.01 step/s
+epoch: 48 / 50, steps: 2600 / 2809, lr: 0.000001, loss: 0.000005, loss_predicate: 0.004098, speed: 2.01 step/s
+epoch: 48 / 50, steps: 2700 / 2809, lr: 0.000001, loss: 0.000002, loss_predicate: 0.000128, speed: 1.99 step/s
+epoch: 48 / 50, steps: 2800 / 2809, lr: 0.000001, loss: 0.000003, loss_predicate: 0.001795, speed: 1.98 step/s
+
+=====start evaluating of 49 epochs=====
+eval loss: 0.002709
+precision: 86.79	 recall: 89.53	 f1: 88.14	
+precision_predicate: 92.04	 recall_predicate: 89.34	 f1_predicate: 90.67	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 29 sec
+
+=====start training of 49 epochs=====
+epoch: 49 / 50, steps: 100 / 2809, lr: 0.000001, loss: 0.000010, loss_predicate: 0.002014, speed: 1.91 step/s
+epoch: 49 / 50, steps: 200 / 2809, lr: 0.000001, loss: 0.000003, loss_predicate: 0.000652, speed: 2.00 step/s
+epoch: 49 / 50, steps: 300 / 2809, lr: 0.000001, loss: 0.000004, loss_predicate: 0.001253, speed: 2.00 step/s
+epoch: 49 / 50, steps: 400 / 2809, lr: 0.000001, loss: 0.000002, loss_predicate: 0.000116, speed: 1.99 step/s
+epoch: 49 / 50, steps: 500 / 2809, lr: 0.000001, loss: 0.000003, loss_predicate: 0.000195, speed: 1.97 step/s
+epoch: 49 / 50, steps: 600 / 2809, lr: 0.000001, loss: 0.000004, loss_predicate: 0.002091, speed: 1.98 step/s
+epoch: 49 / 50, steps: 700 / 2809, lr: 0.000000, loss: 0.000004, loss_predicate: 0.000265, speed: 1.98 step/s
+epoch: 49 / 50, steps: 800 / 2809, lr: 0.000000, loss: 0.000002, loss_predicate: 0.000329, speed: 2.00 step/s
+epoch: 49 / 50, steps: 900 / 2809, lr: 0.000000, loss: 0.000002, loss_predicate: 0.000545, speed: 1.99 step/s
+epoch: 49 / 50, steps: 1000 / 2809, lr: 0.000000, loss: 0.000002, loss_predicate: 0.000271, speed: 2.00 step/s
+epoch: 49 / 50, steps: 1100 / 2809, lr: 0.000000, loss: 0.000003, loss_predicate: 0.001728, speed: 1.99 step/s
+epoch: 49 / 50, steps: 1200 / 2809, lr: 0.000000, loss: 0.000003, loss_predicate: 0.001254, speed: 1.97 step/s
+epoch: 49 / 50, steps: 1300 / 2809, lr: 0.000000, loss: 0.000004, loss_predicate: 0.000876, speed: 1.97 step/s
+epoch: 49 / 50, steps: 1400 / 2809, lr: 0.000000, loss: 0.000004, loss_predicate: 0.001006, speed: 1.98 step/s
+epoch: 49 / 50, steps: 1500 / 2809, lr: 0.000000, loss: 0.000002, loss_predicate: 0.000143, speed: 2.01 step/s
+epoch: 49 / 50, steps: 1600 / 2809, lr: 0.000000, loss: 0.000003, loss_predicate: 0.002145, speed: 2.01 step/s
+epoch: 49 / 50, steps: 1700 / 2809, lr: 0.000000, loss: 0.000004, loss_predicate: 0.001027, speed: 2.00 step/s
+epoch: 49 / 50, steps: 1800 / 2809, lr: 0.000000, loss: 0.000004, loss_predicate: 0.002279, speed: 1.98 step/s
+epoch: 49 / 50, steps: 1900 / 2809, lr: 0.000000, loss: 0.000006, loss_predicate: 0.000812, speed: 1.97 step/s
+epoch: 49 / 50, steps: 2000 / 2809, lr: 0.000000, loss: 0.000009, loss_predicate: 0.000179, speed: 1.98 step/s
+epoch: 49 / 50, steps: 2100 / 2809, lr: 0.000000, loss: 0.000005, loss_predicate: 0.000276, speed: 1.98 step/s
+epoch: 49 / 50, steps: 2200 / 2809, lr: 0.000000, loss: 0.000007, loss_predicate: 0.002522, speed: 1.99 step/s
+epoch: 49 / 50, steps: 2300 / 2809, lr: 0.000000, loss: 0.000003, loss_predicate: 0.001834, speed: 1.99 step/s
+epoch: 49 / 50, steps: 2400 / 2809, lr: 0.000000, loss: 0.000006, loss_predicate: 0.001554, speed: 2.01 step/s
+epoch: 49 / 50, steps: 2500 / 2809, lr: 0.000000, loss: 0.000003, loss_predicate: 0.000211, speed: 1.98 step/s
+epoch: 49 / 50, steps: 2600 / 2809, lr: 0.000000, loss: 0.000006, loss_predicate: 0.002081, speed: 1.97 step/s
+epoch: 49 / 50, steps: 2700 / 2809, lr: 0.000000, loss: 0.000003, loss_predicate: 0.002460, speed: 1.97 step/s
+epoch: 49 / 50, steps: 2800 / 2809, lr: 0.000000, loss: 0.000006, loss_predicate: 0.002302, speed: 1.99 step/s
+
+=====start evaluating of 50 epochs=====
+eval loss: 0.002727
+precision: 86.90	 recall: 89.43	 f1: 88.15	
+precision_predicate: 92.10	 recall_predicate: 89.27	 f1_predicate: 90.66	
+Saving model checkpoint to %s ./log/0421/transfromer_2class_bert/PRE
+Saving optimizer and scheduler states to %s ./log/0421/transfromer_2class_bert/PRE
+epoch time footprint: 0 hour 25 min 32 sec
+Best precision: 92.52	 recall: 89.01	 f1: 90.74	
